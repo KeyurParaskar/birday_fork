@@ -8,6 +8,8 @@ import android.text.style.BulletSpan
 import androidx.annotation.ColorInt
 import app.auspice.R
 import app.auspice.model.EventResult
+import com.auspice.cosmos.Numerology
+import com.auspice.cosmos.WesternSign
 import java.time.LocalDate
 import java.time.format.TextStyle
 import java.util.*
@@ -34,7 +36,7 @@ class StatsGenerator(
         var response: String? = null
         val randomPerson = birthdays.random()
         while (response.isNullOrBlank()) {
-            response = when (Random.nextInt(0, 12)) {
+            response = when (Random.nextInt(0, 14)) {
                 1 -> ageAverage()
                 2 -> mostCommonMonth()
                 3 -> mostCommonDecade()
@@ -46,6 +48,8 @@ class StatsGenerator(
                 9 -> dayOfWeek(randomPerson)
                 10 -> if (astrologyDisabled) dayOfWeek(randomPerson) else zodiacSign(randomPerson)
                 11 -> if (astrologyDisabled) dayOfWeek(randomPerson) else chineseSign(randomPerson)
+                12 -> if (astrologyDisabled) dayOfWeek(randomPerson) else mostCommonElement()
+                13 -> if (astrologyDisabled) dayOfWeek(randomPerson) else mostCommonLifePath()
                 else -> ageAverage()
             }
         }
@@ -68,6 +72,8 @@ class StatsGenerator(
         if (!astrologyDisabled) {
             stats.add(mostCommonZodiacSign())
             stats.add(mostCommonChineseSign())
+            stats.add(mostCommonElement())
+            stats.add(mostCommonLifePath())
         }
         stats.add(eventTypesNumbers())
         stats.removeIf { it.isBlank() }
@@ -260,6 +266,30 @@ class StatsGenerator(
             person.name,
             getZodiacSign(person),
         )
+    }
+
+    // The most common zodiac element (fire, earth, air, water), blank on a tie
+    private fun mostCommonElement(): String {
+        val elements = birthdays
+            .groupingBy { WesternSign.forDate(it.originalDate).element.name }
+            .eachCount()
+        val common = evaluateResult(elements)
+        if (common.isBlank()) return common
+        return String.format(
+            applicationContext?.getString(R.string.most_common_element)!!,
+            common.lowercase().replaceFirstChar { it.uppercase() },
+        )
+    }
+
+    // The most common numerology Life Path number among birthdays with a known year, blank on a tie
+    private fun mostCommonLifePath(): String {
+        val lifePaths = birthdays
+            .filter { it.yearMatter == true }
+            .groupingBy { Numerology.lifePath(it.originalDate).toString() }
+            .eachCount()
+        val common = evaluateResult(lifePaths)
+        if (common.isBlank()) return common
+        return String.format(applicationContext?.getString(R.string.most_common_life_path)!!, common)
     }
 
     // The most common zodiac sign. When there's no common zodiac sign, return a blank string

@@ -21,6 +21,7 @@ import app.auspice.persistence.EventDao
 import app.auspice.persistence.EventDatabase
 import app.auspice.receivers.NotificationActionReceiver
 import app.auspice.utilities.byteArrayToBitmap
+import app.auspice.utilities.eventHighlights
 import app.auspice.utilities.formatDaysRemaining
 import app.auspice.utilities.formatEventList
 import app.auspice.utilities.getCircularBitmap
@@ -166,10 +167,22 @@ class EventWorker(context: Context, params: WorkerParameters) : Worker(context, 
             PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
         // Distinguish between normal notification and upcoming birthday notification
-        val notificationText =
+        val baseText =
             if (!upcoming && ungrouped) formulateNotificationText(nextEvents, surnameFirst, angryBird, true)
             else if (!upcoming) formulateNotificationText(nextEvents, surnameFirst, angryBird)
             else formulateAdditionalNotificationText(nextEvents, surnameFirst, angryBird)
+        // For a single event, add the most notable tradition for this birthday (golden birthday, kanreki...)
+        val highlight = if (nextEvents.size == 1) eventHighlights(
+            PreferenceManager.getDefaultSharedPreferences(applicationContext),
+            nextEvents[0]
+        ).firstOrNull() else null
+        val notificationText =
+            if (highlight == null) baseText
+            else applicationContext.getString(
+                R.string.notification_highlight_format,
+                baseText.trimEnd(),
+                highlight.fallbackText
+            )
 
         val builder = NotificationCompat.Builder(applicationContext, "events_channel")
             .setSmallIcon(R.drawable.static_notification_icon)

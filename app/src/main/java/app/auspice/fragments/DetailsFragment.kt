@@ -30,6 +30,9 @@ import app.auspice.R
 import app.auspice.activities.MainActivity
 import app.auspice.databinding.DialogNotesBinding
 import app.auspice.databinding.FragmentDetailsBinding
+import app.auspice.databinding.ItemTraditionHeaderBinding
+import app.auspice.databinding.ItemTraditionNoteBinding
+import app.auspice.databinding.ItemTraditionRowBinding
 import app.auspice.fragments.dialogs.InsertEventBottomSheet
 import app.auspice.model.Event
 import app.auspice.model.EventCode
@@ -38,6 +41,8 @@ import app.auspice.persistence.ContactsRepository
 import app.auspice.utilities.StatsGenerator
 import app.auspice.utilities.addInsetsByPadding
 import app.auspice.utilities.byteArrayToBitmap
+import app.auspice.utilities.enabledTraditions
+import app.auspice.utilities.eventTraditionsReport
 import app.auspice.utilities.formatDaysRemaining
 import app.auspice.utilities.formatName
 import app.auspice.utilities.formatTextPreview
@@ -46,8 +51,12 @@ import app.auspice.utilities.getReducedDate
 import app.auspice.utilities.getRemainingDays
 import app.auspice.utilities.getStringForTypeCodename
 import app.auspice.utilities.getThemeColor
+import app.auspice.utilities.reportLabelText
+import app.auspice.utilities.traditionTitle
 import app.auspice.utilities.resultToEvent
 import app.auspice.viewmodels.MainViewModel
+import com.auspice.cosmos.Sentiment
+import com.auspice.cosmos.Tradition
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 
@@ -104,7 +113,9 @@ class DetailsFragment : Fragment() {
         val fullView = binding.detailsMotionLayout
         val shimmer = binding.detailsCountdownShimmer
         val shimmerEnabled = sharedPrefs.getBoolean("shimmer", false)
-        val astrologyDisabled = sharedPrefs.getBoolean("disable_astrology", false)
+        val traditions = enabledTraditions(sharedPrefs)
+        val westernEnabled = Tradition.WESTERN_ASTROLOGY in traditions
+        val chineseEnabled = Tradition.CHINESE_ASTROLOGY in traditions
         val hideImage = sharedPrefs.getBoolean("hide_images", false)
         val surnameFirst = sharedPrefs.getBoolean("surname_first", false)
         val titleText = formatName(event, surnameFirst)
@@ -325,9 +336,17 @@ class DetailsFragment : Fragment() {
                 binding.detailsChineseSignValue.text =
                     statsGenerator.getChineseSign(event)
             }
-            // Set the drawable of the zodiac sign or disable them entirely
-            if (astrologyDisabled) disableAstrology()
-            else when (statsGenerator.getZodiacSignNumber(event)) {
+            // Each sign row follows its own tradition toggle
+            if (!westernEnabled) {
+                binding.detailsZodiacSign.visibility = View.GONE
+                binding.detailsZodiacSignValue.visibility = View.GONE
+            }
+            if (!chineseEnabled) {
+                binding.detailsChineseSign.visibility = View.GONE
+                binding.detailsChineseSignValue.visibility = View.GONE
+            }
+            // Set the drawable of the zodiac sign, if western astrology is shown
+            if (westernEnabled) when (statsGenerator.getZodiacSignNumber(event)) {
                 0 -> binding.detailsClearBackground.setImageDrawable(
                     ContextCompat.getDrawable(
                         requireContext(), R.drawable.ic_zodiac_sagittarius
@@ -452,6 +471,9 @@ class DetailsFragment : Fragment() {
             disableAstrology()
         }
 
+        // Everything the enabled traditions say about this person
+        showTraditions(event)
+
         // Manage the predictive back between fragments
         val predictiveBackMargin = resources.getDimensionPixelSize(R.dimen.predictive_back_margin)
         var initialTouchY = -1f
@@ -533,6 +555,46 @@ class DetailsFragment : Fragment() {
             .setType("text/plain")
             .setChooserTitle(getString(R.string.share_event))
             .startChooser()
+    }
+
+    // Fill the traditions section, or hide it when there is nothing to show
+    private fun showTraditions(event: EventResult) {
+        val container = binding.detailsTraditions
+        container.removeAllViews()
+        val sections = try {
+            eventTraditionsReport(sharedPrefs, event)
+        } catch (e: Exception) {
+            Log.e("traditions", "Could not build the traditions report", e)
+            emptyList()
+        }
+        if (sections.isEmpty()) {
+            container.visibility = View.GONE
+            return
+        }
+        val inflater = layoutInflater
+        for (section in sections) {
+            val header = ItemTraditionHeaderBinding.inflate(inflater, container, false)
+            header.root.text = traditionTitle(requireContext(), section.tradition)
+            container.addView(header.root)
+            for (row in section.rows) {
+                val label = row.label
+                if (label == null) {
+                    val note = ItemTraditionNoteBinding.inflate(inflater, container, false)
+                    val marker = if (row.sentiment == Sentiment.CAUTIONARY) "◇" else "✦"
+                    note.root.text = getString(R.string.tradition_note_format, marker, row.value)
+                    container.addView(note.root)
+                } else {
+                    val line = ItemTraditionRowBinding.inflate(inflater, container, false)
+                    line.traditionLabel.text = getString(
+                        R.string.tradition_label_format,
+                        reportLabelText(requireContext(), label)
+                    )
+                    line.traditionValue.text = row.value
+                    container.addView(line.root)
+                }
+            }
+        }
+        container.visibility = View.VISIBLE
     }
 
     // Disable any astrology related view

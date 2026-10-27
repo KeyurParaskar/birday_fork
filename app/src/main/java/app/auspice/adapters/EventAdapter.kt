@@ -20,6 +20,7 @@ import app.auspice.model.EventCode
 import app.auspice.model.EventDataItem
 import app.auspice.model.EventResult
 import app.auspice.utilities.formatName
+import app.auspice.utilities.eventHighlights
 import app.auspice.utilities.getNextYears
 import app.auspice.utilities.getReducedDate
 import app.auspice.utilities.getYears
@@ -195,9 +196,15 @@ class EventAdapter(
                 else getReducedDate(event.originalDate).replaceFirstChar {
                     if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString()
                 }
-            // The original date row also has the current age
+            // The original date row also has the current age, plus what is special about this birthday
             eventPerson.text = formattedPersonName
-            eventDate.text = originalDate
+            val highlights = eventHighlights(sharedPrefs, event)
+            eventDate.text = if (highlights.isEmpty()) originalDate
+            else context.getString(
+                R.string.event_highlight_format,
+                originalDate,
+                highlights.take(2).joinToString(" · ") { it.title }
+            )
 
             // Manage the image
             val hideImages = sharedPrefs.getBoolean("hide_images", false)

@@ -1,0 +1,5 @@
+Traditions arrive in the app.
+- New "Traditions" section on each birthday: Western and Chinese astrology details, numerology, Mayan day sign, birthstones, weekday lore, Hijri date and this birthday's milestones
+- Event list and notifications highlight special birthdays, such as golden birthdays, Ben Ming Nian or kanreki
+- Choose which traditions to show, hide cautionary lore, and read the sources in Settings
+- New stats: most common zodiac element and Life Path number

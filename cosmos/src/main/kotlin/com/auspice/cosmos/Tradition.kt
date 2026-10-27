@@ -21,12 +21,14 @@ enum class Sentiment { AUSPICIOUS, NEUTRAL, CAUTIONARY }
 
 /**
  * A single, self-contained fact about a person or an upcoming birthday, ready to display.
- * [key] is a stable identifier (for example "western.sign.leo") the app maps to localised strings and icons;
- * [fallbackText] is an English rendering used when no localisation exists yet.
+ * [key] is a stable identifier (for example "milestone.golden") the app can map to localised strings and icons;
+ * [fallbackText] is a full English sentence used when no localisation exists yet;
+ * [title] is a two or three word English label short enough for a list row or a notification.
  */
 data class Insight(
     val tradition: Tradition,
     val key: String,
     val fallbackText: String,
     val sentiment: Sentiment = Sentiment.NEUTRAL,
+    val title: String = fallbackText,
 )

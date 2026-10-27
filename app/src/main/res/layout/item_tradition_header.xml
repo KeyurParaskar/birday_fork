@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Title of one tradition group on the details screen -->
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/in_row_padding"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/in_row_padding"
+    android:textAlignment="center"
+    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+    android:textColor="?attr/colorPrimary"
+    android:textStyle="bold" />

@@ -275,6 +275,17 @@
             app:layout_constraintStart_toEndOf="@id/detailsGuideline"
             app:layout_constraintTop_toTopOf="@id/detailsChineseSign" />
 
+        <!-- Traditions section, filled at runtime from the cosmos engine -->
+        <LinearLayout
+            android:id="@+id/detailsTraditions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsChineseSign" />
+
         <Button
             android:id="@+id/detailsContactButton"
             style="@style/Widget.Material3Expressive.Button.ElevatedButton"
@@ -293,7 +304,7 @@
             app:layout_constraintBottom_toTopOf="@id/detailsEditButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detailsChineseSign"
+            app:layout_constraintTop_toBottomOf="@id/detailsTraditions"
             app:layout_constraintVertical_bias="1"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintWidth_max="@dimen/details_button_max_width"

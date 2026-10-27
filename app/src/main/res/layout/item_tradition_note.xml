@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A full sentence of lore, such as a milestone for the coming birthday -->
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/in_row_padding"
+    android:padding="@dimen/in_row_padding"
+    android:textAlignment="center"
+    android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />

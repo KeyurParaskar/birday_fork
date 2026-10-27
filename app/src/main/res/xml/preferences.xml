@@ -70,16 +70,6 @@
             android:widgetLayout="@layout/preference_switch_widget"
             app:iconSpaceReserved="false" />
 
-        <!-- Disable astrology information -->
-        <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:key="disable_astrology"
-            android:summaryOff="@string/disable_astrology_description_off"
-            android:summaryOn="@string/disable_astrology_description_on"
-            android:title="@string/disable_astrology_title"
-            android:widgetLayout="@layout/preference_switch_widget"
-            app:iconSpaceReserved="false" />
-
         <!-- Advanced yearly calendar mode -->
         <SwitchPreferenceCompat
             android:defaultValue="false"
@@ -88,6 +78,51 @@
             android:summaryOn="@string/advanced_overview_description_on"
             android:title="@string/advanced_overview_title"
             android:widgetLayout="@layout/preference_switch_widget"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="traditions"
+        android:title="@string/traditions"
+        app:icon="@drawable/ic_traditions_24dp">
+
+        <!-- Master switch: hides every tradition, astrology included -->
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:disableDependentsState="true"
+            android:key="disable_astrology"
+            android:summaryOff="@string/disable_astrology_description_off"
+            android:summaryOn="@string/disable_astrology_description_on"
+            android:title="@string/disable_astrology_title"
+            android:widgetLayout="@layout/preference_switch_widget"
+            app:iconSpaceReserved="false" />
+
+        <MultiSelectListPreference
+            android:defaultValue="@array/traditionsDefaultValues"
+            android:dependency="disable_astrology"
+            android:entries="@array/traditions"
+            android:entryValues="@array/traditionsValues"
+            android:key="traditions_enabled"
+            android:summary="@string/traditions_enabled_description"
+            android:title="@string/traditions_enabled_title"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:dependency="disable_astrology"
+            android:key="traditions_show_cautionary"
+            android:summaryOff="@string/traditions_cautionary_description_off"
+            android:summaryOn="@string/traditions_cautionary_description_on"
+            android:title="@string/traditions_cautionary_title"
+            android:widgetLayout="@layout/preference_switch_widget"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="traditions_sources"
+            android:persistent="false"
+            android:summary="@string/traditions_sources_description"
+            android:title="@string/traditions_sources_title"
             app:iconSpaceReserved="false" />
 
     </PreferenceCategory>

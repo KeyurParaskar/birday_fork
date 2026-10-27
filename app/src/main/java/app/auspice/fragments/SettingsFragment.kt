@@ -17,6 +17,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.recyclerview.widget.RecyclerView
 import app.auspice.R
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import app.auspice.activities.MainActivity
 import app.auspice.utilities.addInsetsByPadding
 import app.auspice.viewmodels.MainViewModel
@@ -30,6 +31,17 @@ class SettingsFragment : PreferenceFragmentCompat(), OnSharedPreferenceChangeLis
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
+
+        // Sources and notes about the traditions
+        findPreference<Preference>("traditions_sources")?.setOnPreferenceClickListener {
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.traditions_sources_title)
+                .setIcon(R.drawable.ic_traditions_24dp)
+                .setMessage(getText(R.string.traditions_sources_text))
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+            true
+        }
 
         val experimentalPreference: Preference? = findPreference("experimental")
         experimentalPreference?.setOnPreferenceClickListener {

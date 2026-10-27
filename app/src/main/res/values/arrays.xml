@@ -75,4 +75,34 @@
 
     <string-array name="additionalNotificationDefaultValues">
     </string-array>
+
+    <!-- Traditions shown in the app, values match com.auspice.cosmos.Tradition -->
+    <string-array name="traditions">
+        <item>@string/tradition_western</item>
+        <item>@string/tradition_chinese</item>
+        <item>@string/tradition_numerology</item>
+        <item>@string/tradition_mayan</item>
+        <item>@string/tradition_birthstones</item>
+        <item>@string/tradition_day_lore</item>
+        <item>@string/tradition_islamic</item>
+        <item>@string/tradition_milestones</item>
+    </string-array>
+    <string-array name="traditionsValues" translatable="false">
+        <item>WESTERN_ASTROLOGY</item>
+        <item>CHINESE_ASTROLOGY</item>
+        <item>NUMEROLOGY</item>
+        <item>MAYAN</item>
+        <item>BIRTHSTONES_AND_FLOWERS</item>
+        <item>DAY_LORE</item>
+        <item>ISLAMIC_CALENDAR</item>
+        <item>MILESTONES_AND_SUPERSTITIONS</item>
+    </string-array>
+    <!-- Must match TraditionsReport.DEFAULT_ENABLED -->
+    <string-array name="traditionsDefaultValues" translatable="false">
+        <item>WESTERN_ASTROLOGY</item>
+        <item>CHINESE_ASTROLOGY</item>
+        <item>NUMEROLOGY</item>
+        <item>BIRTHSTONES_AND_FLOWERS</item>
+        <item>MILESTONES_AND_SUPERSTITIONS</item>
+    </string-array>
 </resources>

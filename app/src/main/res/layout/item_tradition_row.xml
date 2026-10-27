@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A "label: value" row, aligned like the zodiac rows above it -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="true"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/traditionLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/in_row_padding"
+        android:layout_weight="1"
+        android:padding="@dimen/in_row_padding"
+        android:textAlignment="viewEnd"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="?attr/colorOutline" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/traditionValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/in_row_padding"
+        android:layout_weight="1"
+        android:padding="@dimen/in_row_padding"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+
+</LinearLayout>

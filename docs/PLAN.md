@@ -17,8 +17,8 @@ philosophy, extended with a layer of cultural trivia that makes every birthday a
    origin note. Nothing is phrased as advice or prediction. Cautionary items (yakudoshi, Friday the 13th)
    get a neutral icon, never an alarming one.
 3. **Every tradition is optional.** Each tradition is a toggle in settings. A user who only wants the
-   Chinese zodiac can switch off everything else. Defaults: Western, Chinese, numerology and birthstones
-   on; the rest off until the user explores them.
+   Chinese zodiac can switch off everything else. Defaults: Western, Chinese, numerology, birthstones and
+   birthday milestones on; the rest off until the user explores them.
 4. **Respectful breadth.** Religious calendars (Islamic, Hebrew, Hindu) and cultural practices are
    described in their own terms, with sources in the About screen. Where a practice is sex-specific
    (yakudoshi), the app asks for nothing it does not already know: it shows the item only when the user
@@ -78,7 +78,7 @@ auspice/
 ```
 
 **Why a separate module.** The calculations are deterministic functions of a date and a name. Keeping them
-free of Android means they can be unit tested on the JVM in seconds (already done: 19 tests), reused by
+free of Android means they can be unit tested on the JVM in seconds (26 tests so far), reused by
 widgets and WorkManager workers without a Context, and later shared with a desktop or web build.
 
 **How the app uses it.** `CosmicProfile.of(date, fullName, lunarNewYearOf)` returns everything for the
@@ -120,13 +120,18 @@ plus "Show cautionary items" (default on). Reuses Birday's existing `astrologyDi
 
 ### Phase 1: show it in the app
 
-- [ ] "Traditions" section on the details screen rendering `CosmicProfile`, grouped by tradition, each
-      group collapsible with a one-line origin note.
-- [ ] "This year" note on the upcoming-birthday cards and in the notification text, from `Milestones`.
-- [ ] Settings: tradition toggles and the cautionary switch.
-- [ ] Localised strings for every `Insight.key` (English first; Crowdin project for the rest).
-- [ ] Extend statistics with the new tradition stats.
-- [ ] Sources screen in About listing where each tradition's rules come from.
+- [x] "Traditions" section on the details screen, built by `TraditionsReport` in cosmos and grouped by
+      tradition. Year-dependent traditions are skipped when the birth year is unknown.
+- [x] "This year" highlight on the event list cards and in single-event notifications (golden birthday,
+      Ben Ming Nian, kanreki and so on), from `TraditionsReport.highlights`.
+- [x] Settings: a Traditions category with the master switch, per-tradition toggles, a cautionary-lore
+      switch, and a "Sources and notes" dialog. Defaults: Western, Chinese, numerology, birthstones and
+      milestones on.
+- [x] Statistics: most common zodiac element and most common Life Path number.
+- [~] Localisation: section titles, row labels and settings are string resources, so they can be
+      translated. The values themselves (element names, stones, milestone sentences) still come from cosmos
+      in English; moving them to resources is part of the translation project.
+- [ ] Replace the store screenshots with ones showing the traditions section.
 
 ### Phase 2: depth
 
