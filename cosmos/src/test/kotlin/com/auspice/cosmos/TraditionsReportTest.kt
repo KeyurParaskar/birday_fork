@@ -16,7 +16,8 @@ class TraditionsReportTest {
 
     @Test fun fullReportWithKnownYear() {
         val s = TraditionsReport.build(birth, true, "John", LocalDate.of(2026, 8, 10), all, true)
-        assertEquals(TraditionsReport.AVAILABLE, s.map { it.tradition })
+        // Everything except personality, which needs a stored type
+        assertEquals(TraditionsReport.AVAILABLE - Tradition.PERSONALITY, s.map { it.tradition })
         val western = s.first { it.tradition == Tradition.WESTERN_ASTROLOGY }.rows
         assertEquals("Fire", western[0].value)
         assertEquals("Fixed", western[1].value)

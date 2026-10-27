@@ -378,6 +378,16 @@
     <string name="label_hebrew_date">Hebrew birth date</string>
     <string name="label_hebrew_birthday">Next Hebrew birthday</string>
     <string name="label_celtic_tree">Tree</string>
+    <string name="tradition_personality">Personality type</string>
+    <string name="label_personality_type">Type</string>
+    <string name="label_personality_preferences">Preferences</string>
+    <string name="label_personality_identity">Fifth letter</string>
+    <string name="label_exact_sun_sign">Exact Sun sign</string>
+    <string name="label_moon_sign">Moon sign</string>
+    <string name="label_rising_sign">Rising sign</string>
+    <string name="label_vedic_sun">Sun (sidereal)</string>
+    <string name="label_vedic_moon">Moon sign (rashi)</string>
+    <string name="label_nakshatra">Nakshatra</string>
     <string name="numerology_system_title">Numerology system</string>
     <string name="numerology_pythagorean">Pythagorean (Western)</string>
     <string name="numerology_chaldean">Chaldean</string>

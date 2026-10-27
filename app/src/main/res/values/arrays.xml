@@ -78,7 +78,9 @@
 
     <!-- Traditions shown in the app, values match com.auspice.cosmos.Tradition -->
     <string-array name="traditions">
+        <item>@string/tradition_personality</item>
         <item>@string/tradition_western</item>
+        <item>@string/tradition_vedic</item>
         <item>@string/tradition_chinese</item>
         <item>@string/tradition_numerology</item>
         <item>@string/tradition_mayan</item>
@@ -90,7 +92,9 @@
         <item>@string/tradition_milestones</item>
     </string-array>
     <string-array name="traditionsValues" translatable="false">
+        <item>PERSONALITY</item>
         <item>WESTERN_ASTROLOGY</item>
+        <item>VEDIC_ASTROLOGY</item>
         <item>CHINESE_ASTROLOGY</item>
         <item>NUMEROLOGY</item>
         <item>MAYAN</item>
@@ -103,6 +107,7 @@
     </string-array>
     <!-- Must match TraditionsReport.DEFAULT_ENABLED -->
     <string-array name="traditionsDefaultValues" translatable="false">
+        <item>PERSONALITY</item>
         <item>WESTERN_ASTROLOGY</item>
         <item>CHINESE_ASTROLOGY</item>
         <item>NUMEROLOGY</item>

@@ -5,6 +5,7 @@ package com.auspice.cosmos
  * these so the user can switch whole traditions on or off in the settings and so the UI can group them.
  */
 enum class Tradition {
+    PERSONALITY,
     WESTERN_ASTROLOGY,
     CHINESE_ASTROLOGY,
     VEDIC_ASTROLOGY,

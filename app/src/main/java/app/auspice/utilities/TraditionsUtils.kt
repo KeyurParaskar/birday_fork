@@ -130,6 +130,7 @@ fun eventHighlights(sharedPrefs: SharedPreferences, event: EventResult): List<In
 
 fun traditionTitle(context: Context, tradition: Tradition): String = context.getString(
     when (tradition) {
+        Tradition.PERSONALITY -> R.string.tradition_personality
         Tradition.WESTERN_ASTROLOGY -> R.string.tradition_western
         Tradition.CHINESE_ASTROLOGY -> R.string.tradition_chinese
         Tradition.VEDIC_ASTROLOGY -> R.string.tradition_vedic
@@ -146,6 +147,15 @@ fun traditionTitle(context: Context, tradition: Tradition): String = context.get
 
 fun reportLabelText(context: Context, label: ReportLabel): String = context.getString(
     when (label) {
+        ReportLabel.PERSONALITY_TYPE -> R.string.label_personality_type
+        ReportLabel.PERSONALITY_PREFERENCES -> R.string.label_personality_preferences
+        ReportLabel.PERSONALITY_IDENTITY -> R.string.label_personality_identity
+        ReportLabel.EXACT_SUN_SIGN -> R.string.label_exact_sun_sign
+        ReportLabel.MOON_SIGN -> R.string.label_moon_sign
+        ReportLabel.RISING_SIGN -> R.string.label_rising_sign
+        ReportLabel.VEDIC_SUN -> R.string.label_vedic_sun
+        ReportLabel.VEDIC_MOON -> R.string.label_vedic_moon
+        ReportLabel.NAKSHATRA -> R.string.label_nakshatra
         ReportLabel.ELEMENT -> R.string.label_element
         ReportLabel.MODALITY -> R.string.label_modality
         ReportLabel.RULING_PLANET -> R.string.label_ruling_planet

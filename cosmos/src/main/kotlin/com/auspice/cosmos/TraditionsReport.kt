@@ -1,6 +1,9 @@
 package com.auspice.cosmos
 
 import java.time.LocalDate
+import java.time.LocalTime
+import java.time.ZoneId
+import java.time.ZoneOffset
 import java.time.chrono.HijrahDate
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
@@ -10,6 +13,9 @@ import java.util.Locale
 
 /** The label of one row in a traditions section. The app maps each to a localised string. */
 enum class ReportLabel {
+    PERSONALITY_TYPE, PERSONALITY_PREFERENCES, PERSONALITY_IDENTITY,
+    EXACT_SUN_SIGN, MOON_SIGN, RISING_SIGN,
+    VEDIC_SUN, VEDIC_MOON, NAKSHATRA,
     ELEMENT, MODALITY, RULING_PLANET,
     BEST_MATCHES, CLASHES_WITH,
     LIFE_PATH, BIRTHDAY_NUMBER, ATTITUDE_NUMBER, PERSONAL_YEAR, EXPRESSION, SOUL_URGE, PERSONALITY, NUMEROLOGY_SYSTEM,
@@ -38,7 +44,9 @@ object TraditionsReport {
 
     /** Traditions the app can show today, in display order. Vedic astrology arrives in phase 3. */
     val AVAILABLE = listOf(
+        Tradition.PERSONALITY,
         Tradition.WESTERN_ASTROLOGY,
+        Tradition.VEDIC_ASTROLOGY,
         Tradition.CHINESE_ASTROLOGY,
         Tradition.NUMEROLOGY,
         Tradition.MAYAN,
@@ -52,6 +60,7 @@ object TraditionsReport {
 
     /** What a new user sees before touching the settings. */
     val DEFAULT_ENABLED = setOf(
+        Tradition.PERSONALITY,
         Tradition.WESTERN_ASTROLOGY,
         Tradition.CHINESE_ASTROLOGY,
         Tradition.NUMEROLOGY,
@@ -82,19 +91,65 @@ object TraditionsReport {
         numerologySystem: NumerologySystem = NumerologySystem.PYTHAGOREAN,
         sex: Sex = Sex.UNKNOWN,
         today: LocalDate = LocalDate.now(),
+        birthTime: LocalTime? = null,
+        birthPlace: BirthPlace? = null,
+        fallbackZone: ZoneId = ZoneOffset.UTC,
+        personality: String? = null,
     ): List<ReportSection> {
         val sections = mutableListOf<ReportSection>()
         fun add(tradition: Tradition, rows: List<ReportRow>) {
             if (tradition in enabled && rows.isNotEmpty()) sections += ReportSection(tradition, rows)
         }
 
-        // Western astrology needs only month and day
+        // Personality type, as the user entered it or as the test found it
+        PersonalityType.parse(personality)?.let { type ->
+            val rows = mutableListOf(
+                ReportRow(ReportLabel.PERSONALITY_TYPE, "${type.code}, the ${type.nickname}"),
+                ReportRow(null, type.summary),
+                ReportRow(ReportLabel.PERSONALITY_PREFERENCES, type.letters.mapIndexed { i, letter ->
+                    val d = Dimension.entries[i]
+                    if (letter == d.first) d.firstName else d.secondName
+                }.joinToString(", ")),
+            )
+            type.identity?.let {
+                rows += ReportRow(ReportLabel.PERSONALITY_IDENTITY, "${PersonalityType.identityName(it)}: ${PersonalityType.identitySummary(it)}")
+            }
+            add(Tradition.PERSONALITY, rows)
+        }
+
+        // The sky at birth needs the year; time and place sharpen it
+        val chart = if (yearKnown) runCatching {
+            BirthChart.compute(birthDate, birthTime, birthPlace, fallbackZone)
+        }.getOrNull() else null
+
+        // Western astrology needs only month and day; the chart adds Moon and rising signs
         val western = WesternSign.forDate(birthDate)
-        add(Tradition.WESTERN_ASTROLOGY, listOf(
+        val westernRows = mutableListOf(
             ReportRow(ReportLabel.ELEMENT, titleCase(western.element.name)),
             ReportRow(ReportLabel.MODALITY, titleCase(western.modality.name)),
             ReportRow(ReportLabel.RULING_PLANET, western.rulingPlanet),
-        ))
+        )
+        if (chart != null) {
+            // The usual date table can be a day off on a cusp; the Sun's real position settles it
+            if (chart.sunSigns != listOf(western)) {
+                westernRows += ReportRow(ReportLabel.EXACT_SUN_SIGN, orList(chart.sunSigns.map { titleCase(it.name) }, chart.exactTime))
+            }
+            westernRows += ReportRow(ReportLabel.MOON_SIGN, orList(chart.moonSigns.map { titleCase(it.name) }, chart.exactTime))
+            chart.risingSign?.let { westernRows += ReportRow(ReportLabel.RISING_SIGN, titleCase(it.name)) }
+        }
+        add(Tradition.WESTERN_ASTROLOGY, westernRows)
+
+        // Vedic astrology: the sidereal zodiac (Lahiri), Moon sign (janma rashi) and lunar mansion
+        if (chart != null) {
+            fun rashi(r: Rashi) = "${r.displayName} (${r.english})"
+            val nakshatra = if (chart.exactTime) chart.nakshatras.first().let { "${it.name}, pada ${it.pada}" }
+            else orList(chart.nakshatras.map { it.name }, false)
+            add(Tradition.VEDIC_ASTROLOGY, listOf(
+                ReportRow(ReportLabel.VEDIC_SUN, orList(chart.vedicSunSigns.map(::rashi), chart.exactTime)),
+                ReportRow(ReportLabel.VEDIC_MOON, orList(chart.vedicMoonSigns.map(::rashi), chart.exactTime)),
+                ReportRow(ReportLabel.NAKSHATRA, nakshatra),
+            ))
+        }
 
         // Chinese astrology needs the year
         if (yearKnown) {
@@ -224,4 +279,9 @@ object TraditionsReport {
     }.getOrNull()
 
     private fun titleCase(s: String) = s.lowercase().replaceFirstChar { it.uppercase() }
+
+    /** "Leo", or "Leo or Virgo (depends on the birth time)" when the day spans more than one. */
+    private fun orList(items: List<String>, exact: Boolean): String =
+        if (items.size <= 1 || exact) items.joinToString(" or ")
+        else items.joinToString(" or ") + " (depends on the birth time)"
 }
