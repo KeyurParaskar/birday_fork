@@ -319,7 +319,8 @@ class FavoritesFragment : Fragment() {
                     surname = event.surname,
                     favorite = event.favorite,
                     notes = note,
-                    image = event.image
+                    image = event.image,
+                    sex = event.sex,
                 )
                 mainViewModel.update(tuple)
                 dialog.dismiss()

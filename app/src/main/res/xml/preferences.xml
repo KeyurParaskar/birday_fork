@@ -118,6 +118,26 @@
             android:widgetLayout="@layout/preference_switch_widget"
             app:iconSpaceReserved="false" />
 
+        <ListPreference
+            android:defaultValue="PYTHAGOREAN"
+            android:dependency="disable_astrology"
+            android:entries="@array/numerologySystems"
+            android:entryValues="@array/numerologySystemValues"
+            android:key="numerology_system"
+            android:summary="%s"
+            android:title="@string/numerology_system_title"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:dependency="disable_astrology"
+            android:key="traditions_weekly_fact"
+            android:summaryOff="@string/weekly_fact_description_off"
+            android:summaryOn="@string/weekly_fact_description_on"
+            android:title="@string/weekly_fact_setting_title"
+            android:widgetLayout="@layout/preference_switch_widget"
+            app:iconSpaceReserved="false" />
+
         <Preference
             android:key="traditions_sources"
             android:persistent="false"

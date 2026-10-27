@@ -1,0 +1,7 @@
+More traditions and a compatibility view.
+- Hebrew calendar: Hebrew birth date and the next Hebrew birthday
+- Celtic tree calendar (a modern system, labelled as such)
+- Chaldean numerology as an alternative to Pythagorean
+- Compatibility: compare any two birthdays across Western, Chinese and numerology traditions
+- Optional sex field on birthdays, used for Japanese yakudoshi years
+- Weekly "did you know" notification about an upcoming birthday, off by default

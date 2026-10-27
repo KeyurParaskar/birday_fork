@@ -109,4 +109,13 @@
         <item>BIRTHSTONES_AND_FLOWERS</item>
         <item>MILESTONES_AND_SUPERSTITIONS</item>
     </string-array>
+
+    <string-array name="numerologySystems">
+        <item>@string/numerology_pythagorean</item>
+        <item>@string/numerology_chaldean</item>
+    </string-array>
+    <string-array name="numerologySystemValues" translatable="false">
+        <item>PYTHAGOREAN</item>
+        <item>CHALDEAN</item>
+    </string-array>
 </resources>

@@ -42,6 +42,7 @@ import app.auspice.utilities.StatsGenerator
 import app.auspice.utilities.addInsetsByPadding
 import app.auspice.utilities.byteArrayToBitmap
 import app.auspice.utilities.enabledTraditions
+import app.auspice.utilities.eventCompatibility
 import app.auspice.utilities.eventTraditionsReport
 import app.auspice.utilities.formatDaysRemaining
 import app.auspice.utilities.formatName
@@ -286,7 +287,8 @@ class DetailsFragment : Fragment() {
                         surname = event.surname,
                         favorite = event.favorite,
                         notes = note,
-                        image = event.image
+                        image = event.image,
+                        sex = event.sex,
                     )
                     mainViewModel.update(tuple)
                     // Update locally (no livedata here)
@@ -474,6 +476,21 @@ class DetailsFragment : Fragment() {
         // Everything the enabled traditions say about this person
         showTraditions(event)
 
+        // Compatibility with someone else, for birthdays when a comparable tradition is on
+        val comparable = setOf(
+            Tradition.WESTERN_ASTROLOGY,
+            Tradition.CHINESE_ASTROLOGY,
+            Tradition.NUMEROLOGY
+        )
+        val compatibilityButton = binding.detailsCompatibilityButton
+        compatibilityButton.visibility =
+            if (event.type == EventCode.BIRTHDAY.name && traditions.any { it in comparable }) View.VISIBLE
+            else View.GONE
+        compatibilityButton.setOnClickListener {
+            act.vibrate()
+            pickCompatibilityPartner(event)
+        }
+
         // Manage the predictive back between fragments
         val predictiveBackMargin = resources.getDimensionPixelSize(R.dimen.predictive_back_margin)
         var initialTouchY = -1f
@@ -595,6 +612,58 @@ class DetailsFragment : Fragment() {
             }
         }
         container.visibility = View.VISIBLE
+    }
+
+    // Let the user choose another birthday to compare with
+    private fun pickCompatibilityPartner(event: EventResult) {
+        val surnameFirst = sharedPrefs.getBoolean("surname_first", false)
+        val others = mainViewModel.allEventsUnfiltered.value.orEmpty()
+            .filter { it.type == EventCode.BIRTHDAY.name && it.id != event.id }
+            .sortedBy { formatName(it, surnameFirst).lowercase() }
+        if (others.isEmpty()) {
+            act.showSnackbar(getString(R.string.compatibility_no_one))
+            return
+        }
+        MaterialAlertDialogBuilder(act)
+            .setTitle(R.string.compatibility_pick)
+            .setIcon(R.drawable.ic_traditions_24dp)
+            .setItems(others.map { formatName(it, surnameFirst) }.toTypedArray()) { dialog, which ->
+                dialog.dismiss()
+                showCompatibility(event, others[which], surnameFirst)
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    // Show what the enabled traditions say about the pair
+    private fun showCompatibility(a: EventResult, b: EventResult, surnameFirst: Boolean) {
+        val result = eventCompatibility(sharedPrefs, a, b)
+        val lines = result?.items.orEmpty().map {
+            val marker = when (it.sentiment) {
+                Sentiment.AUSPICIOUS -> "✦"
+                Sentiment.CAUTIONARY -> "◇"
+                Sentiment.NEUTRAL -> "•"
+            }
+            getString(R.string.tradition_note_format, marker, it.fallbackText)
+        }
+        val summary = when {
+            result == null || lines.isEmpty() -> getString(R.string.compatibility_nothing)
+            result.score > 0 -> getString(R.string.compatibility_positive)
+            result.score < 0 -> getString(R.string.compatibility_negative)
+            else -> getString(R.string.compatibility_balanced)
+        }
+        MaterialAlertDialogBuilder(act)
+            .setTitle(
+                getString(
+                    R.string.compatibility_title,
+                    formatName(a, surnameFirst),
+                    formatName(b, surnameFirst)
+                )
+            )
+            .setIcon(R.drawable.ic_traditions_24dp)
+            .setMessage((listOf(summary) + lines).joinToString("\n\n"))
+            .setPositiveButton(android.R.string.ok, null)
+            .show()
     }
 
     // Disable any astrology related view

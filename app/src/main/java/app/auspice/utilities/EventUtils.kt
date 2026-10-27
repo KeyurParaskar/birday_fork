@@ -33,7 +33,8 @@ fun resultToEvent(eventResult: EventResult) = Event(
     originalDate = eventResult.originalDate,
     yearMatter = eventResult.yearMatter,
     notes = eventResult.notes,
-    image = eventResult.image
+    image = eventResult.image,
+    sex = eventResult.sex,
 )
 
 // Transform an event in a result event
@@ -47,7 +48,8 @@ fun eventToResult(event: Event) = EventResult(
     nextDate = getNextDate(event.originalDate),
     yearMatter = event.yearMatter,
     notes = event.notes,
-    image = event.image
+    image = event.image,
+    sex = event.sex,
 )
 
 // Simply returns the next date for a given date
@@ -74,7 +76,8 @@ fun normalizeEvent(event: Event): Event {
         notes = event.notes?.substring(IntRange(0, 500.coerceAtMost(event.notes.length) - 1)),
         originalDate = event.originalDate,
         yearMatter = event.yearMatter,
-        type = fixedType
+        type = fixedType,
+        sex = event.sex?.takeIf { it == "MALE" || it == "FEMALE" },
     )
 }
 

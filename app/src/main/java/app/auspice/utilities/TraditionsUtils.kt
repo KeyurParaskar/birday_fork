@@ -5,9 +5,14 @@ import android.content.SharedPreferences
 import app.auspice.R
 import app.auspice.model.EventCode
 import app.auspice.model.EventResult
+import com.auspice.cosmos.Compatibility
+import com.auspice.cosmos.CompatibilityResult
 import com.auspice.cosmos.Insight
+import com.auspice.cosmos.NumerologySystem
+import com.auspice.cosmos.Person
 import com.auspice.cosmos.ReportLabel
 import com.auspice.cosmos.ReportSection
+import com.auspice.cosmos.Sex
 import com.auspice.cosmos.Tradition
 import com.auspice.cosmos.TraditionsReport
 import java.time.LocalDate
@@ -19,6 +24,9 @@ import java.util.concurrent.ConcurrentHashMap
 const val PREF_TRADITIONS = "traditions_enabled"
 const val PREF_TRADITIONS_CAUTIONARY = "traditions_show_cautionary"
 const val PREF_DISABLE_ASTROLOGY = "disable_astrology"
+const val PREF_NUMEROLOGY_SYSTEM = "numerology_system"
+const val PREF_WEEKLY_FACT = "traditions_weekly_fact"
+const val PREF_WEEKLY_FACT_LAST = "traditions_weekly_fact_last"
 
 /**
  * Gregorian date of the Chinese New Year falling in the given Gregorian year, found with the same
@@ -56,6 +64,34 @@ fun enabledTraditions(sharedPrefs: SharedPreferences): Set<Tradition> {
 fun showCautionaryLore(sharedPrefs: SharedPreferences) =
     sharedPrefs.getBoolean(PREF_TRADITIONS_CAUTIONARY, true)
 
+fun numerologySystem(sharedPrefs: SharedPreferences): NumerologySystem =
+    NumerologySystem.entries.firstOrNull { it.name == sharedPrefs.getString(PREF_NUMEROLOGY_SYSTEM, null) }
+        ?: NumerologySystem.PYTHAGOREAN
+
+// The stored value is MALE, FEMALE or null
+fun eventSex(event: EventResult): Sex = when (event.sex) {
+    "MALE" -> Sex.MALE
+    "FEMALE" -> Sex.FEMALE
+    else -> Sex.UNKNOWN
+}
+
+// What traditions say about two people, null when either is not a birthday
+fun eventCompatibility(sharedPrefs: SharedPreferences, a: EventResult, b: EventResult): CompatibilityResult? {
+    if (a.type != EventCode.BIRTHDAY.name || b.type != EventCode.BIRTHDAY.name) return null
+    fun person(e: EventResult) = Person(e.name, e.originalDate, e.yearMatter == true)
+    return try {
+        Compatibility.between(
+            person(a),
+            person(b),
+            enabledTraditions(sharedPrefs),
+            showCautionaryLore(sharedPrefs),
+            LunarNewYear::of,
+        )
+    } catch (_: Exception) {
+        null
+    }
+}
+
 // The full traditions report for the details screen, empty for anything that isn't a birthday
 fun eventTraditionsReport(sharedPrefs: SharedPreferences, event: EventResult): List<ReportSection> {
     if (event.type != EventCode.BIRTHDAY.name) return emptyList()
@@ -69,6 +105,8 @@ fun eventTraditionsReport(sharedPrefs: SharedPreferences, event: EventResult): L
         showCautionary = showCautionaryLore(sharedPrefs),
         locale = Locale.getDefault(),
         lunarNewYearOf = LunarNewYear::of,
+        numerologySystem = numerologySystem(sharedPrefs),
+        sex = eventSex(event),
     )
 }
 
@@ -83,6 +121,7 @@ fun eventHighlights(sharedPrefs: SharedPreferences, event: EventResult): List<In
             enabled = enabledTraditions(sharedPrefs),
             showCautionary = showCautionaryLore(sharedPrefs),
             lunarNewYearOf = LunarNewYear::of,
+            sex = eventSex(event),
         )
     } catch (_: Exception) {
         emptyList()

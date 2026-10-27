@@ -78,7 +78,7 @@ auspice/
 ```
 
 **Why a separate module.** The calculations are deterministic functions of a date and a name. Keeping them
-free of Android means they can be unit tested on the JVM in seconds (26 tests so far), reused by
+free of Android means they can be unit tested on the JVM in seconds (38 tests so far), reused by
 widgets and WorkManager workers without a Context, and later shared with a desktop or web build.
 
 **How the app uses it.** `CosmicProfile.of(date, fullName, lunarNewYearOf)` returns everything for the
@@ -135,13 +135,19 @@ plus "Show cautionary items" (default on). Reuses Birday's existing `astrologyDi
 
 ### Phase 2: depth
 
-- [ ] Hebrew calendar (port of a known algorithm; unit tested against published dates).
-- [ ] Chaldean numerology as an alternative system.
-- [ ] Compatibility view for two people.
-- [ ] Weekly "did you know" notification.
-- [ ] Optional `sex` field on the contact (yakudoshi becomes visible).
-- [ ] Celtic tree calendar, Native American "medicine wheel" animals and similar modern systems, clearly
-      labelled as modern inventions.
+- [x] Hebrew calendar: Hebrew birth date and next Hebrew birthday. Ported from Calendrical Calculations
+      and verified day by day from 1900 to 2100 against ICU, and every Rosh Hashanah from year 4000 to 7000
+      against an independent implementation of the classical postponement rules. ICU 77 differs on one
+      year only (5807, in 2046); both of our implementations agree on the date and the test documents it.
+- [x] Chaldean numerology as an alternative system, with compound name numbers. Chosen in Settings.
+- [x] Compatibility view for two people, from the details screen: Western elements, Chinese trines,
+      secret friends and clashes, and Life Path families.
+- [x] Weekly "did you know" notification on Mondays, off by default.
+- [x] Optional sex field on birthdays (database version 12, included in JSON backups), so yakudoshi shows.
+- [x] Celtic tree calendar, labelled as a modern construction (Graves, 1948).
+- [ ] ~~Native American "medicine wheel" animals~~: dropped. It is a 1980 invention by Sun Bear that many
+      Native American nations regard as cultural appropriation, which conflicts with principle 4 above.
+      It is easy to add later as one more cosmos calculator if wanted.
 
 ### Phase 3: astronomy
 

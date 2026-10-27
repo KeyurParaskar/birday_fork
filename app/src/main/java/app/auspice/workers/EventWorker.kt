@@ -21,7 +21,14 @@ import app.auspice.persistence.EventDao
 import app.auspice.persistence.EventDatabase
 import app.auspice.receivers.NotificationActionReceiver
 import app.auspice.utilities.byteArrayToBitmap
+import app.auspice.utilities.PREF_WEEKLY_FACT
+import app.auspice.utilities.PREF_WEEKLY_FACT_LAST
 import app.auspice.utilities.eventHighlights
+import app.auspice.utilities.eventTraditionsReport
+import app.auspice.utilities.formatName
+import app.auspice.utilities.reportLabelText
+import androidx.core.content.edit
+import java.time.DayOfWeek
 import app.auspice.utilities.formatDaysRemaining
 import app.auspice.utilities.formatEventList
 import app.auspice.utilities.getCircularBitmap
@@ -131,6 +138,9 @@ class EventWorker(context: Context, params: WorkerParameters) : Worker(context, 
                         )
                     }
             }
+
+            // Once a week, on Monday, share a tradition about someone whose birthday is coming up
+            if (sharedPrefs.getBoolean(PREF_WEEKLY_FACT, false)) sendWeeklyFact(allEvents, surnameFirst)
 
             // Set Execution at the time specified + 15 seconds to avoid midnight problems
             dueDate.set(Calendar.HOUR_OF_DAY, workHour)
@@ -272,6 +282,60 @@ class EventWorker(context: Context, params: WorkerParameters) : Worker(context, 
         }
     }
 
+    // A weekly "did you know" built from the traditions of the next week's birthdays. Never fails the worker
+    private fun sendWeeklyFact(allEvents: List<EventResult>, surnameFirst: Boolean) {
+        try {
+            val today = LocalDate.now()
+            if (today.dayOfWeek != DayOfWeek.MONDAY) return
+            val sharedPrefs = PreferenceManager.getDefaultSharedPreferences(applicationContext)
+            if (sharedPrefs.getString(PREF_WEEKLY_FACT_LAST, "") == today.toString()) return
+            // Birthdays in the next seven days, excluding today's (they have their own notification) and ignored ones
+            val upcoming = allEvents.filter {
+                val next = it.nextDate ?: return@filter false
+                it.favorite != null && next.isAfter(today) && !next.isAfter(today.plusDays(7))
+            }
+            if (upcoming.isEmpty()) return
+            // Prefer a milestone for the coming birthday, otherwise a random fact from someone's traditions
+            val withHighlight = upcoming.firstNotNullOfOrNull { e ->
+                eventHighlights(sharedPrefs, e).firstOrNull()?.let { e to it.fallbackText }
+            }
+            val (person, fact) = withHighlight ?: upcoming.shuffled().firstNotNullOfOrNull { e ->
+                eventTraditionsReport(sharedPrefs, e)
+                    .flatMap { it.rows }
+                    .filter { it.label != null }
+                    .randomOrNull()
+                    ?.let { row -> e to "${reportLabelText(applicationContext, row.label!!)}: ${row.value}" }
+            } ?: return
+            val text = applicationContext.getString(
+                R.string.weekly_fact_text,
+                formatName(person, surnameFirst),
+                formatDaysRemaining(getRemainingDays(person.nextDate!!), applicationContext),
+                fact
+            )
+            val intent = Intent(applicationContext, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            val pendingIntent =
+                PendingIntent.getActivity(applicationContext, 1, intent, PendingIntent.FLAG_IMMUTABLE)
+            val builder = NotificationCompat.Builder(applicationContext, "events_channel")
+                .setSmallIcon(R.drawable.static_notification_icon)
+                .setContentTitle(applicationContext.getString(R.string.weekly_fact_title))
+                .setContentText(text)
+                .setStyle(NotificationCompat.BigTextStyle().bigText(text))
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+            if (ActivityCompat.checkSelfPermission(
+                    applicationContext,
+                    Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) return
+            NotificationManagerCompat.from(applicationContext).notify(WEEKLY_FACT_ID, builder.build())
+            sharedPrefs.edit { putString(PREF_WEEKLY_FACT_LAST, today.toString()) }
+        } catch (_: Exception) {
+            // A missed fact is harmless; the daily reminders must keep working
+        }
+    }
+
     // Notification for upcoming events, also considering
     private fun formulateAdditionalNotificationText(
         nextEvents: List<EventResult>,
@@ -301,4 +365,9 @@ class EventWorker(context: Context, params: WorkerParameters) : Worker(context, 
                 nextEvents, surnameFirst, applicationContext
             ) + ". "
         }
+
+    companion object {
+        // Far from the ids used by event notifications
+        private const val WEEKLY_FACT_ID = 9001
+    }
 }

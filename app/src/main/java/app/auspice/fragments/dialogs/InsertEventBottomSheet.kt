@@ -101,6 +101,8 @@ class InsertEventBottomSheet(
         val negativeButton = binding.negativeButton
         val eventImage = binding.imageEvent
         var typeValue = EventCode.BIRTHDAY.name
+        // Optional sex for birthdays: null, MALE or FEMALE
+        var sexValue: String? = event?.sex
         positiveButton.isEnabled = false
 
         if (event != null) {
@@ -141,7 +143,8 @@ class InsertEventBottomSheet(
                 surname = surnameValue.smartFixName(),
                 favorite = event.favorite,
                 notes = event.notes,
-                image = image
+                image = image,
+                sex = if (typeValue == EventCode.BIRTHDAY.name) sexValue else null,
             ) else
                 Event(
                     id = 0,
@@ -151,6 +154,7 @@ class InsertEventBottomSheet(
                     yearMatter = countYearValue,
                     type = typeValue,
                     image = image,
+                    sex = if (typeValue == EventCode.BIRTHDAY.name) sexValue else null,
                 )
             // Insert using another thread
             val thread = Thread {
@@ -174,6 +178,23 @@ class InsertEventBottomSheet(
         val eventDate = binding.dateEvent
         val countYear = binding.countYearSwitch
 
+        // The sex dropdown: shown only for birthdays, "not set" by default
+        val sexLayout = binding.sexEventLayout
+        val sexCodes = listOf<String?>(null, "MALE", "FEMALE")
+        val sexLabels = listOf(
+            getString(R.string.sex_not_set),
+            getString(R.string.sex_male),
+            getString(R.string.sex_female),
+        )
+        with(binding.sexEvent) {
+            setAdapter(ArrayAdapter(act, R.layout.event_type_list_item, sexLabels))
+            setText(sexLabels[sexCodes.indexOf(sexValue).coerceAtLeast(0)], false)
+            onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+                sexValue = sexCodes[position]
+            }
+        }
+        sexLayout.visibility = if (typeValue == EventCode.BIRTHDAY.name) View.VISIBLE else View.GONE
+
         // Set the dropdown to show the available event types
         val items = getAvailableTypes(act)
         val eventTypeAdapter = ArrayAdapter(act, R.layout.event_type_list_item, items)
@@ -183,6 +204,8 @@ class InsertEventBottomSheet(
             onItemClickListener =
                 AdapterView.OnItemClickListener { _, _, position, _ ->
                     typeValue = items[position].codeName.name
+                    sexLayout.visibility =
+                        if (typeValue == EventCode.BIRTHDAY.name) View.VISIBLE else View.GONE
                     // Automatically uncheck "the year matters" for name days
                     if (typeValue == EventCode.NAME_DAY.name) {
                         countYear.isChecked = false

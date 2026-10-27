@@ -242,6 +242,41 @@
                 app:switchPadding="@dimen/text_switch_padding"
                 app:switchTextAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
+            <!-- Optional, only for birthdays: some traditions differ by sex (yakudoshi) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sexEventLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/insert_sex_hint"
+                android:labelFor="@+id/sexEvent"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxCornerRadiusBottomEnd="@dimen/text_field_corner"
+                app:boxCornerRadiusBottomStart="@dimen/text_field_corner"
+                app:boxCornerRadiusTopEnd="@dimen/text_field_corner"
+                app:boxCornerRadiusTopStart="@dimen/text_field_corner"
+                app:helperText="@string/insert_sex_helper"
+                app:helperTextEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="?attr/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/countYearSwitch"
+                app:startIconDrawable="@drawable/ic_traditions_24dp"
+                app:startIconTint="?attr/colorOutline">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sexEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:padding="0dp"
+                    android:textCursorDrawable="@drawable/custom_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <Button
                 android:id="@+id/positiveButton"
                 style="@style/Widget.Material3Expressive.Button.TextButton"
@@ -251,7 +286,7 @@
                 android:text="@string/insert_event"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/countYearSwitch" />
+                app:layout_constraintTop_toBottomOf="@id/sexEventLayout" />
 
             <Button
                 android:id="@+id/negativeButton"
