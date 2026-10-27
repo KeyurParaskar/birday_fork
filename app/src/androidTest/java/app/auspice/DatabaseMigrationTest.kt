@@ -14,8 +14,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 /**
- * Upgrading from Birday's database (version 11) to Auspice's (version 12) must keep every event and add the
- * optional sex column. The version 11 schema below is exactly what Room generated for Birday's Event entity.
+ * Upgrading from Birday's database (version 11) to Auspice's current one must keep every event and add the
+ * optional columns (sex in 12; birth time, place and personality in 13). The version 11 schema below is exactly what Room generated for Birday's Event entity.
  */
 @RunWith(AndroidJUnit4::class)
 class DatabaseMigrationTest {
@@ -76,10 +76,32 @@ class DatabaseMigrationTest {
         assertEquals("Lovelace", ada.surname)
         assertEquals("Likes engines", ada.notes)
         assertEquals(true, ada.favorite)
-        assertNull("The new column starts empty", ada.sex)
+        // Columns added in versions 12 and 13 start empty
+        assertNull(ada.sex)
+        assertNull(ada.birthTime)
+        assertNull(ada.birthPlace)
+        assertNull(ada.birthLatitude)
+        assertNull(ada.birthZone)
+        assertNull(ada.personality)
 
-        // The new column can be written and read back
-        dao.updateEventReplace(resultToEvent(ada).copy(sex = "FEMALE"))
-        assertEquals("FEMALE", dao.getOrderedEventsStatic()[0].sex)
+        // and can be written and read back
+        dao.updateEventReplace(
+            resultToEvent(ada).copy(
+                sex = "FEMALE",
+                birthTime = "06:30",
+                birthPlace = "London, United Kingdom",
+                birthLatitude = 51.51,
+                birthLongitude = -0.13,
+                birthZone = "Europe/London",
+                personality = "INTJ-A",
+            )
+        )
+        val updated = dao.getOrderedEventsStatic()[0]
+        assertEquals("FEMALE", updated.sex)
+        assertEquals("06:30", updated.birthTime)
+        assertEquals(51.51, updated.birthLatitude!!, 1e-9)
+        assertEquals("Europe/London", updated.birthZone)
+        assertEquals("INTJ-A", updated.personality)
+        assertEquals("Likes engines", updated.notes)
     }
 }

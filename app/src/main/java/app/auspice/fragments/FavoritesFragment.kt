@@ -16,6 +16,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import app.auspice.R
+import app.auspice.utilities.resultToEvent
 import app.auspice.activities.MainActivity
 import app.auspice.adapters.FavoritesAdapter
 import app.auspice.animators.BirdayRecyclerAnimator
@@ -310,18 +311,8 @@ class FavoritesFragment : Fragment() {
             .setIcon(R.drawable.ic_note_24dp)
             .setPositiveButton(resources.getString(android.R.string.ok)) { dialog, _ ->
                 val note = noteTextField.text.toString().trim()
-                val tuple = Event(
-                    id = event.id,
-                    type = event.type,
-                    originalDate = event.originalDate,
-                    name = event.name,
-                    yearMatter = event.yearMatter,
-                    surname = event.surname,
-                    favorite = event.favorite,
-                    notes = note,
-                    image = event.image,
-                    sex = event.sex,
-                )
+                // Copy everything and change only the notes, so no other field is lost
+                val tuple = resultToEvent(event).copy(notes = note)
                 mainViewModel.update(tuple)
                 dialog.dismiss()
             }

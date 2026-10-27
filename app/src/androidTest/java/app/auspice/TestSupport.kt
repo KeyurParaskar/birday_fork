@@ -27,6 +27,8 @@ object TestSupport {
         originalDate = inAMonth.withYear(1990),
         yearMatter = true,
         sex = "FEMALE",
+        // Four letters known, fifth unknown, so the fifth-letter test has something to complete
+        personality = "INTJ",
     )
     val grace = Event(
         id = 2,

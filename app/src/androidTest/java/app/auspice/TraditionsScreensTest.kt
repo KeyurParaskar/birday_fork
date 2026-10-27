@@ -12,7 +12,9 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.RootMatchers.isDialog
 import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
+import androidx.test.espresso.matcher.ViewMatchers.Visibility
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -104,9 +106,58 @@ class TraditionsScreensTest {
     }
 
     @Test
-    fun insertSheetOffersTheOptionalSexField() {
+    fun insertSheetOffersTheOptionalBirthdayFields() {
         onView(withId(R.id.fab)).perform(click())
         onView(withId(R.id.sexEventLayout)).check(matches(isDisplayed()))
+        onView(withId(R.id.birthTimeLayout)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+        onView(withId(R.id.birthPlaceLayout)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
         TestSupport.screenshot("07_insert_sheet")
+    }
+
+    private fun openPersonalityMenu() {
+        openDetailsOfAda()
+        onView(withId(R.id.detailsPersonalityButton)).perform(scrollTo(), click())
+    }
+
+    @Test
+    fun personalityTypeCanBeEnteredDirectly() {
+        openPersonalityMenu()
+        TestSupport.screenshot("08_personality_menu")
+        onView(withText("Enter the type")).inRoot(isDialog()).perform(click())
+        onView(withText("ISTJ, the Steward")).inRoot(isDialog()).perform(click())
+        onView(withText("Assertive (A)")).inRoot(isDialog()).perform(click())
+        onView(withText("ISTJ-A, the Steward")).perform(scrollTo()).check(matches(isDisplayed()))
+        TestSupport.screenshot("09_personality_entered")
+    }
+
+    @Test
+    fun fullTestGivesTheTieBreakTypeForNeutralAnswers() {
+        openPersonalityMenu()
+        onView(withText("Take the full test (50 statements)")).inRoot(isDialog()).perform(click())
+        TestSupport.screenshot("10_personality_test_question")
+        repeat(50) {
+            onView(withId(R.id.testAnswer3)).perform(click())
+            onView(withId(R.id.testNext)).perform(click())
+        }
+        // Neutral everywhere ties every dimension, which resolves to I, N, F, P and T
+        onView(withId(R.id.testResultType)).check(matches(withText("INFP-T")))
+        TestSupport.screenshot("11_personality_test_result")
+        onView(withId(R.id.testSave)).perform(click())
+        onView(withText("INFP-T, the Idealist")).perform(scrollTo()).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun fifthLetterTestCompletesAKnownType() {
+        openPersonalityMenu()
+        onView(withText("Find only the fifth letter (10 statements)")).inRoot(isDialog()).perform(click())
+        // Statements alternate: assertive-keyed first, then turbulent-keyed
+        repeat(10) { i ->
+            onView(withId(if (i % 2 == 0) R.id.testAnswer5 else R.id.testAnswer1)).perform(click())
+            onView(withId(R.id.testNext)).perform(click())
+        }
+        onView(withId(R.id.testResultType)).check(matches(withText("INTJ-A")))
+        TestSupport.screenshot("12_fifth_letter_result")
+        onView(withId(R.id.testSave)).perform(click())
+        onView(withText("INTJ-A, the Strategist")).perform(scrollTo()).check(matches(isDisplayed()))
     }
 }

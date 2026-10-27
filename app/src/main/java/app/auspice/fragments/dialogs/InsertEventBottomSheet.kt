@@ -1,5 +1,11 @@
 package app.auspice.fragments.dialogs
 
+import android.text.format.DateFormat
+import androidx.core.widget.doAfterTextChanged
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
+import com.auspice.cosmos.Places
+import java.time.LocalTime
 import android.graphics.Bitmap
 import android.graphics.ImageDecoder
 import android.media.ThumbnailUtils
@@ -103,6 +109,12 @@ class InsertEventBottomSheet(
         var typeValue = EventCode.BIRTHDAY.name
         // Optional sex for birthdays: null, MALE or FEMALE
         var sexValue: String? = event?.sex
+        // Optional birth time ("HH:mm") and place (label, coordinates and time zone), birthdays only
+        var birthTimeValue: String? = event?.birthTime
+        var placeLabel: String? = event?.birthPlace
+        var placeLatitude: Double? = event?.birthLatitude
+        var placeLongitude: Double? = event?.birthLongitude
+        var placeZone: String? = event?.birthZone
         positiveButton.isEnabled = false
 
         if (event != null) {
@@ -145,6 +157,12 @@ class InsertEventBottomSheet(
                 notes = event.notes,
                 image = image,
                 sex = if (typeValue == EventCode.BIRTHDAY.name) sexValue else null,
+                birthTime = if (typeValue == EventCode.BIRTHDAY.name) birthTimeValue else null,
+                birthPlace = if (typeValue == EventCode.BIRTHDAY.name) placeLabel else null,
+                birthLatitude = if (typeValue == EventCode.BIRTHDAY.name) placeLatitude else null,
+                birthLongitude = if (typeValue == EventCode.BIRTHDAY.name) placeLongitude else null,
+                birthZone = if (typeValue == EventCode.BIRTHDAY.name) placeZone else null,
+                personality = event.personality,
             ) else
                 Event(
                     id = 0,
@@ -155,6 +173,11 @@ class InsertEventBottomSheet(
                     type = typeValue,
                     image = image,
                     sex = if (typeValue == EventCode.BIRTHDAY.name) sexValue else null,
+                    birthTime = if (typeValue == EventCode.BIRTHDAY.name) birthTimeValue else null,
+                    birthPlace = if (typeValue == EventCode.BIRTHDAY.name) placeLabel else null,
+                    birthLatitude = if (typeValue == EventCode.BIRTHDAY.name) placeLatitude else null,
+                    birthLongitude = if (typeValue == EventCode.BIRTHDAY.name) placeLongitude else null,
+                    birthZone = if (typeValue == EventCode.BIRTHDAY.name) placeZone else null,
                 )
             // Insert using another thread
             val thread = Thread {
@@ -195,6 +218,63 @@ class InsertEventBottomSheet(
         }
         sexLayout.visibility = if (typeValue == EventCode.BIRTHDAY.name) View.VISIBLE else View.GONE
 
+        // Birth time: a time picker, cleared with the end icon
+        val birthTimeLayout = binding.birthTimeLayout
+        val birthTimeField = binding.birthTimeEvent
+        birthTimeField.setText(birthTimeValue ?: "")
+        birthTimeField.setOnClickListener {
+            val current = birthTimeValue?.let { runCatching { LocalTime.parse(it) }.getOrNull() } ?: LocalTime.NOON
+            val picker = MaterialTimePicker.Builder()
+                .setTimeFormat(
+                    if (DateFormat.is24HourFormat(act)) TimeFormat.CLOCK_24H else TimeFormat.CLOCK_12H
+                )
+                .setHour(current.hour)
+                .setMinute(current.minute)
+                .setTitleText(R.string.insert_birth_time_hint)
+                .build()
+            picker.addOnPositiveButtonClickListener {
+                val picked = LocalTime.of(picker.hour, picker.minute)
+                birthTimeValue = picked.toString()
+                birthTimeField.setText(birthTimeValue)
+            }
+            picker.show(childFragmentManager, "birth_time_picker")
+        }
+        birthTimeLayout.setEndIconOnClickListener {
+            birthTimeValue = null
+            birthTimeField.setText("")
+        }
+
+        // Birth place: a searchable list of built-in cities, cleared with the end icon
+        val birthPlaceLayout = binding.birthPlaceLayout
+        val birthPlaceField = binding.birthPlaceEvent
+        val placeAdapter = ArrayAdapter(act, R.layout.event_type_list_item, Places.ALL.map { it.label })
+        birthPlaceField.setAdapter(placeAdapter)
+        birthPlaceField.setText(placeLabel ?: "", false)
+        birthPlaceField.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            // The adapter is filtered, so read the label from it rather than from the full list
+            val place = Places.byLabel(placeAdapter.getItem(position))
+            placeLabel = place?.label
+            placeLatitude = place?.latitude
+            placeLongitude = place?.longitude
+            placeZone = place?.zoneId
+        }
+        birthPlaceField.doAfterTextChanged { text ->
+            // Typing something that is not the chosen city forgets the choice
+            if (text.toString() != placeLabel) {
+                placeLabel = null
+                placeLatitude = null
+                placeLongitude = null
+                placeZone = null
+            }
+        }
+        birthPlaceLayout.setEndIconOnClickListener {
+            birthPlaceField.setText("", false)
+        }
+        val birthdayOnly = listOf(sexLayout, birthTimeLayout, birthPlaceLayout)
+        birthdayOnly.forEach {
+            it.visibility = if (typeValue == EventCode.BIRTHDAY.name) View.VISIBLE else View.GONE
+        }
+
         // Set the dropdown to show the available event types
         val items = getAvailableTypes(act)
         val eventTypeAdapter = ArrayAdapter(act, R.layout.event_type_list_item, items)
@@ -204,8 +284,10 @@ class InsertEventBottomSheet(
             onItemClickListener =
                 AdapterView.OnItemClickListener { _, _, position, _ ->
                     typeValue = items[position].codeName.name
-                    sexLayout.visibility =
-                        if (typeValue == EventCode.BIRTHDAY.name) View.VISIBLE else View.GONE
+                    birthdayOnly.forEach {
+                        it.visibility =
+                            if (typeValue == EventCode.BIRTHDAY.name) View.VISIBLE else View.GONE
+                    }
                     // Automatically uncheck "the year matters" for name days
                     if (typeValue == EventCode.NAME_DAY.name) {
                         countYear.isChecked = false

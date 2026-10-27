@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import app.auspice.R
 import app.auspice.model.EventCode
 import app.auspice.model.EventResult
+import com.auspice.cosmos.BirthPlace
 import com.auspice.cosmos.Compatibility
 import com.auspice.cosmos.CompatibilityResult
 import com.auspice.cosmos.Insight
@@ -16,6 +17,8 @@ import com.auspice.cosmos.Sex
 import com.auspice.cosmos.Tradition
 import com.auspice.cosmos.TraditionsReport
 import java.time.LocalDate
+import java.time.LocalTime
+import java.time.ZoneId
 import java.util.Locale
 import java.util.concurrent.ConcurrentHashMap
 
@@ -75,6 +78,18 @@ fun eventSex(event: EventResult): Sex = when (event.sex) {
     else -> Sex.UNKNOWN
 }
 
+// "HH:mm" to a time, null when missing or malformed
+fun eventBirthTime(event: EventResult): LocalTime? =
+    event.birthTime?.let { runCatching { LocalTime.parse(it) }.getOrNull() }
+
+// The stored birth place, when it has coordinates and a valid time zone
+fun eventBirthPlace(event: EventResult): BirthPlace? {
+    val latitude = event.birthLatitude ?: return null
+    val longitude = event.birthLongitude ?: return null
+    val zone = event.birthZone?.takeIf { runCatching { ZoneId.of(it) }.isSuccess } ?: return null
+    return BirthPlace(event.birthPlace ?: "", "", latitude, longitude, zone)
+}
+
 // What traditions say about two people, null when either is not a birthday
 fun eventCompatibility(sharedPrefs: SharedPreferences, a: EventResult, b: EventResult): CompatibilityResult? {
     if (a.type != EventCode.BIRTHDAY.name || b.type != EventCode.BIRTHDAY.name) return null
@@ -107,6 +122,11 @@ fun eventTraditionsReport(sharedPrefs: SharedPreferences, event: EventResult): L
         lunarNewYearOf = LunarNewYear::of,
         numerologySystem = numerologySystem(sharedPrefs),
         sex = eventSex(event),
+        birthTime = eventBirthTime(event),
+        birthPlace = eventBirthPlace(event),
+        // Without a birth place, the phone's time zone sets the limits of the birth day
+        fallbackZone = ZoneId.systemDefault(),
+        personality = event.personality,
     )
 }
 

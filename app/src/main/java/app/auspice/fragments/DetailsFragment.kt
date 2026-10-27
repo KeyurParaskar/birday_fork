@@ -34,6 +34,7 @@ import app.auspice.databinding.ItemTraditionHeaderBinding
 import app.auspice.databinding.ItemTraditionNoteBinding
 import app.auspice.databinding.ItemTraditionRowBinding
 import app.auspice.fragments.dialogs.InsertEventBottomSheet
+import app.auspice.fragments.dialogs.PersonalityTestBottomSheet
 import app.auspice.model.Event
 import app.auspice.model.EventCode
 import app.auspice.model.EventResult
@@ -56,6 +57,7 @@ import app.auspice.utilities.reportLabelText
 import app.auspice.utilities.traditionTitle
 import app.auspice.utilities.resultToEvent
 import app.auspice.viewmodels.MainViewModel
+import com.auspice.cosmos.PersonalityType
 import com.auspice.cosmos.Sentiment
 import com.auspice.cosmos.Tradition
 import java.time.format.DateTimeFormatter
@@ -278,18 +280,8 @@ class DetailsFragment : Fragment() {
                 .setIcon(R.drawable.ic_note_24dp)
                 .setPositiveButton(resources.getString(android.R.string.ok)) { dialog, _ ->
                     val note = noteTextField.text.toString().trim()
-                    val tuple = Event(
-                        id = event.id,
-                        type = event.type,
-                        originalDate = event.originalDate,
-                        name = event.name,
-                        yearMatter = event.yearMatter,
-                        surname = event.surname,
-                        favorite = event.favorite,
-                        notes = note,
-                        image = event.image,
-                        sex = event.sex,
-                    )
+                    // Copy everything and change only the notes, so no other field is lost
+                    val tuple = resultToEvent(event).copy(notes = note)
                     mainViewModel.update(tuple)
                     // Update locally (no livedata here)
                     event.notes = note
@@ -491,6 +483,16 @@ class DetailsFragment : Fragment() {
             pickCompatibilityPartner(event)
         }
 
+        // Personality type: enter it, take the test, or find just the fifth letter
+        val personalityButton = binding.detailsPersonalityButton
+        personalityButton.visibility =
+            if (event.type == EventCode.BIRTHDAY.name && Tradition.PERSONALITY in traditions) View.VISIBLE
+            else View.GONE
+        personalityButton.setOnClickListener {
+            act.vibrate()
+            choosePersonalityAction(event)
+        }
+
         // Manage the predictive back between fragments
         val predictiveBackMargin = resources.getDimensionPixelSize(R.dimen.predictive_back_margin)
         var initialTouchY = -1f
@@ -612,6 +614,87 @@ class DetailsFragment : Fragment() {
             }
         }
         container.visibility = View.VISIBLE
+    }
+
+    // The personality menu: enter, full test, fifth letter only, or clear
+    private fun choosePersonalityAction(event: EventResult) {
+        val current = PersonalityType.parse(event.personality)
+        val actions = mutableListOf(
+            getString(R.string.personality_enter),
+            getString(R.string.personality_take_test),
+            getString(R.string.personality_take_fifth_letter_test),
+        )
+        if (current != null) actions += getString(R.string.personality_clear)
+        MaterialAlertDialogBuilder(act)
+            .setTitle(getString(R.string.personality_menu_title, event.name))
+            .setIcon(R.drawable.ic_traditions_24dp)
+            .setItems(actions.toTypedArray()) { dialog, which ->
+                dialog.dismiss()
+                when (which) {
+                    0 -> pickFourLetters(event, current?.letters) { letters -> pickFifthLetter(event, letters) }
+                    1 -> showPersonalityTest(event, fifthLetterOnly = false, knownLetters = null)
+                    2 -> if (current != null) showPersonalityTest(event, true, current.letters)
+                    else pickFourLetters(event, null) { letters -> showPersonalityTest(event, true, letters) }
+                    3 -> savePersonality(event, null)
+                }
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    // Choose one of the 16 four-letter types
+    private fun pickFourLetters(event: EventResult, selected: String?, then: (String) -> Unit) {
+        val types = PersonalityType.ALL_LETTERS
+        val labels = types.map { getString(R.string.personality_type_label, it, PersonalityType(it).nickname) }
+        MaterialAlertDialogBuilder(act)
+            .setTitle(getString(R.string.personality_pick_type, event.name))
+            .setSingleChoiceItems(labels.toTypedArray(), types.indexOf(selected)) { dialog, which ->
+                dialog.dismiss()
+                then(types[which])
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    // Choose A, T or unknown for the fifth letter, then save
+    private fun pickFifthLetter(event: EventResult, letters: String) {
+        val options = arrayOf(
+            getString(R.string.personality_assertive),
+            getString(R.string.personality_turbulent),
+            getString(R.string.personality_fifth_unknown),
+        )
+        MaterialAlertDialogBuilder(act)
+            .setTitle(R.string.personality_pick_fifth)
+            .setItems(options) { dialog, which ->
+                dialog.dismiss()
+                val identity = when (which) {
+                    0 -> 'A'
+                    1 -> 'T'
+                    else -> null
+                }
+                savePersonality(event, PersonalityType(letters, identity).code)
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun showPersonalityTest(event: EventResult, fifthLetterOnly: Boolean, knownLetters: String?) {
+        val sheet = PersonalityTestBottomSheet(event.name, fifthLetterOnly, knownLetters) { code ->
+            savePersonality(event, code)
+        }
+        if (sheet.isAdded) return
+        sheet.show(act.supportFragmentManager, "personality_test_bottom_sheet")
+    }
+
+    // Store the type (or clear it) and refresh the traditions section in place
+    private fun savePersonality(event: EventResult, code: String?) {
+        event.personality = code
+        mainViewModel.update(resultToEvent(event))
+        if (_binding != null) showTraditions(event)
+        act.showSnackbar(
+            if (code == null) getString(R.string.personality_cleared)
+            else getString(R.string.personality_saved, event.name, code)
+        )
     }
 
     // Let the user choose another birthday to compare with

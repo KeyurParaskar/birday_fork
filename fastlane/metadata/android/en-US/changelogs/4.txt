@@ -1,0 +1,6 @@
+The sky at birth, and personality types.
+- Optional birth time and birth place (136 built-in cities, works offline)
+- Moon sign, exact Sun sign on cusp days, and rising sign
+- Vedic astrology: sidereal Sun and Moon signs and nakshatra
+- Without a birth time, Auspice lists every sign the Moon passed through that day instead of guessing
+- Personality types in the Myers-Briggs style with the A/T fifth letter: enter one, take a 50-statement test, or take a short test for just the fifth letter

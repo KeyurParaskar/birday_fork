@@ -78,7 +78,7 @@ auspice/
 ```
 
 **Why a separate module.** The calculations are deterministic functions of a date and a name. Keeping them
-free of Android means they can be unit tested on the JVM in seconds (38 tests so far), reused by
+free of Android means they can be unit tested on the JVM in seconds (54 tests so far), reused by
 widgets and WorkManager workers without a Context, and later shared with a desktop or web build.
 
 **How the app uses it.** `CosmicProfile.of(date, fullName, lunarNewYearOf)` returns everything for the
@@ -149,13 +149,29 @@ plus "Show cautionary items" (default on). Reuses Birday's existing `astrologyDi
       Native American nations regard as cultural appropriation, which conflicts with principle 4 above.
       It is easy to add later as one more cosmos calculator if wanted.
 
-### Phase 3: astronomy
+### Phase 3: astronomy (on branch `phase-3`, pending a local CI run)
 
-- [ ] Optional birth time and place on the contact.
-- [ ] Solar longitude for exact Western cusps; Moon longitude (Meeus) for Moon sign; sidereal (Lahiri)
-      conversion for Vedic rashi and nakshatra; rising sign from local sidereal time.
-- [ ] Precision is documented honestly: without a birth time, Moon sign is shown as "likely X (or Y)" when
-      the Moon changed sign that day.
+- [x] Optional birth time and place on birthdays. Places come from 136 built-in cities with IANA time
+      zones, so historical daylight saving is right and nothing needs the network.
+- [x] Sun and Moon positions (Meeus, Astronomical Algorithms): the Moon sign, the exact Sun sign on cusp
+      days, and the rising sign when both time and place are known. Checked against Meeus's worked examples,
+      the January 2000 new and full moons, and 500 random ascendants that must lie on the eastern horizon.
+- [x] Vedic astrology: sidereal Sun and Moon signs (rashi) with the Lahiri ayanamsa, and the nakshatra with
+      its pada.
+- [x] Honest precision: without a birth time the whole day is scanned and every possible sign is listed,
+      as in "Leo or Virgo (depends on the birth time)".
+- [ ] Custom coordinates for places not in the list.
+- [ ] Planets beyond the Sun and Moon, if users ask for them.
+
+### Personality types (added during phase 3)
+
+- [x] Myers-Briggs-style four-letter types plus the Assertive/Turbulent fifth letter ("INTJ-A"), stored per
+      person (database version 13).
+- [x] Three ways to set it from the details screen: enter it directly, take the full 50-statement test, or
+      take the 10-statement test for the fifth letter only.
+- [x] Original questions, balanced so that agreeing with everything does not bias the result; ties follow the
+      classic I/N/F/P convention. Labelled clearly as not the official MBTI assessment.
+- [ ] Personality in the compatibility view.
 
 ### Phase 4: polish and release
 

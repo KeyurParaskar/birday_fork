@@ -10,7 +10,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import app.auspice.model.Event
 
 
-@Database(entities = [Event::class], version = 12, exportSchema = false)
+@Database(entities = [Event::class], version = 13, exportSchema = false)
 @TypeConverters(LocalDateTypeConverter::class)
 abstract class EventDatabase : RoomDatabase() {
     abstract fun eventDao(): EventDao
@@ -46,6 +46,17 @@ abstract class EventDatabase : RoomDatabase() {
                 )
             }
         }
+        // Migration strategy to add birth time, birth place and personality type from version 12 to 13 (Auspice)
+        private val MIGRATION_12_13: Migration = object : Migration(12, 13) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE Event ADD COLUMN birthTime TEXT")
+                db.execSQL("ALTER TABLE Event ADD COLUMN birthPlace TEXT")
+                db.execSQL("ALTER TABLE Event ADD COLUMN birthLatitude REAL")
+                db.execSQL("ALTER TABLE Event ADD COLUMN birthLongitude REAL")
+                db.execSQL("ALTER TABLE Event ADD COLUMN birthZone TEXT")
+                db.execSQL("ALTER TABLE Event ADD COLUMN personality TEXT")
+            }
+        }
         fun getBirdayDatabase(context: Context): EventDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
@@ -60,6 +71,7 @@ abstract class EventDatabase : RoomDatabase() {
                     .addMigrations(MIGRATION_9_10)
                     .addMigrations(MIGRATION_10_11)
                     .addMigrations(MIGRATION_11_12)
+                    .addMigrations(MIGRATION_12_13)
                     .build()
                 INSTANCE = instance
                 return instance

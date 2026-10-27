@@ -35,6 +35,12 @@ fun resultToEvent(eventResult: EventResult) = Event(
     notes = eventResult.notes,
     image = eventResult.image,
     sex = eventResult.sex,
+    birthTime = eventResult.birthTime,
+    birthPlace = eventResult.birthPlace,
+    birthLatitude = eventResult.birthLatitude,
+    birthLongitude = eventResult.birthLongitude,
+    birthZone = eventResult.birthZone,
+    personality = eventResult.personality,
 )
 
 // Transform an event in a result event
@@ -50,6 +56,12 @@ fun eventToResult(event: Event) = EventResult(
     notes = event.notes,
     image = event.image,
     sex = event.sex,
+    birthTime = event.birthTime,
+    birthPlace = event.birthPlace,
+    birthLatitude = event.birthLatitude,
+    birthLongitude = event.birthLongitude,
+    birthZone = event.birthZone,
+    personality = event.personality,
 )
 
 // Simply returns the next date for a given date
@@ -78,6 +90,12 @@ fun normalizeEvent(event: Event): Event {
         yearMatter = event.yearMatter,
         type = fixedType,
         sex = event.sex?.takeIf { it == "MALE" || it == "FEMALE" },
+        birthTime = event.birthTime,
+        birthPlace = event.birthPlace,
+        birthLatitude = event.birthLatitude,
+        birthLongitude = event.birthLongitude,
+        birthZone = event.birthZone,
+        personality = event.personality,
     )
 }
 

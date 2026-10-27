@@ -34,6 +34,19 @@ data class Event(
     // Optional, only used by traditions that differ by sex (yakudoshi). Values: MALE, FEMALE or null
     @Expose
     val sex: String? = null,
+    // Optional birth time ("HH:mm"), place (label, coordinates, IANA zone) and personality type ("INTJ-A")
+    @Expose
+    val birthTime: String? = null,
+    @Expose
+    val birthPlace: String? = null,
+    @Expose
+    val birthLatitude: Double? = null,
+    @Expose
+    val birthLongitude: Double? = null,
+    @Expose
+    val birthZone: String? = null,
+    @Expose
+    val personality: String? = null,
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -48,6 +61,12 @@ data class Event(
         if (originalDate != other.originalDate) return false
         if (!image.contentEquals(other.image)) return false
         if (sex != other.sex) return false
+        if (birthTime != other.birthTime) return false
+        if (birthPlace != other.birthPlace) return false
+        if (birthLatitude != other.birthLatitude) return false
+        if (birthLongitude != other.birthLongitude) return false
+        if (birthZone != other.birthZone) return false
+        if (personality != other.personality) return false
 
         return true
     }
@@ -63,6 +82,12 @@ data class Event(
         result = 31 * result + (notes?.hashCode() ?: 0)
         result = 31 * result + (image?.contentHashCode() ?: 0)
         result = 31 * result + (sex?.hashCode() ?: 0)
+        result = 31 * result + (birthTime?.hashCode() ?: 0)
+        result = 31 * result + (birthPlace?.hashCode() ?: 0)
+        result = 31 * result + (birthLatitude?.hashCode() ?: 0)
+        result = 31 * result + (birthLongitude?.hashCode() ?: 0)
+        result = 31 * result + (birthZone?.hashCode() ?: 0)
+        result = 31 * result + (personality?.hashCode() ?: 0)
         return result
     }
 }

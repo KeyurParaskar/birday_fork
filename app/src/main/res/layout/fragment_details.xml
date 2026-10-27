@@ -324,10 +324,31 @@
             android:tint="?attr/colorPrimary"
             android:visibility="gone"
             app:icon="@drawable/ic_traditions_24dp"
-            app:layout_constraintBottom_toTopOf="@id/detailsEditButton"
+            app:layout_constraintBottom_toTopOf="@id/detailsPersonalityButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detailsContactButton"
+            app:layout_constraintWidth_max="@dimen/details_button_max_width"
+            app:rippleColor="?attr/colorPrimary" />
+
+        <!-- Enter or discover this person's personality type -->
+        <Button
+            android:id="@+id/detailsPersonalityButton"
+            style="@style/Widget.Material3Expressive.Button.ElevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/linear_vertical_margin"
+            android:paddingVertical="@dimen/in_row_button_padding"
+            android:text="@string/personality_button"
+            android:textColor="?attr/colorPrimary"
+            android:tint="?attr/colorPrimary"
+            android:visibility="gone"
+            app:icon="@drawable/ic_traditions_24dp"
+            app:layout_constraintBottom_toTopOf="@id/detailsEditButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsCompatibilityButton"
             app:layout_constraintWidth_max="@dimen/details_button_max_width"
             app:rippleColor="?attr/colorPrimary" />
 
@@ -346,7 +367,7 @@
             app:layout_constraintBottom_toTopOf="@id/detailsDeleteButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detailsCompatibilityButton"
+            app:layout_constraintTop_toBottomOf="@id/detailsPersonalityButton"
             app:layout_constraintWidth_max="@dimen/details_button_max_width"
             app:rippleColor="?attr/colorPrimary" />
 
