@@ -1,3 +1,18 @@
+# Auspice
+
+**Birthday and event reminders, plus what the world's traditions say about every birthday.**
+
+Auspice is a derivative of [Birday](https://github.com/m-i-n-a-r/birday) by m-i-n-a-r. It keeps Birday's
+fast, offline, no-account approach to remembering birthdays and adds a "traditions" layer: Western and
+Chinese astrology, numerology, Mayan day signs, birthstones, weekday lore, other religious calendars, and the
+lucky and unlucky ages celebrated in cultures around the world. Everything is computed on the device.
+
+- The plan, feature list and roadmap: [docs/PLAN.md](docs/PLAN.md)
+- The traditions engine (pure Kotlin, unit tested): [cosmos/](cosmos/)
+- Licence: GPL-3, same as Birday. Birday's history, credits and translations are preserved below.
+
+---
+
 # Birday
 
 An open source app to remember birthdays and events without having to rely on apps like Facebook or Google Calendar or set alarms manually.

@@ -80,6 +80,9 @@ configurations.configureEach {
 
 dependencies {
 
+    // Auspice traditions engine (pure Kotlin, see /cosmos)
+    implementation(project(":cosmos"))
+
     // Default dependencies
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.core:core-ktx:1.17.0")

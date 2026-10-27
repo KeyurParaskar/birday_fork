@@ -1,0 +1,32 @@
+package com.auspice.cosmos
+
+/**
+ * The cultural or esoteric system an insight belongs to. Every insight Auspice shows is tagged with one of
+ * these so the user can switch whole traditions on or off in the settings and so the UI can group them.
+ */
+enum class Tradition {
+    WESTERN_ASTROLOGY,
+    CHINESE_ASTROLOGY,
+    VEDIC_ASTROLOGY,
+    NUMEROLOGY,
+    MAYAN,
+    BIRTHSTONES_AND_FLOWERS,
+    DAY_LORE,
+    ISLAMIC_CALENDAR,
+    MILESTONES_AND_SUPERSTITIONS,
+}
+
+/** How a tradition regards the thing described: used to pick an icon/colour, never to alarm the user. */
+enum class Sentiment { AUSPICIOUS, NEUTRAL, CAUTIONARY }
+
+/**
+ * A single, self-contained fact about a person or an upcoming birthday, ready to display.
+ * [key] is a stable identifier (for example "western.sign.leo") the app maps to localised strings and icons;
+ * [fallbackText] is an English rendering used when no localisation exists yet.
+ */
+data class Insight(
+    val tradition: Tradition,
+    val key: String,
+    val fallbackText: String,
+    val sentiment: Sentiment = Sentiment.NEUTRAL,
+)
