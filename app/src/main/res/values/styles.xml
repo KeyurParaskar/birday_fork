@@ -63,7 +63,7 @@
     </style>
 
     <style name="SplashTheme.Base.Legacy">
-        <item name="android:windowBackground">@drawable/static_birday_light</item>
+        <item name="android:windowBackground">@drawable/static_splash_light</item>
     </style>
 
     <!-- Widget theme -->

@@ -82,7 +82,7 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <!-- Main activity, the core of Birday -->
+        <!-- Main activity, the core of Auspice -->
         <activity
             android:name=".activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Velkommen til Birday</string>
-    <string name="app_name_extended">Birday - Hendelsesbehandler</string>
-    <string name="leave_review_title">Gi Birday en vurdering</string>
+    <string name="app_welcome">Velkommen til Auspice</string>
+    <string name="app_name_extended">Auspice - Hendelsesbehandler</string>
+    <string name="leave_review_title">Gi Auspice en vurdering</string>
     <string name="leave_review_subtitle">Gi en vurdering for å hjelpe meg med appen. Husk at utenom donasjoner, så er appen helt gratis og fri fra reklame!</string>
     <string name="yes_review">Gi vurdering!</string>
     <string name="later">Senere, jeg lover</string>
@@ -18,12 +18,12 @@
     <string name="stats_summary">Oppsummering av statistikk</string>
     <string name="no_stats_description">Du har ikke nok hendelser til å generere statistikk. Legg til flere hendelser og kom tilbake seinere!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birday hjelper deg å huske på totalt %d hendelse</item>
-        <item quantity="other">Birday hjelper deg å huske på totalt %d hendelser</item>
+        <item quantity="one">Auspice hjelper deg å huske på totalt %d hendelse</item>
+        <item quantity="other">Auspice hjelper deg å huske på totalt %d hendelser</item>
     </plurals>
     <string name="next_event">Neste hendelse</string>
     <string name="no_next_event">Ingen hendelser å vise!</string>
-    <string name="no_next_event_description">Du har ikke lagt inn eller importert en hendelse enda. Legg til en og la Birday hjelpe deg!</string>
+    <string name="no_next_event_description">Du har ikke lagt inn eller importert en hendelse enda. Legg til en og la Auspice hjelpe deg!</string>
     <string name="next_age_years">År</string>
     <string name="event_others">og andre</string>
     <plurals name="days_left">
@@ -84,16 +84,16 @@
     <string name="import_failed">Noe gikk galt!</string>
     <string name="missing_permission_contacts">Tilgangen til kontakter ble avvist. Prøv igjen eller aktiver tilgangen manuelt,
     ellers vil det ikke fungere å importere kontakter!</string>
-    <string name="missing_permission_contacts_forever">Birday can\'t ask for permission to import contacts,
+    <string name="missing_permission_contacts_forever">Auspice can\'t ask for permission to import contacts,
     since you checked \"never ask again\". Enable it manually!</string>
-    <string name="birday_import_title">Importer en sikkerhetskopi fra Birday</string>
-    <string name="birday_import_description">Velg en gyldig sikkerhetskopi fra Birday for å gjenopprette hendelsene dine. Alle eksisterende data
+    <string name="birday_import_title">Importer en sikkerhetskopi fra Auspice</string>
+    <string name="birday_import_description">Velg en gyldig sikkerhetskopi fra Auspice for å gjenopprette hendelsene dine. Alle eksisterende data
     vil bli overskrevet!</string>
     <string name="birday_export_title">Export and share events</string>
     <string name="birday_export_description">Eksporter tilgjengelige hendelser til en sikkerhetskopi, og del dem om du ønsker</string>
     <string name="birday_import_success">Import fullført!</string>
     <string name="birday_import_failure">Import failed. Did you choose the file correctly?</string>
-    <string name="birday_import_invalid_file">Importering feilet. Den valgte filen er ikke en sikkerhetskopi fra Birday!</string>
+    <string name="birday_import_invalid_file">Importering feilet. Den valgte filen er ikke en sikkerhetskopi fra Auspice!</string>
     <string name="birday_export_success">Eksport fullført!</string>
     <string name="birday_export_failure">Eksport feilet. Ups!</string>
     <string name="birday_export_nothing_found">Ingenting å eksportere!</string>
@@ -111,14 +111,14 @@
     <string name="additional_notification_only_favorites_description_off">Send the additional notification for every event inserted</string>
     <string name="troubleshoot">Troubleshoot and extra</string>
     <string name="battery_optimization_title">Deaktiver batterioptimalisering</string>
-    <string name="battery_optimization_description">Open the settings to disable any optimization for Birday. Useful if notifications aren\'t working</string>
-    <string name="battery_optimization_tutorial">- Show all the apps and find Birday in the list\n- Tap on Birday and select \"Don\'t optimize\"</string>
+    <string name="battery_optimization_description">Open the settings to disable any optimization for Auspice. Useful if notifications aren\'t working</string>
+    <string name="battery_optimization_tutorial">- Show all the apps and find Auspice in the list\n- Tap on Auspice and select \"Don\'t optimize\"</string>
     <string name="notification_sound_title">Notification sound</string>
     <string name="notification_sound_description">Shortcut to the notification sound settings, if you don\'t like the default bird sound</string>
-    <string name="missing_permission_notifications">The notification permission was denied, and Birday can\'t send notifications! Activate the permission from settings.</string>
-    <string name="missing_permission_notifications_forever">The notification permission was denied and can\'t be asked again, so Birday can\'t send notifications! Activate the permission manually, from settings.</string>
-    <string name="missing_permission_calendar">The calendar permission was denied, and Birday can\'t import from calendar! Activate the permission from settings.</string>
-    <string name="missing_permission_calendar_forever">The calendar permission was denied and can\'t be asked again, so Birday can\'t import from calendar! Activate the permission manually, from settings.</string>
+    <string name="missing_permission_notifications">The notification permission was denied, and Auspice can\'t send notifications! Activate the permission from settings.</string>
+    <string name="missing_permission_notifications_forever">The notification permission was denied and can\'t be asked again, so Auspice can\'t send notifications! Activate the permission manually, from settings.</string>
+    <string name="missing_permission_calendar">The calendar permission was denied, and Auspice can\'t import from calendar! Activate the permission from settings.</string>
+    <string name="missing_permission_calendar_forever">The calendar permission was denied and can\'t be asked again, so Auspice can\'t import from calendar! Activate the permission manually, from settings.</string>
     <string name="import_calendar_title">Importer fra kalender</string>
     <string name="import_calendar_description">Import any yearly event from your calendars. Remember to set the event type and year to keep things ordered!</string>
     <string name="loop_avd_title">Gjenta animasjoner</string>
@@ -129,13 +129,11 @@
     <string name="order_alphabetically_description_off">The events are ordered by date</string>
     <string name="grouped_notifications_title">Group multiple notifications</string>
     <string name="grouped_notifications_description_on">If there are two or more events in a single day, the notifications are grouped</string>
-    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Birday will send a notification for each</string>
+    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Auspice will send a notification for each</string>
     <!-- Developer -->
-    <string name="dev_description">I\'m a polite guy and I like beautiful things, like animations, icons, sport cars and 3D printing. I work as a designer and computer engineer.</string>
-    <string name="easter_egg">Nice logo, huh? ;D</string>
     <!-- New event -->
     <string name="new_event">Ny hendelse</string>
-    <string name="new_event_description">Enter a person you care about, and Birday will help you to remember their birthday or other events!</string>
+    <string name="new_event_description">Enter a person you care about, and Auspice will help you to remember their birthday or other events!</string>
     <string name="insert_event">Sett inn hendelse</string>
     <string name="cancel">Avbryt</string>
     <string name="insert_name_hint">Sett inn fornavn</string>
@@ -236,28 +234,28 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Påminnelse for hendelser</string>
-    <string name="events_channel_description">Påminnelser om kommende hendelser fra Birday</string>
-    <string name="notification_title">Birday Påminnelse</string>
+    <string name="events_channel_description">Påminnelser om kommende hendelser fra Auspice</string>
+    <string name="notification_title">Auspice Påminnelse</string>
     <string name="notification_description_part_1">Dagens hendelser er</string>
     <string name="notification_description_part_2">Ha en fin dag!</string>
     <string name="additional_notification_text">Kommende hendelser!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Velkommen til Birday!</string>
-    <string name="slide_one_description">Birday is a simple and lightweight app to manage important events!
+    <string name="slide_one_title">Velkommen til Auspice!</string>
+    <string name="slide_one_description">Auspice is a simple and lightweight app to manage important events!
     You can use it to remember and store the birthdays of the people you love and more, in a reliable and fast way.
     </string>
     <string name="slide_two_title">Free, simple, customizable</string>
-    <string name="slide_two_description">Birday is free, ad-free and open source. It provides a set of
+    <string name="slide_two_description">Auspice is free, ad-free and open source. It provides a set of
     stats about your events, a favorite system and a customizable interface. And guaranteed
     support and updates!
     </string>
     <string name="slide_three_title">Import from contacts</string>
     <string name="slide_three_description">It\'s also possible to import the events you\'ve already saved
-    from your contacts. Birday can do it for you, just grant the contacts permission. Enjoy!
+    from your contacts. Auspice can do it for you, just grant the contacts permission. Enjoy!
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Kommende hendelser</string>
-    <string name="add_widget">Birday - Kommende</string>
+    <string name="add_widget">Auspice - Kommende</string>
     <string name="dark_widget_name">Mørk modul</string>
     <string name="dark_widget_description_on">Modulen bruker mørkt tema</string>
     <string name="dark_widget_description_off">Modulen bruker lyst tema</string>
@@ -290,8 +288,8 @@
     <string name="check_github">Sjekk GitHub</string>
     <string name="translate_app">Oversett appen</string>
     <string name="launch_auto_import_title">Importer automatisk ved oppstart</string>
-    <string name="launch_auto_import_description_off">Birday won\'t import contacts automatically when launched</string>
-    <string name="launch_auto_import_description_on">Birday will automatically sync with contacts at startup</string>
+    <string name="launch_auto_import_description_off">Auspice won\'t import contacts automatically when launched</string>
+    <string name="launch_auto_import_description_on">Auspice will automatically sync with contacts at startup</string>
     <string name="hide_on_scroll_title">Hide navbar on scroll</string>
     <string name="hide_on_scroll_description_on">Hide the bottom navbar when you scroll</string>
     <string name="hide_on_scroll_description_off">The bottom navbar will always be visible</string>
@@ -312,8 +310,8 @@
     <string name="export_calendar_title">Eksporter til kalender</string>
     <string name="export_calendar_description">Save every event to your local calendar, if possible. Requires the calendar permission</string>
     <string name="auto_export_title">Eksporter hendelser automatisk</string>
-    <string name="auto_export_description_on">Birday will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
-    <string name="auto_export_description_off">To perform a local Birday backup, it has to be executed manually</string>
+    <string name="auto_export_description_on">Auspice will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
+    <string name="auto_export_description_off">To perform a local Auspice backup, it has to be executed manually</string>
     <string name="add_demo_entries_title">Add demo entries</string>
     <string name="add_demo_entries_description">Populate the DB with a demo set of events, mostly actors and historical figures</string>
     <string name="add_demo_entries_dialog_description">Dette vil legge til THOUSANNER av oppføringer på DB og er ment for feilsøking. Det vil ikke slette noen eksisterende arrangementer, men hvis du vil slette de nye oppføringene manuelt. Lykke til med det.</string>
@@ -323,7 +321,7 @@
     <string name="delete_db_dialog_description">Make sure to backup your events first, this operation will wipe the DB and should be used for debugging purposes only</string>
     <string name="delete_search_title">Delete search selection</string>
     <string name="delete_search_description_off">It won\'t be possible to delete multiple events at once</string>
-    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Birday. Use with caution!</string>
+    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Auspice. Use with caution!</string>
     <string name="delete_search_confirm">This will delete all the results of this search. You can undo the process shortly after clicking OK if you change your mind!</string>
     <string name="import_contacts_bottom_sheet_description">Would you like to import all the events from your contacts right now?</string>
     <string name="yes_import">Importer</string>

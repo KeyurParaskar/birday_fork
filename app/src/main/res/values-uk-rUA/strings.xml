@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Ласкаво просимо до Birday</string>
-    <string name="app_name_extended">Birday - Менеджер подій</string>
-    <string name="leave_review_title">Залишити відгук для Birday</string>
+    <string name="app_welcome">Ласкаво просимо до Auspice</string>
+    <string name="app_name_extended">Auspice - Менеджер подій</string>
+    <string name="leave_review_title">Залишити відгук для Auspice</string>
     <string name="leave_review_subtitle">Залиште відгук щоб допомогти мені в розробці цього додатку. Не забувайте, що окрім донатів - цей додаток повністю безкоштовний та без будь-якої реклами!</string>
     <string name="yes_review">Залишити відгук!</string>
     <string name="later">Пізніше, клянуся</string>
@@ -18,14 +18,14 @@
     <string name="stats_summary">Підсумок статистики</string>
     <string name="no_stats_description">У вас не достатньо подій для генерації статистики. Додайте декілька подій та повертайтеся!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birday допомагає вам запам\'ятати %d подію</item>
-        <item quantity="few">Birday допомагає вам запам\'ятати %d події</item>
-        <item quantity="many">Birday допомагає вам запам\'ятати %d подій</item>
-        <item quantity="other">Birday допомагає вам запам\'ятати %d подій</item>
+        <item quantity="one">Auspice допомагає вам запам\'ятати %d подію</item>
+        <item quantity="few">Auspice допомагає вам запам\'ятати %d події</item>
+        <item quantity="many">Auspice допомагає вам запам\'ятати %d подій</item>
+        <item quantity="other">Auspice допомагає вам запам\'ятати %d подій</item>
     </plurals>
     <string name="next_event">Наступна подія</string>
     <string name="no_next_event">Жодниї подій!</string>
-    <string name="no_next_event_description">Ви не ввели та не імпортували жодних подій. Додайте подію і Birday допоможе вам!</string>
+    <string name="no_next_event_description">Ви не ввели та не імпортували жодних подій. Додайте подію і Auspice допоможе вам!</string>
     <string name="next_age_years">Років</string>
     <string name="event_others">та інші</string>
     <plurals name="days_left">
@@ -87,14 +87,14 @@
     <string name="import_nothing_found">Жодних подій!</string>
     <string name="import_failed">Щось пішло не так!</string>
     <string name="missing_permission_contacts">Доступ до контактів закрито. Спробуйте ще раз, або активуйте доступ вручну - без цього імпорт не буде працювати!</string>
-    <string name="missing_permission_contacts_forever">Birday не може отримати доступ до імпорту контактів так як ви обрали \"ніколи не запитувати\". Увімкніть вручну!</string>
-    <string name="birday_import_title">Імпортувати резервну копію Birday</string>
-    <string name="birday_import_description">Оберіть резервну копію Birday шоб відновити ваші події. Усі поточні дані будуть втрачені!</string>
+    <string name="missing_permission_contacts_forever">Auspice не може отримати доступ до імпорту контактів так як ви обрали \"ніколи не запитувати\". Увімкніть вручну!</string>
+    <string name="birday_import_title">Імпортувати резервну копію Auspice</string>
+    <string name="birday_import_description">Оберіть резервну копію Auspice шоб відновити ваші події. Усі поточні дані будуть втрачені!</string>
     <string name="birday_export_title">Експортувати та ділитися подіями</string>
     <string name="birday_export_description">Експортуйте та діліться подіями, якщо хочете</string>
     <string name="birday_import_success">Імпорт завершено!</string>
     <string name="birday_import_failure">Помилка імпорту. Ви впевнені що обрали правильний файл?</string>
-    <string name="birday_import_invalid_file">Помилка імпорту. Вибраний вами файл не є резервною копією Birday!</string>
+    <string name="birday_import_invalid_file">Помилка імпорту. Вибраний вами файл не є резервною копією Auspice!</string>
     <string name="birday_export_success">Експорт завершено!</string>
     <string name="birday_export_failure">Помилка експорту. Упс!</string>
     <string name="birday_export_nothing_found">Нічого експортувати!</string>
@@ -112,14 +112,14 @@
     <string name="additional_notification_only_favorites_description_off">Відправляти додаткове сповіщення для кожної вставленої події</string>
     <string name="troubleshoot">Усунення несправностей та ін.</string>
     <string name="battery_optimization_title">Вимкнути оптимізацію батареї</string>
-    <string name="battery_optimization_description">Відкрийте налаштування щоб вимкнути будь-яку оптимізацію для Birday. Корисно якщо не працюють сповіщння </string>
-    <string name="battery_optimization_tutorial">- Показати всі застосунки та знайти Birday у списку\n- Торкніться Birday та виберіть \"Не оптимізувати\"</string>
+    <string name="battery_optimization_description">Відкрийте налаштування щоб вимкнути будь-яку оптимізацію для Auspice. Корисно якщо не працюють сповіщння </string>
+    <string name="battery_optimization_tutorial">- Показати всі застосунки та знайти Auspice у списку\n- Торкніться Auspice та виберіть \"Не оптимізувати\"</string>
     <string name="notification_sound_title">Звук сповіщень</string>
     <string name="notification_sound_description">Ярлик до налаштувань звуку сповіщень, якщо вам не подобається звук пташки за замовчуванням</string>
-    <string name="missing_permission_notifications">Дозвіл надсилати сповіщення відхилено, тому Birday не може надсилати сповіщення! Надайте дозвіл вручну в налаштуваннях.</string>
-    <string name="missing_permission_notifications_forever">Дозвіл надсилати сповіщення відхилено та не може бути запитано знову, тому Birday не може надсилати сповіщення! Надайте дозвіл вручну в налаштуваннях.</string>
-    <string name="missing_permission_calendar">Дозвіл переглядати календар відхилено, тому Birday не може імпортувати з календаря! Надайте дозвіл вручну в налаштуваннях.</string>
-    <string name="missing_permission_calendar_forever">Дозвіл переглядати календар відхилено, тому Birday не може імпортувати з календаря! Надайте дозвіл вручну в налаштуваннях.</string>
+    <string name="missing_permission_notifications">Дозвіл надсилати сповіщення відхилено, тому Auspice не може надсилати сповіщення! Надайте дозвіл вручну в налаштуваннях.</string>
+    <string name="missing_permission_notifications_forever">Дозвіл надсилати сповіщення відхилено та не може бути запитано знову, тому Auspice не може надсилати сповіщення! Надайте дозвіл вручну в налаштуваннях.</string>
+    <string name="missing_permission_calendar">Дозвіл переглядати календар відхилено, тому Auspice не може імпортувати з календаря! Надайте дозвіл вручну в налаштуваннях.</string>
+    <string name="missing_permission_calendar_forever">Дозвіл переглядати календар відхилено, тому Auspice не може імпортувати з календаря! Надайте дозвіл вручну в налаштуваннях.</string>
     <string name="import_calendar_title">Імпортувати з календаря</string>
     <string name="import_calendar_description">Імпортувати щорічну подію з календарів. Не забудьте встановити тип події, щоб тримати все в порядку!</string>
     <string name="loop_avd_title">Циклічні анімації</string>
@@ -130,13 +130,11 @@
     <string name="order_alphabetically_description_off">Події впорядковані за датою</string>
     <string name="grouped_notifications_title">Групування кількох сповіщень</string>
     <string name="grouped_notifications_description_on">Якщо за один день є дві або більше подій, сповіщення групуються</string>
-    <string name="grouped_notifications_description_off">Якщо в один день є дві або більше подій, Birday надішле сповіщення про кожну з них</string>
+    <string name="grouped_notifications_description_off">Якщо в один день є дві або більше подій, Auspice надішле сповіщення про кожну з них</string>
     <!-- Developer -->
-    <string name="dev_description">Я ввічливий хлопець і люблю красиві речі, як-от анімацію, іконки, спортивні автомобілі та 3D-друк. Працюю дизайнером та комп\’ютерним інженером.</string>
-    <string name="easter_egg">Файний логотип, га? ;D</string>
     <!-- New event -->
     <string name="new_event">Нова подія</string>
-    <string name="new_event_description">Введіть близьку вам людину, і Birday допоможе вам згадати його/її день народження або ж інші події!</string>
+    <string name="new_event_description">Введіть близьку вам людину, і Auspice допоможе вам згадати його/її день народження або ж інші події!</string>
     <string name="insert_event">Додати подію</string>
     <string name="cancel">Відмінити</string>
     <string name="insert_name_hint">Введіть ім\'я</string>
@@ -245,27 +243,27 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Нагадування про події</string>
-    <string name="events_channel_description">Нагадування про наступаючі події від Birday</string>
-    <string name="notification_title">Нагадування Birday</string>
+    <string name="events_channel_description">Нагадування про наступаючі події від Auspice</string>
+    <string name="notification_title">Нагадування Auspice</string>
     <string name="notification_description_part_1">Сьогоднішні події:</string>
     <string name="notification_description_part_2">Гарного дня!</string>
     <string name="additional_notification_text">Найближчі подіЇ!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Ласкаво просимо до Birday!</string>
-    <string name="slide_one_description">Birday — це простий і легкий додаток для керування важливими подіями!
+    <string name="slide_one_title">Ласкаво просимо до Auspice!</string>
+    <string name="slide_one_description">Auspice — це простий і легкий додаток для керування важливими подіями!
     Ви можете використовувати його, щоб надійним і швидким способом запам\’ятовувати та зберігати дні народження людей, яких ви любите, тощо.
     </string>
     <string name="slide_two_title">Безкоштовний, простий, легко настроюваний</string>
-    <string name="slide_two_description">Birday безкоштовний, без реклами та з відкритим кодом. Він забезпечує набір
+    <string name="slide_two_description">Auspice безкоштовний, без реклами та з відкритим кодом. Він забезпечує набір
      статистики про ваші події, має систему вибраних та настроюваний інтерфейс. А також гарантована підтримка та оновлення!
     </string>
     <string name="slide_three_title">Іспортувати з контактів</string>
     <string name="slide_three_description">Також можна імпортувати події, які вже збережені у ваших контактах.
-        Birday може зробити це за вас, просто надайте доступ до контактів. Насолоджуйтесь!
+        Auspice може зробити це за вас, просто надайте доступ до контактів. Насолоджуйтесь!
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Найближчі події</string>
-    <string name="add_widget">Birday - Найближчі</string>
+    <string name="add_widget">Auspice - Найближчі</string>
     <string name="dark_widget_name">Темний віджет</string>
     <string name="dark_widget_description_on">Віджет використовує темну тему</string>
     <string name="dark_widget_description_off">Віджет використовує світлу тему</string>
@@ -298,8 +296,8 @@
     <string name="check_github">Переглянути GitHub</string>
     <string name="translate_app">Перекласти додаток</string>
     <string name="launch_auto_import_title">Автоматичний імпорт при запуску</string>
-    <string name="launch_auto_import_description_off">При запуску, Birday не імпортує контакти автоматично</string>
-    <string name="launch_auto_import_description_on">Birday буде автоматично синхронізуватись з контактами при запуску</string>
+    <string name="launch_auto_import_description_off">При запуску, Auspice не імпортує контакти автоматично</string>
+    <string name="launch_auto_import_description_on">Auspice буде автоматично синхронізуватись з контактами при запуску</string>
     <string name="hide_on_scroll_title">Ховати навігацію при прокрутці</string>
     <string name="hide_on_scroll_description_on">Приховувати нижню панель навігації при прокручуванні</string>
     <string name="hide_on_scroll_description_off">Нижня панель навігації завжди буде відображатися</string>
@@ -320,8 +318,8 @@
     <string name="export_calendar_title">Експортувати в календар</string>
     <string name="export_calendar_description">Зберігайте кожну подію у своєму локальному календарі, якщо це можливо. Потрібен дозвіл на календар</string>
     <string name="auto_export_title">Автоматичний експорт подій</string>
-    <string name="auto_export_description_on">Birday автоматично експортує резервну копію, коли закривається застосунок. Зверніть увагу, що кожна наступна резервна копія перезаписуватиме попередню</string>
-    <string name="auto_export_description_off">Щоб виконати локальне резервне копіювання Birday, його потрібно виконати вручну</string>
+    <string name="auto_export_description_on">Auspice автоматично експортує резервну копію, коли закривається застосунок. Зверніть увагу, що кожна наступна резервна копія перезаписуватиме попередню</string>
+    <string name="auto_export_description_off">Щоб виконати локальне резервне копіювання Auspice, його потрібно виконати вручну</string>
     <string name="add_demo_entries_title">Додайте демонстраційні записи</string>
     <string name="add_demo_entries_description">Заповніть базу даних демонстраційним набором подій, переважно акторами та історичними діячами</string>
     <string name="add_demo_entries_dialog_description">Це назавжди додасть ТИСЯЧІ записів до бази даних і призначить цілями для налагодження. Це не призведе до видалення наявних подій, але якщо ви хочете видалити нові записи, вам потрібно буде зробити це вручну. Удачі в цьому.</string>
@@ -331,7 +329,7 @@
     <string name="delete_db_dialog_description">Переконайтесь, що зробили резервну копію, адже ця операція видалить базу даних і це варто використовувати лише для налагодження</string>
     <string name="delete_search_title">Видалити обране в пошуку</string>
     <string name="delete_search_description_off">Неможливо видалити кілька подій одночасно</string>
-    <string name="delete_search_description_on">Натисніть кнопку «Видалити», коли шукатимете одну або кілька подій, щоби швидко видалити їх з Birday! Користуйтесь з обережністю!</string>
+    <string name="delete_search_description_on">Натисніть кнопку «Видалити», коли шукатимете одну або кілька подій, щоби швидко видалити їх з Auspice! Користуйтесь з обережністю!</string>
     <string name="delete_search_confirm">Це видалить всі результати цього пошуку. Ви зможете швидко скасувати це після натискання ОК, якщо передумаєте!</string>
     <string name="import_contacts_bottom_sheet_description">Ви хотіли б імпортувати всі події з ваших контактів прямо зараз?</string>
     <string name="yes_import">Імпорт</string>

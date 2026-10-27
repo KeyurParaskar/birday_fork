@@ -1,32 +1,16 @@
-<animation-list android:oneshot="false"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Base state -->
-    <item android:drawable="@drawable/icon_birday_normal" android:duration="7500" />
-    
-    <!-- Eye -->
-    <item android:drawable="@drawable/icon_birday_eye_1" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_2" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_3" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_4" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_5" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_6" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_5" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_4" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_3" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_2" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_1" android:duration="30" />
-
-    <!-- Eye -->
-    <item android:drawable="@drawable/icon_birday_eye_1" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_2" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_3" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_4" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_5" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_6" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_5" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_4" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_3" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_2" android:duration="30" />
-    <item android:drawable="@drawable/icon_birday_eye_1" android:duration="8000" />
-
-</animation-list>
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M14,3.02 A9.2,9.2 0 1,0 14,20.98 A9.32,9.32 0 0,1 14,3.02Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M15.60,5.10 L16.42,8.41 L19.35,6.65 L17.59,9.58 L20.90,10.40 L17.59,11.22 L19.35,14.15 L16.42,12.39 L15.60,15.70 L14.78,12.39 L11.85,14.15 L13.61,11.22 L10.30,10.40 L13.61,9.58 L11.85,6.65 L14.78,8.41Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M18.60,16.70 L19.06,17.94 L20.30,18.40 L19.06,18.86 L18.60,20.10 L18.14,18.86 L16.90,18.40 L18.14,17.94Z" />
+</vector>

@@ -5,5 +5,5 @@
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
--keep class com.minar.birday.model.EventResult
+-keep class app.auspice.model.EventResult
 -keep class androidx.constraintlayout.** { *; }

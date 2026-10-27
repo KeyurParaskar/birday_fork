@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Birday मध्ये आपले स्वागत आहे</string>
-    <string name="app_name_extended">Birday - कार्यक्रम व्यवस्थापक</string>
-    <string name="leave_review_title">Birday कसे आहे ते आम्हाला सांगा</string>
+    <string name="app_welcome">Auspice मध्ये आपले स्वागत आहे</string>
+    <string name="app_name_extended">Auspice - कार्यक्रम व्यवस्थापक</string>
+    <string name="leave_review_title">Auspice कसे आहे ते आम्हाला सांगा</string>
     <string name="leave_review_subtitle">आम्हाला मदत करण्यासाठी अॅप कसे आहे ते आम्हाला सांगा. लक्षात ठेवा, देणग्या बाजूला ठेवून, हे अॅप पूर्णपणे विनामूल्य आणि जाहिरातमुक्त आहे!</string>
     <string name="yes_review">समीक्षा!</string>
     <string name="later">नंतर, नक्कीच</string>
@@ -18,12 +18,12 @@
     <string name="stats_summary">आकडेवारीचा सारांश</string>
     <string name="no_stats_description">तुमच्याकडे आकडेवारी व्युत्पन्न करण्यासाठी पुरेसे कार्यक्रम नाहीत. काही जोडा आणि नंतर परत या!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birday तुम्हाला एकूण %d कार्यक्रम लक्षात ठेवण्यास मदत करत आहे</item>
-        <item quantity="other">Birday तुम्हाला एकूण %d कार्यक्रम लक्षात ठेवण्यास मदत करत आहे</item>
+        <item quantity="one">Auspice तुम्हाला एकूण %d कार्यक्रम लक्षात ठेवण्यास मदत करत आहे</item>
+        <item quantity="other">Auspice तुम्हाला एकूण %d कार्यक्रम लक्षात ठेवण्यास मदत करत आहे</item>
     </plurals>
     <string name="next_event">पुढचा कार्यक्रम</string>
     <string name="no_next_event">दर्शविण्यासाठी कोणतेही कार्यक्रम नाहीत!</string>
-    <string name="no_next_event_description">तुम्ही अद्याप कार्यक्रममध्ये प्रवेश केलेला नाही किंवा आयात केलेला नाही. एक जोडा आणि Birday ला तुमची मदत करू द्या!</string>
+    <string name="no_next_event_description">तुम्ही अद्याप कार्यक्रममध्ये प्रवेश केलेला नाही किंवा आयात केलेला नाही. एक जोडा आणि Auspice ला तुमची मदत करू द्या!</string>
     <string name="next_age_years">वर्षे</string>
     <string name="event_others">आणि इतर</string>
     <plurals name="days_left">
@@ -83,14 +83,14 @@
     <string name="import_nothing_found">कोणताही कार्यक्रम आढळला नाही!</string>
     <string name="import_failed">काहीतरी चूक झाली!</string>
     <string name="missing_permission_contacts">संपर्क परवानगी नाकारली गेली. पुन्हा प्रयत्न करा किंवा परवानगी व्यक्तिचलितपणे सक्रिय करा, किंवा संपर्क आयात कार्य करणार नाही!</string>
-    <string name="missing_permission_contacts_forever">Birday संपर्क आयात करण्याची परवानगी मागू शकत नाही, तुम्ही \"पुन्हा कधीही विचारू नका\" हे तपासले आहे. ते व्यक्तिचलितपणे सक्षम करा!</string>
-    <string name="birday_import_title">Import a Birday backup</string>
-    <string name="birday_import_description">तुमचे कार्यक्रम पुनर्संचयित करण्यासाठी वैध Birday बॅकअप निवडा. सर्व विद्यमान डेटा अधिलिखित केले जाईल!</string>
+    <string name="missing_permission_contacts_forever">Auspice संपर्क आयात करण्याची परवानगी मागू शकत नाही, तुम्ही \"पुन्हा कधीही विचारू नका\" हे तपासले आहे. ते व्यक्तिचलितपणे सक्षम करा!</string>
+    <string name="birday_import_title">Import a Auspice backup</string>
+    <string name="birday_import_description">तुमचे कार्यक्रम पुनर्संचयित करण्यासाठी वैध Auspice बॅकअप निवडा. सर्व विद्यमान डेटा अधिलिखित केले जाईल!</string>
     <string name="birday_export_title">कार्यक्रम निर्यात आणि शेअर करा</string>
     <string name="birday_export_description">उपलब्ध कार्यक्रम्स बॅकअपमध्ये एक्सपोर्ट करा आणि तुम्हाला हवे असल्यास ते शेअर करा</string>
     <string name="birday_import_success">आयात पूर्ण झाले!</string>
     <string name="birday_import_failure">आयात अयशस्वी. तुम्ही फाइल योग्यरित्या निवडली आहे का?</string>
-    <string name="birday_import_invalid_file">आयात अयशस्वी. निवडलेली फाइल Birday बॅकअप नाही!</string>
+    <string name="birday_import_invalid_file">आयात अयशस्वी. निवडलेली फाइल Auspice बॅकअप नाही!</string>
     <string name="birday_export_success">निर्यात पूर्ण!</string>
     <string name="birday_export_failure">निर्यात अयशस्वी. अरेरे!</string>
     <string name="birday_export_nothing_found">निर्यात करण्यासाठी काहीही नाही!</string>
@@ -108,14 +108,14 @@
     <string name="additional_notification_only_favorites_description_off">Send the additional notification for every event inserted</string>
     <string name="troubleshoot">समस्यानिवारण आणि अतिरिक्त</string>
     <string name="battery_optimization_title">बॅटरी ऑप्टिमायझेशन अक्षम करा</string>
-    <string name="battery_optimization_description">Birday साठी कोणतेही ऑप्टिमायझेशन अक्षम करण्यासाठी सेटिंग्ज उघडा. सूचना कार्य करत नसल्यास उपयुक्त</string>
-    <string name="battery_optimization_tutorial">- Show all the apps and find Birday in the list\n- Tap on Birday and select \"Don\'t optimize\"</string>
+    <string name="battery_optimization_description">Auspice साठी कोणतेही ऑप्टिमायझेशन अक्षम करण्यासाठी सेटिंग्ज उघडा. सूचना कार्य करत नसल्यास उपयुक्त</string>
+    <string name="battery_optimization_tutorial">- Show all the apps and find Auspice in the list\n- Tap on Auspice and select \"Don\'t optimize\"</string>
     <string name="notification_sound_title">सूचना आवाज</string>
     <string name="notification_sound_description">तुम्हाला डिफॉल्ट पक्षी आवाज आवडत नसल्यास, सूचना आवाज सेटिंग्जचा शॉर्टकट</string>
-    <string name="missing_permission_notifications">The notification permission was denied, and Birday can\'t send notifications! Activate the permission from settings.</string>
-    <string name="missing_permission_notifications_forever">The notification permission was denied and can\'t be asked again, so Birday can\'t send notifications! Activate the permission manually, from settings.</string>
-    <string name="missing_permission_calendar">The calendar permission was denied, and Birday can\'t import from calendar! Activate the permission from settings.</string>
-    <string name="missing_permission_calendar_forever">The calendar permission was denied and can\'t be asked again, so Birday can\'t import from calendar! Activate the permission manually, from settings.</string>
+    <string name="missing_permission_notifications">The notification permission was denied, and Auspice can\'t send notifications! Activate the permission from settings.</string>
+    <string name="missing_permission_notifications_forever">The notification permission was denied and can\'t be asked again, so Auspice can\'t send notifications! Activate the permission manually, from settings.</string>
+    <string name="missing_permission_calendar">The calendar permission was denied, and Auspice can\'t import from calendar! Activate the permission from settings.</string>
+    <string name="missing_permission_calendar_forever">The calendar permission was denied and can\'t be asked again, so Auspice can\'t import from calendar! Activate the permission manually, from settings.</string>
     <string name="import_calendar_title">Import from calendar</string>
     <string name="import_calendar_description">Import any yearly event from your calendars. Remember to set the event type and year to keep things ordered!</string>
     <string name="loop_avd_title">Loop animations</string>
@@ -126,13 +126,11 @@
     <string name="order_alphabetically_description_off">The events are ordered by date</string>
     <string name="grouped_notifications_title">Group multiple notifications</string>
     <string name="grouped_notifications_description_on">If there are two or more events in a single day, the notifications are grouped</string>
-    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Birday will send a notification for each</string>
+    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Auspice will send a notification for each</string>
     <!-- Developer -->
-    <string name="dev_description">मी एक विनयशील माणूस आहे आणि मला अॅनिमेशन, आयकॉन, स्पोर्ट कार आणि 3D प्रिंटिंग सारख्या सुंदर गोष्टी आवडतात. मी डिझायनर आणि संगणक अभियंता म्हणून काम करतो.</string>
-    <string name="easter_egg">छान लोगो, हं? ;D</string>
     <!-- New event -->
     <string name="new_event">नवीन कार्यक्रम</string>
-    <string name="new_event_description">एखादी व्यक्ती ज्याची तुम्हाला काळजी आहे एंटर करा आणि Birday तुम्हाला त्यांचा वाढदिवस किंवा इतर कार्यक्रम लक्षात ठेवण्यास मदत करेल!</string>
+    <string name="new_event_description">एखादी व्यक्ती ज्याची तुम्हाला काळजी आहे एंटर करा आणि Auspice तुम्हाला त्यांचा वाढदिवस किंवा इतर कार्यक्रम लक्षात ठेवण्यास मदत करेल!</string>
     <string name="insert_event">कार्यक्रम घाला</string>
     <string name="cancel">रद्द करा</string>
     <string name="insert_name_hint">प्रथम नाव घाला</string>
@@ -233,24 +231,24 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">कार्यक्रम स्मरणपत्र</string>
-    <string name="events_channel_description">Birday कडून आगामी कार्यक्रमांबद्दल स्मरणपत्रे</string>
-    <string name="notification_title">Birday आठवण</string>
+    <string name="events_channel_description">Auspice कडून आगामी कार्यक्रमांबद्दल स्मरणपत्रे</string>
+    <string name="notification_title">Auspice आठवण</string>
     <string name="notification_description_part_1">आजच्या घटना आहेत</string>
     <string name="notification_description_part_2">तुमचा दिवस चांगला जावो!</string>
     <string name="additional_notification_text">पुढील कार्यक्रम!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Birday मध्ये आपले स्वागत आहे!</string>
-    <string name="slide_one_description">Birday हे महत्त्वाचे कार्यक्रम व्यवस्थापित करण्यासाठी सोपे आणि हलके अॅप आहे! तुम्ही विश्वासार्ह आणि जलद मार्गाने तुम्हाला आवडत असलेल्या लोकांचे वाढदिवस लक्षात ठेवण्यासाठी आणि संग्रहित करण्यासाठी याचा वापर करू शकता.
+    <string name="slide_one_title">Auspice मध्ये आपले स्वागत आहे!</string>
+    <string name="slide_one_description">Auspice हे महत्त्वाचे कार्यक्रम व्यवस्थापित करण्यासाठी सोपे आणि हलके अॅप आहे! तुम्ही विश्वासार्ह आणि जलद मार्गाने तुम्हाला आवडत असलेल्या लोकांचे वाढदिवस लक्षात ठेवण्यासाठी आणि संग्रहित करण्यासाठी याचा वापर करू शकता.
     </string>
     <string name="slide_two_title">विनामूल्य, साधे, सानुकूल करण्यायोग्य</string>
-    <string name="slide_two_description">Birday विनामूल्य, जाहिरातमुक्त आणि मुक्त स्रोत आहे. तो एक संच प्रदान करते तुमच्‍या इव्‍हेंटची आकडेवारी, एक आवडती सिस्‍टम आणि सानुकूल करण्यायोग्य इंटरफेस. आणि हमी दिली समर्थन आणि अद्यतने!
+    <string name="slide_two_description">Auspice विनामूल्य, जाहिरातमुक्त आणि मुक्त स्रोत आहे. तो एक संच प्रदान करते तुमच्‍या इव्‍हेंटची आकडेवारी, एक आवडती सिस्‍टम आणि सानुकूल करण्यायोग्य इंटरफेस. आणि हमी दिली समर्थन आणि अद्यतने!
     </string>
     <string name="slide_three_title">संपर्कांमधून आयात करा</string>
-    <string name="slide_three_description">तुम्ही आधीच सेव्ह केलेले इव्हेंट इंपोर्ट करणे देखील शक्य आहे तुमच्या संपर्कांमधून. Birday हे तुमच्यासाठी करू शकते, फक्त संपर्कांना परवानगी द्या. आनंद घ्या!
+    <string name="slide_three_description">तुम्ही आधीच सेव्ह केलेले इव्हेंट इंपोर्ट करणे देखील शक्य आहे तुमच्या संपर्कांमधून. Auspice हे तुमच्यासाठी करू शकते, फक्त संपर्कांना परवानगी द्या. आनंद घ्या!
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">पुढील कार्यक्रम</string>
-    <string name="add_widget">Birday - आगामी</string>
+    <string name="add_widget">Auspice - आगामी</string>
     <string name="dark_widget_name">गडद विजेट</string>
     <string name="dark_widget_description_on">विजेट गडद थीम वापरते</string>
     <string name="dark_widget_description_off">विजेट लाइट थीम वापरते</string>
@@ -283,8 +281,8 @@
     <string name="check_github">Check Github</string>
     <string name="translate_app">Translate the app</string>
     <string name="launch_auto_import_title">Auto import on launch</string>
-    <string name="launch_auto_import_description_off">Birday won\'t import contacts automatically when launched</string>
-    <string name="launch_auto_import_description_on">Birday will automatically sync with contacts at startup</string>
+    <string name="launch_auto_import_description_off">Auspice won\'t import contacts automatically when launched</string>
+    <string name="launch_auto_import_description_on">Auspice will automatically sync with contacts at startup</string>
     <string name="hide_on_scroll_title">Hide navbar on scroll</string>
     <string name="hide_on_scroll_description_on">Hide the bottom navbar when you scroll</string>
     <string name="hide_on_scroll_description_off">The bottom navbar will always be visible</string>
@@ -305,8 +303,8 @@
     <string name="export_calendar_title">Export to calendar</string>
     <string name="export_calendar_description">Save every event to your local calendar, if possible. Requires the calendar permission</string>
     <string name="auto_export_title">Auto export events</string>
-    <string name="auto_export_description_on">Birday will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
-    <string name="auto_export_description_off">To perform a local Birday backup, it has to be executed manually</string>
+    <string name="auto_export_description_on">Auspice will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
+    <string name="auto_export_description_off">To perform a local Auspice backup, it has to be executed manually</string>
     <string name="add_demo_entries_title">Add demo entries</string>
     <string name="add_demo_entries_description">Populate the DB with a demo set of events, mostly actors and historical figures</string>
     <string name="add_demo_entries_dialog_description">हे डेटाबेसमध्ये कायमस्वरूपी हजारो नोंदी जोडेल आणि हे फक्त डिबग उद्देशांसाठी आहे. हे कोणतीही विद्यमान घटना हटवणार नाही, परंतु जर तुम्हाला नवीन नोंदी हटवायच्या असतील, तर तुम्हाला त्या हाताने कराव्या लागतील. त्यासाठी शुभेच्छा.</string>
@@ -316,7 +314,7 @@
     <string name="delete_db_dialog_description">Make sure to backup your events first, this operation will wipe the DB and should be used for debugging purposes only</string>
     <string name="delete_search_title">Delete search selection</string>
     <string name="delete_search_description_off">It won\'t be possible to delete multiple events at once</string>
-    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Birday. Use with caution!</string>
+    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Auspice. Use with caution!</string>
     <string name="delete_search_confirm">This will delete all the results of this search. You can undo the process shortly after clicking OK if you change your mind!</string>
     <string name="import_contacts_bottom_sheet_description">Would you like to import all the events from your contacts right now?</string>
     <string name="yes_import">Import</string>

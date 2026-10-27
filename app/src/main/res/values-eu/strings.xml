@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Ongi etorri Birdayra</string>
-    <string name="app_name_extended">Birday - Hitzordu kudeatzailea</string>
-    <string name="leave_review_title">Birdayren iritzia eman</string>
+    <string name="app_welcome">Ongi etorri Auspicera</string>
+    <string name="app_name_extended">Auspice - Hitzordu kudeatzailea</string>
+    <string name="leave_review_title">Auspiceren iritzia eman</string>
     <string name="leave_review_subtitle">Eman zure iritzia aplikazioaren garapenarekin laguntzeko. Dohaintzak alde batera utzita, aplikazio hau doakoa da eta ez du iragarkirik!</string>
     <string name="yes_review">Eman iritzia!</string>
     <string name="later">Geroago egingo dut</string>
@@ -18,12 +18,12 @@
     <string name="stats_summary">Estatistiken laburpena</string>
     <string name="no_stats_description">Ez duzu estatistikak sortze behar beste hitzordu. Gehitu batzuk eta begiratu beranduago!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birdayk hitzordu %d gogorarazten laguntzen dizu</item>
-        <item quantity="other">Birdayk %d hitzordu gogorarazten laguntzen dizu</item>
+        <item quantity="one">Auspicek hitzordu %d gogorarazten laguntzen dizu</item>
+        <item quantity="other">Auspicek %d hitzordu gogorarazten laguntzen dizu</item>
     </plurals>
     <string name="next_event">Hurrengo hitzordua</string>
     <string name="no_next_event">Ez dago hitzordurik!</string>
-    <string name="no_next_event_description">Ez duzu hitzordurik gehitu edo inportatu. Gehitu bat eta utzi Birdayri laguntzen!</string>
+    <string name="no_next_event_description">Ez duzu hitzordurik gehitu edo inportatu. Gehitu bat eta utzi Auspiceri laguntzen!</string>
     <string name="next_age_years">Urteak</string>
     <string name="event_others">eta bestelakoak</string>
     <plurals name="days_left">
@@ -83,14 +83,14 @@
     <string name="import_nothing_found">Ez da hitzordurik aurkitu!</string>
     <string name="import_failed">Errore bat gertatu da!</string>
     <string name="missing_permission_contacts">Kontaktuak atzitzeko baimena ukatu duzu. Saiatu berriz edo aktibatu baimena eskuz, bestela kontaktuen inportazioak ez du funtzionatuko!</string>
-    <string name="missing_permission_contacts_forever">Birdayk ezin du kontaktuak inportatzeko baimena eskatu \"berriz ez eskatu\" sakatu duzulako. Aktibatu ezazu eskuz!</string>
-    <string name="birday_import_title">Inportatu Birdayren segurtasun-kopia</string>
-    <string name="birday_import_description">Aukeratu zure hitzorduak berrezartzeko Birdayren segurtasun-kopia zuzen bat. Datu guztiak gainidatzi egingo dira!</string>
+    <string name="missing_permission_contacts_forever">Auspicek ezin du kontaktuak inportatzeko baimena eskatu \"berriz ez eskatu\" sakatu duzulako. Aktibatu ezazu eskuz!</string>
+    <string name="birday_import_title">Inportatu Auspiceren segurtasun-kopia</string>
+    <string name="birday_import_description">Aukeratu zure hitzorduak berrezartzeko Auspiceren segurtasun-kopia zuzen bat. Datu guztiak gainidatzi egingo dira!</string>
     <string name="birday_export_title">Esportatu eta partekatu hitzorduak</string>
     <string name="birday_export_description">Esportatu hitzorduak segurtasun-kopia bat eginez eta partekatu hala nahi baduzu</string>
     <string name="birday_import_success">Inportazioa ondo egin da!</string>
     <string name="birday_import_failure">Inportazioak huts egin du. Fitxategia ondo aukeratu duzu?</string>
-    <string name="birday_import_invalid_file">Inportazioak huts egin du. Aukeratu duzun fitxategia ez da Birdayren segurtasun-kopia bat!</string>
+    <string name="birday_import_invalid_file">Inportazioak huts egin du. Aukeratu duzun fitxategia ez da Auspiceren segurtasun-kopia bat!</string>
     <string name="birday_export_success">Esportazioa ondo egin da!</string>
     <string name="birday_export_failure">Esportazioak huts egin du. Ene bada!</string>
     <string name="birday_export_nothing_found">Ez dago esportatzeko ezer!</string>
@@ -108,14 +108,14 @@
     <string name="additional_notification_only_favorites_description_off">Bidali jakinarazpen gehia hitzordu guztientzat</string>
     <string name="troubleshoot">Arazoak konpontzea eta ezarpen gehigarriak</string>
     <string name="battery_optimization_title">Desaktibatu bateria optimizatzea</string>
-    <string name="battery_optimization_description">Ireki ezarpenak Birdayren optimizazioak desaktibatzeko. Erabilgarria da jakinarazpenak ez badabiltza.</string>
-    <string name="battery_optimization_tutorial">- Erakutsi aplikazio guztiak eta bilatu Birday zerrendan\n- Sakatu Birday eta aukeratu \"Ez optimizatu\"</string>
+    <string name="battery_optimization_description">Ireki ezarpenak Auspiceren optimizazioak desaktibatzeko. Erabilgarria da jakinarazpenak ez badabiltza.</string>
+    <string name="battery_optimization_tutorial">- Erakutsi aplikazio guztiak eta bilatu Auspice zerrendan\n- Sakatu Auspice eta aukeratu \"Ez optimizatu\"</string>
     <string name="notification_sound_title">Jakinarazpenaren soinua</string>
     <string name="notification_sound_description">Jakinarazpenaren soinuaren ezarpenetarako sarbidea defektuzkoa aldatu nahi baduzu</string>
-    <string name="missing_permission_notifications">Jakinarazpenaren baimena ukatu egin da eta Birdayk ezin du jakinarazpenik bidali! Aktibatu baimena ezarpenetatik.</string>
-    <string name="missing_permission_notifications_forever">Jakinarazpenen baimena ukatu egin da eta ezin da berriz eskatu beraz Birdayk ezin ditu jakinarazpenak bidali. Aktibatu baimena eskuz, ezarpenetara joanez.</string>
-    <string name="missing_permission_calendar">Egutegiaren baimena ukatu egin da eta Birdayk ezin du egutegitik ezer inportatu! Aktibatu baimena eskuz, ezarpenetara joanez.</string>
-    <string name="missing_permission_calendar_forever">Egutegiaren baiman ukatu egin da eta ezin da berriz eskatu, beraz Birdayk ezin du egutegitik ezer inportatu. Aktibatu baimena eskuz, ezarpenetara joanez.</string>
+    <string name="missing_permission_notifications">Jakinarazpenaren baimena ukatu egin da eta Auspicek ezin du jakinarazpenik bidali! Aktibatu baimena ezarpenetatik.</string>
+    <string name="missing_permission_notifications_forever">Jakinarazpenen baimena ukatu egin da eta ezin da berriz eskatu beraz Auspicek ezin ditu jakinarazpenak bidali. Aktibatu baimena eskuz, ezarpenetara joanez.</string>
+    <string name="missing_permission_calendar">Egutegiaren baimena ukatu egin da eta Auspicek ezin du egutegitik ezer inportatu! Aktibatu baimena eskuz, ezarpenetara joanez.</string>
+    <string name="missing_permission_calendar_forever">Egutegiaren baiman ukatu egin da eta ezin da berriz eskatu, beraz Auspicek ezin du egutegitik ezer inportatu. Aktibatu baimena eskuz, ezarpenetara joanez.</string>
     <string name="import_calendar_title">Inportatu egutegitik</string>
     <string name="import_calendar_description">Inportatu zure egutegietako urteroko hitzordu bat. Gogoratu hitzordu-mota ezarri eta gauzak ordenatuta izateaz!</string>
     <string name="loop_avd_title">Animazio errepikakorrak</string>
@@ -128,11 +128,9 @@
     <string name="grouped_notifications_description_on">Egun berean hitzordu bi edo gehiago badago, jakinarazpenak taldekatu</string>
     <string name="grouped_notifications_description_off">Egun berean hitzordu bi edo gehiago badago, bakoitzarentzat jakinarazpen bat bidali</string>
     <!-- Developer -->
-    <string name="dev_description">Tipo atsegina naiz eta gauza politak gustatzen zaizkit, hala nola animazioak, ikonoak kotxeak eta 3D inprimaketa. Diseinatzaile eta informatikari lana egiten dut.</string>
-    <string name="easter_egg">Logo polita, ezta? ;D</string>
     <!-- New event -->
     <string name="new_event">Hitzordu berria</string>
-    <string name="new_event_description">Sartu pertsona baten datuak, eta Birdayk bere urtebetze eguna edo beste edozein hitzordu gogorarazten lagundiko dizu!</string>
+    <string name="new_event_description">Sartu pertsona baten datuak, eta Auspicek bere urtebetze eguna edo beste edozein hitzordu gogorarazten lagundiko dizu!</string>
     <string name="insert_event">Txertatu hitzordua</string>
     <string name="cancel">Utzi</string>
     <string name="insert_name_hint">Idatzi izena</string>
@@ -233,25 +231,25 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Hitzorduaren gogorarazpena</string>
-    <string name="events_channel_description">Hurrengo Birdayko hitzorduen gogorarazpenak</string>
-    <string name="notification_title">Birday gogorarazpena</string>
+    <string name="events_channel_description">Hurrengo Auspiceko hitzorduen gogorarazpenak</string>
+    <string name="notification_title">Auspice gogorarazpena</string>
     <string name="notification_description_part_1">Gaurko hitzorduak</string>
     <string name="notification_description_part_2">Egun ona izan!</string>
     <string name="additional_notification_text">Hurrengo hitzorduak!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Ongi etorri Birdayra!</string>
-    <string name="slide_one_description">Hitzordu garrantzitsuak kudeatzeko aplikazio sinple eta arina da Birday!
+    <string name="slide_one_title">Ongi etorri Auspicera!</string>
+    <string name="slide_one_description">Hitzordu garrantzitsuak kudeatzeko aplikazio sinple eta arina da Auspice!
     Lagun eta familiako kideen urtebetetzeak gorde eta gogorarazteko erabili dezakezu.
     </string>
     <string name="slide_two_title">Doakoa, sinplea eta pertsonalizagarria</string>
-    <string name="slide_two_description">Birday doakoa da, ez du iragarkirik eta kode-irekikoa da. Zure hitzorduen estatistikak ematen dizkizu, gogokoen sistema bat ere badu eta interfazea pertsonalizatu dezakezu. Gainera eguneraketak ere eskaintzen dizkizu!
+    <string name="slide_two_description">Auspice doakoa da, ez du iragarkirik eta kode-irekikoa da. Zure hitzorduen estatistikak ematen dizkizu, gogokoen sistema bat ere badu eta interfazea pertsonalizatu dezakezu. Gainera eguneraketak ere eskaintzen dizkizu!
     </string>
     <string name="slide_three_title">Inportatu kontaktuetatik</string>
-    <string name="slide_three_description">Zure kontaktuen fitxetan dituzun hitzorduak ere inporattu ditzakezu. Birdayk egin dezake hori, horretarako eman kontaktuak atzitzeko baimena.
+    <string name="slide_three_description">Zure kontaktuen fitxetan dituzun hitzorduak ere inporattu ditzakezu. Auspicek egin dezake hori, horretarako eman kontaktuak atzitzeko baimena.
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Hurrengo hitzorduak</string>
-    <string name="add_widget">Birday - Hurrengoak</string>
+    <string name="add_widget">Auspice - Hurrengoak</string>
     <string name="dark_widget_name">Widget iluna</string>
     <string name="dark_widget_description_on">Widgetak itxura iluna du</string>
     <string name="dark_widget_description_off">Widgetak itxura argia du</string>
@@ -284,8 +282,8 @@
     <string name="check_github">Begiratu GitHub</string>
     <string name="translate_app">Itzuli aplikazioa</string>
     <string name="launch_auto_import_title">Automatikoki inportatu abiaraztean</string>
-    <string name="launch_auto_import_description_off">Birdayk ez ditu zure kontaktuak inportatuko abiaraztean</string>
-    <string name="launch_auto_import_description_on">Birdayk zure kontaktuak inportatutako ditu abiaraztean</string>
+    <string name="launch_auto_import_description_off">Auspicek ez ditu zure kontaktuak inportatuko abiaraztean</string>
+    <string name="launch_auto_import_description_on">Auspicek zure kontaktuak inportatutako ditu abiaraztean</string>
     <string name="hide_on_scroll_title">Ezkutatu nabigazio barra korritzean</string>
     <string name="hide_on_scroll_description_on">Ezkutatu beheko barra korritzean</string>
     <string name="hide_on_scroll_description_off">Beheko barra beti erakutsi</string>
@@ -306,8 +304,8 @@
     <string name="export_calendar_title">Esportatu egutegira</string>
     <string name="export_calendar_description">Gorde hitzordu bakoitza zure egutegi lokalean, posible bada. Egutegia atzitzeko baimena behar du</string>
     <string name="auto_export_title">Esportatu hitzorduak automatikoki</string>
-    <string name="auto_export_description_on">Birdayk automatikoki segurtasun-kopia bat esportatuko du aplikazioa ixtean. Kontuan izan segurtasun-kopia bakoitzak aurrekoa ezabatu egingo duela</string>
-    <string name="auto_export_description_off">Birdayren segurtasun-kopia lokala egiteko, eskuz egin behar da</string>
+    <string name="auto_export_description_on">Auspicek automatikoki segurtasun-kopia bat esportatuko du aplikazioa ixtean. Kontuan izan segurtasun-kopia bakoitzak aurrekoa ezabatu egingo duela</string>
+    <string name="auto_export_description_off">Auspiceren segurtasun-kopia lokala egiteko, eskuz egin behar da</string>
     <string name="add_demo_entries_title">Gehitu probatako hitzorduak</string>
     <string name="add_demo_entries_description">Zerrendara probatako hitzordu batzuk gehitzen ditu, aktoreak eta pertsonaia historikoak</string>
     <string name="add_demo_entries_dialog_description">Aukera honek milaka datu kargatuko ditu eta probak egiteko besterik ez da. Ez du zerrendako hitzordirik ezabatuko baina gehitutakoak ezabatu nahi badituzu, eskuz egin beharko duzu. Zorte on lan horretan.</string>
@@ -317,7 +315,7 @@
     <string name="delete_db_dialog_description">Egin zure hitzorduen segurtasun-kopia, ekintza honek zerrenda hustu egingo du-eta.</string>
     <string name="delete_search_title">Ezabatu bilaketa-aukera</string>
     <string name="delete_search_description_off">Ezingo dira hitzordu bat baino gehiago batera ezabatu</string>
-    <string name="delete_search_description_on">Sakatu zakarrontziaren ikonoa hitzordu bat edo gehiago bilatzen dituzuenean guztiak Birdaytik ezabatzeko. Kontuz ibili!</string>
+    <string name="delete_search_description_on">Sakatu zakarrontziaren ikonoa hitzordu bat edo gehiago bilatzen dituzuenean guztiak Auspicetik ezabatzeko. Kontuz ibili!</string>
     <string name="delete_search_confirm">Honek bilaketa honen emaitza guztiak ezabatu egingo ditu. OK sakatu ostean zure ekintza desegiteko aukera izango duzu momentu batez</string>
     <string name="import_contacts_bottom_sheet_description">Zure kontaktuen hitzordu guztiak inportatu nahi dituzu?</string>
     <string name="yes_import">Inportatu</string>

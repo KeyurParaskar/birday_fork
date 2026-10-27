@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">欢迎使用 Birday</string>
-    <string name="app_name_extended">Birday - 事件管理器</string>
-    <string name="leave_review_title">为 Birday 评分</string>
+    <string name="app_welcome">欢迎使用 Auspice</string>
+    <string name="app_name_extended">Auspice - 事件管理器</string>
+    <string name="leave_review_title">为 Auspice 评分</string>
     <string name="leave_review_subtitle">请帮我为这个应用留个评价吧！记住，这个应用除了捐赠外，是完全免费且无广告的！</string>
     <string name="yes_review">评价！</string>
     <string name="later">稍候，我保证</string>
@@ -18,11 +18,11 @@
     <string name="stats_summary">数据概览</string>
     <string name="no_stats_description">你没有足够的事件来生成数据，添加一些后再回来看！</string>
     <plurals name="stats_total">
-        <item quantity="other">Birday帮助你记住了共%d个事件</item>
+        <item quantity="other">Auspice帮助你记住了共%d个事件</item>
     </plurals>
     <string name="next_event">下个事件</string>
     <string name="no_next_event">没有可显示的事件！</string>
-    <string name="no_next_event_description">你还没有输入或导入任何事件，添加一个并让Birday帮助你！</string>
+    <string name="no_next_event_description">你还没有输入或导入任何事件，添加一个并让Auspice帮助你！</string>
     <string name="next_age_years">年</string>
     <string name="event_others">和其它</string>
     <plurals name="days_left">
@@ -81,14 +81,14 @@
     <string name="import_nothing_found">未找到事件！</string>
     <string name="import_failed">有什么出错了！</string>
     <string name="missing_permission_contacts">通讯录权限被拒绝，再试下或手动打开权限，否则无法导入通讯录！</string>
-    <string name="missing_permission_contacts_forever">Birday无法询问导入通讯录的权限，因为你选择了“不再询问”。请手动开启权限！</string>
-    <string name="birday_import_title">导入Birday备份</string>
-    <string name="birday_import_description">选择一个有效的Birday备份来恢复你的事件。所有现存数据会被覆盖！</string>
+    <string name="missing_permission_contacts_forever">Auspice无法询问导入通讯录的权限，因为你选择了“不再询问”。请手动开启权限！</string>
+    <string name="birday_import_title">导入Auspice备份</string>
+    <string name="birday_import_description">选择一个有效的Auspice备份来恢复你的事件。所有现存数据会被覆盖！</string>
     <string name="birday_export_title">导出并共享事件</string>
     <string name="birday_export_description">将可用的事件导出到备份中，并且如果你想的话可以分享它们</string>
     <string name="birday_import_success">导入完成！</string>
     <string name="birday_import_failure">导入失败。请问你选择了正确的文件吗？</string>
-    <string name="birday_import_invalid_file">导入失败。所选文件不是Birday备份！</string>
+    <string name="birday_import_invalid_file">导入失败。所选文件不是Auspice备份！</string>
     <string name="birday_export_success">导出完成！</string>
     <string name="birday_export_failure">导出失败。哎呀！</string>
     <string name="birday_export_nothing_found">没东西可导出！</string>
@@ -106,14 +106,14 @@
     <string name="additional_notification_only_favorites_description_off">为每个插入的事件发送额外通知</string>
     <string name="troubleshoot">疑难诊断和更多</string>
     <string name="battery_optimization_title">禁用电池优化</string>
-    <string name="battery_optimization_description">打开设置来为Birday禁用任何优化。如果通知不正常工作的话会有用。</string>
-    <string name="battery_optimization_tutorial">- 在打开的电池优化列表中找到 Birday\n- 点击 Birday 并选择“不优化”</string>
+    <string name="battery_optimization_description">打开设置来为Auspice禁用任何优化。如果通知不正常工作的话会有用。</string>
+    <string name="battery_optimization_tutorial">- 在打开的电池优化列表中找到 Auspice\n- 点击 Auspice 并选择“不优化”</string>
     <string name="notification_sound_title">通知声音</string>
     <string name="notification_sound_description">通知声音设置的快捷方式，如果你不喜欢默认的声音。</string>
-    <string name="missing_permission_notifications">通知权限被拒绝，且Birday无法发送通知！请从设置中开启权限。</string>
-    <string name="missing_permission_notifications_forever">通知权限被拒绝且无法再次询问，所以Birday无法发送通知！请从设置中手动开启权限。</string>
-    <string name="missing_permission_calendar">日历权限被拒绝，且Birday无法从日历导入！请从设置中开启权限。</string>
-    <string name="missing_permission_calendar_forever">日历权限被拒绝且无法再次询问，所以Birday无法从日历导入！请从设置中手动开启权限。</string>
+    <string name="missing_permission_notifications">通知权限被拒绝，且Auspice无法发送通知！请从设置中开启权限。</string>
+    <string name="missing_permission_notifications_forever">通知权限被拒绝且无法再次询问，所以Auspice无法发送通知！请从设置中手动开启权限。</string>
+    <string name="missing_permission_calendar">日历权限被拒绝，且Auspice无法从日历导入！请从设置中开启权限。</string>
+    <string name="missing_permission_calendar_forever">日历权限被拒绝且无法再次询问，所以Auspice无法从日历导入！请从设置中手动开启权限。</string>
     <string name="import_calendar_title">从日历导入</string>
     <string name="import_calendar_description">从你的日历导入任何年度事件。记住设置事件的类型和年份来让它们整齐！</string>
     <string name="loop_avd_title">循环动画</string>
@@ -124,13 +124,11 @@
     <string name="order_alphabetically_description_off">事件会按日期排序</string>
     <string name="grouped_notifications_title">将多个通知分组</string>
     <string name="grouped_notifications_description_on">如果一天有两个或两个以上的事件，则通知将分组</string>
-    <string name="grouped_notifications_description_off">如果一天内有两个或两个以上的活动，Birday 将为每个活动发送通知</string>
+    <string name="grouped_notifications_description_off">如果一天内有两个或两个以上的活动，Auspice 将为每个活动发送通知</string>
     <!-- Developer -->
-    <string name="dev_description">我是一个有礼貌和喜欢美好事物的家伙，喜欢动画，图标，跑车和3D打印。我的工作是设计家和计算机工程师。</string>
-    <string name="easter_egg">标志不错，对吧？;D</string>
     <!-- New event -->
     <string name="new_event">新事件</string>
-    <string name="new_event_description">输入一个你关心的人，然后Birday会帮你记住他们的生日或其它事件！</string>
+    <string name="new_event_description">输入一个你关心的人，然后Auspice会帮你记住他们的生日或其它事件！</string>
     <string name="insert_event">插入事件</string>
     <string name="cancel">取消</string>
     <string name="insert_name_hint">插入名字</string>
@@ -227,24 +225,24 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">事件提醒</string>
-    <string name="events_channel_description">来自Birday的关于即将到来的事件的提醒</string>
-    <string name="notification_title">Birday提醒</string>
+    <string name="events_channel_description">来自Auspice的关于即将到来的事件的提醒</string>
+    <string name="notification_title">Auspice提醒</string>
     <string name="notification_description_part_1">今天的事件是</string>
     <string name="notification_description_part_2">祝您愉快！</string>
     <string name="additional_notification_text">即将到来的事件！</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">欢迎使用Birday！</string>
-    <string name="slide_one_description">Birday是个简单且轻量的管理重要事件的app！你能用它来记住和存储你爱的人的生日等等，可靠又迅捷。
+    <string name="slide_one_title">欢迎使用Auspice！</string>
+    <string name="slide_one_description">Auspice是个简单且轻量的管理重要事件的app！你能用它来记住和存储你爱的人的生日等等，可靠又迅捷。
     </string>
     <string name="slide_two_title">免费，简单，可自定义</string>
-    <string name="slide_two_description">Birday免费，无广告，且开源。它提供一套关于你的事件的数据，一个最受喜爱的系统和可自定义的界面。还有保证的支持和更新！
+    <string name="slide_two_description">Auspice免费，无广告，且开源。它提供一套关于你的事件的数据，一个最受喜爱的系统和可自定义的界面。还有保证的支持和更新！
     </string>
     <string name="slide_three_title">从通讯录导入</string>
-    <string name="slide_three_description">从你的通讯录导入你已保存的事件也是可能的。Birday能帮你搞定，只要提供通讯录权限即可。请享受吧！
+    <string name="slide_three_description">从你的通讯录导入你已保存的事件也是可能的。Auspice能帮你搞定，只要提供通讯录权限即可。请享受吧！
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">即将到来的事件</string>
-    <string name="add_widget">Birday - 即将到来</string>
+    <string name="add_widget">Auspice - 即将到来</string>
     <string name="dark_widget_name">黑暗组件</string>
     <string name="dark_widget_description_on">组件使用黑暗主题</string>
     <string name="dark_widget_description_off">组件使用光明主题</string>
@@ -277,8 +275,8 @@
     <string name="check_github">查看Github</string>
     <string name="translate_app">翻译app</string>
     <string name="launch_auto_import_title">开启时自动导入</string>
-    <string name="launch_auto_import_description_off">Birday不会在开启时自动导入通讯录</string>
-    <string name="launch_auto_import_description_on">Birday会在开启时与通讯录自动同步</string>
+    <string name="launch_auto_import_description_off">Auspice不会在开启时自动导入通讯录</string>
+    <string name="launch_auto_import_description_on">Auspice会在开启时与通讯录自动同步</string>
     <string name="hide_on_scroll_title">滑动时隐藏导航栏</string>
     <string name="hide_on_scroll_description_on">当你滑动时隐藏底部导航栏</string>
     <string name="hide_on_scroll_description_off">底部导航栏总是可见</string>
@@ -299,8 +297,8 @@
     <string name="export_calendar_title">导出到日历</string>
     <string name="export_calendar_description">如有可能，则将所有事件保存至本地日历。需要日历权限</string>
     <string name="auto_export_title">自动导出事件</string>
-    <string name="auto_export_description_on">应用关闭时，Birday将自动导出备份。请注意，新备份将覆盖旧备份</string>
-    <string name="auto_export_description_off">要在本地备份Birday信息，则必须手动进行</string>
+    <string name="auto_export_description_on">应用关闭时，Auspice将自动导出备份。请注意，新备份将覆盖旧备份</string>
+    <string name="auto_export_description_off">要在本地备份Auspice信息，则必须手动进行</string>
     <string name="add_demo_entries_title">添加演示条目</string>
     <string name="add_demo_entries_description">使用一组演示事件填充数据库，其中大部分是演员和历史人物</string>
     <string name="add_demo_entries_dialog_description">这将永久地向数据库添加数千个条目，用于调试目的。它不会删除任何现有事件，但如果您想删除新条目，则需要手动执行。祝你好运。</string>
@@ -310,7 +308,7 @@
     <string name="delete_db_dialog_description">确认先备份好你的事件，这个操作会抹除掉数据库而且只应该用作debug的用途</string>
     <string name="delete_search_title">删除搜索选择</string>
     <string name="delete_search_description_off">不可能一次性删除多个事件</string>
-    <string name="delete_search_description_on">当你搜索一个或多个事件时点击垃圾箱键来将他们全部从Birday快速删除掉。小心使用！</string>
+    <string name="delete_search_description_on">当你搜索一个或多个事件时点击垃圾箱键来将他们全部从Auspice快速删除掉。小心使用！</string>
     <string name="delete_search_confirm">这会删除所有的搜索结果。如果你在点击OK后很快改主意的话可以撤销进程！</string>
     <string name="import_contacts_bottom_sheet_description">您想要现在从您的联系人中导入所有事件吗？</string>
     <string name="yes_import">导入</string>

@@ -35,9 +35,9 @@
     <dimen name="event_countdown_opacity">0.3</dimen>
 
     <!-- Unchanged dimensions -->
-    <dimen name="minar_banner_height">84dp</dimen>
-    <dimen name="minar_banner_padding">12dp</dimen>
-    <dimen name="minar_description_padding">16dp</dimen>
+    <dimen name="about_banner_height">84dp</dimen>
+    <dimen name="about_banner_padding">12dp</dimen>
+    <dimen name="about_description_padding">16dp</dimen>
     <dimen name="bottom_navbar_height">80dp</dimen>
     <dimen name="bottom_navbar_item_padding">12dp</dimen>
     <dimen name="result_text_margin">42dp</dimen>

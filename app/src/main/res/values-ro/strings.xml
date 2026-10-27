@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Bine ai venit la Birday</string>
-    <string name="app_name_extended">Birday - Manager Evenimente</string>
-    <string name="leave_review_title">Lasă o recenzie despre Birday</string>
+    <string name="app_welcome">Bine ai venit la Auspice</string>
+    <string name="app_name_extended">Auspice - Manager Evenimente</string>
+    <string name="leave_review_title">Lasă o recenzie despre Auspice</string>
     <string name="leave_review_subtitle">Lasă o recenzie pentru a mă ajuta cu aplicația. Reține că, lăsând la o parte donațiile, această aplicație este complet gratuită și fără publicitate!</string>
     <string name="yes_review">Recenzie!</string>
     <string name="later">Mai târziu</string>
@@ -18,13 +18,13 @@
     <string name="stats_summary">Sumar statistici</string>
     <string name="no_stats_description">Nu ai destule evenimente pentru a genera statistici. Adaugă unele și întoarce-te mai târziu!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birday te ajută să îți amintești un total de %d eveniment</item>
-        <item quantity="few">Birday te ajută să îți amintești un total de %d evenimente</item>
-        <item quantity="other">Birday te ajută să îți amintești un total de %d evenimente</item>
+        <item quantity="one">Auspice te ajută să îți amintești un total de %d eveniment</item>
+        <item quantity="few">Auspice te ajută să îți amintești un total de %d evenimente</item>
+        <item quantity="other">Auspice te ajută să îți amintești un total de %d evenimente</item>
     </plurals>
     <string name="next_event">Următorul eveniment</string>
     <string name="no_next_event">Niciun eveniment de afișat!</string>
-    <string name="no_next_event_description">Nu ai introdus sau importat niciun eveniment. Adaugă unul și lasă Birday să te ajute!</string>
+    <string name="no_next_event_description">Nu ai introdus sau importat niciun eveniment. Adaugă unul și lasă Auspice să te ajute!</string>
     <string name="next_age_years">Ani</string>
     <string name="event_others">și altele</string>
     <plurals name="days_left">
@@ -86,16 +86,16 @@
     <string name="import_failed">Ceva nu a mers bine!</string>
     <string name="missing_permission_contacts">Permisiunea de citire a contactelor a fost refuzată. Încearcă din nou sau activează manual permisiunea,
     sau importul contactelor nu va funcționa!</string>
-    <string name="missing_permission_contacts_forever">Birday nu poate cere permisiunea de a importa contactele,
+    <string name="missing_permission_contacts_forever">Auspice nu poate cere permisiunea de a importa contactele,
     deoarece aţi bifat \"nu mai solicita din nou\". Activeaz-o manual!</string>
     <string name="birday_import_title">Importă o copie de rezervă</string>
-    <string name="birday_import_description">Alege o copie de rezervă validă pentru Birday pentru a restabili evenimentele. Toate datele existente
+    <string name="birday_import_description">Alege o copie de rezervă validă pentru Auspice pentru a restabili evenimentele. Toate datele existente
     vor fi suprascrise!</string>
     <string name="birday_export_title">Exportă și distribuie evenimentele</string>
     <string name="birday_export_description">Exportă evenimentele disponibile într-o copie de rezervă și partajează-le dacă dorești</string>
     <string name="birday_import_success">Import finalizat!</string>
     <string name="birday_import_failure">Importarea a eșuat. Ai ales fișierul corect?</string>
-    <string name="birday_import_invalid_file">Importarea a eșuat. Fișierul ales nu este o copie de rezervă a Birday!</string>
+    <string name="birday_import_invalid_file">Importarea a eșuat. Fișierul ales nu este o copie de rezervă a Auspice!</string>
     <string name="birday_export_success">Export finalizat!</string>
     <string name="birday_export_failure">Exportul a eșuat. Hopa!</string>
     <string name="birday_export_nothing_found">Nimic de exportat!</string>
@@ -113,14 +113,14 @@
     <string name="additional_notification_only_favorites_description_off">Trimite o notificare suplimentară pentru fiecare eveniment introdus</string>
     <string name="troubleshoot">Depanați</string>
     <string name="battery_optimization_title">Dezactivează optimizarea bateriei</string>
-    <string name="battery_optimization_description">Deschide setările pentru a dezactiva orice optimizare pentru Birday. Util dacă notificările nu funcționează</string>
-    <string name="battery_optimization_tutorial">- Afișează toate aplicațiile și găsește Birday în listă\n- Apasă pe Birday și selectează \"Nu optimiza\"</string>
+    <string name="battery_optimization_description">Deschide setările pentru a dezactiva orice optimizare pentru Auspice. Util dacă notificările nu funcționează</string>
+    <string name="battery_optimization_tutorial">- Afișează toate aplicațiile și găsește Auspice în listă\n- Apasă pe Auspice și selectează \"Nu optimiza\"</string>
     <string name="notification_sound_title">Sunet de notificare</string>
     <string name="notification_sound_description">Comandă rapidă la setările sunetului de notificare, dacă nu vă place sunetul implicit al păsărilor</string>
-    <string name="missing_permission_notifications">Permisiunea de notificare a fost refuzată, iar Birday nu poate trimite notificări! Activați permisiunea din setări.</string>
-    <string name="missing_permission_notifications_forever">Permisiunea de notificare a fost refuzată și nu poate fi solicitată din nou, așa că Birday nu poate trimite notificări! Activează permisiunea manual în setări.</string>
-    <string name="missing_permission_calendar">Permisiunea pentru calendar a fost refuzată, iar Birday nu poate importa din calendar! Activează permisiunea în Setări.</string>
-    <string name="missing_permission_calendar_forever">Permisiunea pentru calendar a fost refuzată și nu poate fi solicitată din nou, așa că Birday nu poate importa din calendar! Activează permisiunea manual în Setări.</string>
+    <string name="missing_permission_notifications">Permisiunea de notificare a fost refuzată, iar Auspice nu poate trimite notificări! Activați permisiunea din setări.</string>
+    <string name="missing_permission_notifications_forever">Permisiunea de notificare a fost refuzată și nu poate fi solicitată din nou, așa că Auspice nu poate trimite notificări! Activează permisiunea manual în setări.</string>
+    <string name="missing_permission_calendar">Permisiunea pentru calendar a fost refuzată, iar Auspice nu poate importa din calendar! Activează permisiunea în Setări.</string>
+    <string name="missing_permission_calendar_forever">Permisiunea pentru calendar a fost refuzată și nu poate fi solicitată din nou, așa că Auspice nu poate importa din calendar! Activează permisiunea manual în Setări.</string>
     <string name="import_calendar_title">Import din calendar</string>
     <string name="import_calendar_description">Importă orice eveniment anual din calendare. Nu uita să setezi tipul evenimentului și anul pentru a menține lucrurile ordonate!</string>
     <string name="loop_avd_title">Animații în buclă</string>
@@ -131,13 +131,11 @@
     <string name="order_alphabetically_description_off">Evenimentele sunt ordonate după dată</string>
     <string name="grouped_notifications_title">Grupează notificări multiple</string>
     <string name="grouped_notifications_description_on">Dacă există două sau mai multe evenimente într-o singură zi, notificările sunt grupate</string>
-    <string name="grouped_notifications_description_off">Dacă există două sau mai multe evenimente într-o singură zi, Birday va trimite o notificare pentru fiecare</string>
+    <string name="grouped_notifications_description_off">Dacă există două sau mai multe evenimente într-o singură zi, Auspice va trimite o notificare pentru fiecare</string>
     <!-- Developer -->
-    <string name="dev_description">Sunt un tip politicos și îmi plac lucruri frumoase, precum animații, pictograme, mașini sportive și imprimare 3D. Eu lucrez ca designer și inginer de calculatoare.</string>
-    <string name="easter_egg">Frumoasă siglă, nu? ;D</string>
     <!-- New event -->
     <string name="new_event">Eveniment nou</string>
-    <string name="new_event_description">Introdu o persoană de care îți pasă, iar Birday te va ajuta să îți amintești de ziua ei de naștere sau alte evenimente!</string>
+    <string name="new_event_description">Introdu o persoană de care îți pasă, iar Auspice te va ajuta să îți amintești de ziua ei de naștere sau alte evenimente!</string>
     <string name="insert_event">Inserare eveniment</string>
     <string name="cancel">Anulează</string>
     <string name="insert_name_hint">Introdu prenumele</string>
@@ -242,28 +240,28 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Memento eveniment</string>
-    <string name="events_channel_description">Memento-uri despre evenimentele viitoare din Birday</string>
-    <string name="notification_title">Memento Birday</string>
+    <string name="events_channel_description">Memento-uri despre evenimentele viitoare din Auspice</string>
+    <string name="notification_title">Memento Auspice</string>
     <string name="notification_description_part_1">Evenimentele de astăzi sunt</string>
     <string name="notification_description_part_2">O zi grozavă!</string>
     <string name="additional_notification_text">Evenimente viitoare!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Bine ai venit la Birday!</string>
-    <string name="slide_one_description">Birday este o aplicație simplă și ușoară pentru gestionarea evenimentelor importante!
+    <string name="slide_one_title">Bine ai venit la Auspice!</string>
+    <string name="slide_one_description">Auspice este o aplicație simplă și ușoară pentru gestionarea evenimentelor importante!
     O poți folosi pentru a reține și păstra zilele de naștere ale persoanelor pe care le iubești etc, într-un mod fiabil şi rapid.
     </string>
     <string name="slide_two_title">Gratuit, simplu și personalizat</string>
-    <string name="slide_two_description">Birday este gratuit, fără publicitate și cu sursă deschisă. Oferă un set de
+    <string name="slide_two_description">Auspice este gratuit, fără publicitate și cu sursă deschisă. Oferă un set de
     statistici despre evenimentele tale, un sistem preferat și o interfață personalizabilă. Și garantează
     suport și actualizări!
     </string>
     <string name="slide_three_title">Importă din Agendă</string>
     <string name="slide_three_description">De asemenea, este posibil să imporți evenimentele pe care le-ai salvat deja
-    din contacte. Birday poate face acest lucru pentru tine, doar acordă permisiunea contactelor. Bucură-te de ele!
+    din contacte. Auspice poate face acest lucru pentru tine, doar acordă permisiunea contactelor. Bucură-te de ele!
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Evenimente viitoare</string>
-    <string name="add_widget">Birday - Urmează</string>
+    <string name="add_widget">Auspice - Urmează</string>
     <string name="dark_widget_name">Widget întunecat</string>
     <string name="dark_widget_description_on">Widget-ul utilizează tema întunecată</string>
     <string name="dark_widget_description_off">Widget-ul utilizează tema luminoasă</string>
@@ -296,8 +294,8 @@
     <string name="check_github">Verifică Github</string>
     <string name="translate_app">Tradu aplicația</string>
     <string name="launch_auto_import_title">Import automat la lansare</string>
-    <string name="launch_auto_import_description_off">Birday nu va importa contactele automat la lansare</string>
-    <string name="launch_auto_import_description_on">Birday se va sincroniza automat cu contactele la pornire</string>
+    <string name="launch_auto_import_description_off">Auspice nu va importa contactele automat la lansare</string>
+    <string name="launch_auto_import_description_on">Auspice se va sincroniza automat cu contactele la pornire</string>
     <string name="hide_on_scroll_title">Ascunde bara de navigare la derulare</string>
     <string name="hide_on_scroll_description_on">Ascunde bara de navigare de jos la derulare</string>
     <string name="hide_on_scroll_description_off">Bara de navigare de jos va fi întotdeauna vizibilă</string>
@@ -318,8 +316,8 @@
     <string name="export_calendar_title">Export în calendar</string>
     <string name="export_calendar_description">Salvează fiecare eveniment în calendarul local, dacă este posibil. Necesită permisiunea calendarului</string>
     <string name="auto_export_title">Se exportă evenimentele în mod automat</string>
-    <string name="auto_export_description_on">Birday va exporta automat o copie de rezervă atunci când aplicația este închisă. Reține că fiecare copie de rezervă va suprascrie precedenta</string>
-    <string name="auto_export_description_off">Pentru a efectua o copie de rezervă locală Birday, trebuie să fie executată manual</string>
+    <string name="auto_export_description_on">Auspice va exporta automat o copie de rezervă atunci când aplicația este închisă. Reține că fiecare copie de rezervă va suprascrie precedenta</string>
+    <string name="auto_export_description_off">Pentru a efectua o copie de rezervă locală Auspice, trebuie să fie executată manual</string>
     <string name="add_demo_entries_title">Adaugă intrări demo</string>
     <string name="add_demo_entries_description">Completează baza de date cu un set demo de evenimente, în principal actori și cifre istorice</string>
     <string name="add_demo_entries_dialog_description">Acest lucru va adăuga permanent SUTE de evenimente în baza de date și este destinat pentru depanare. Nu va șterge niciun eveniment existent, dar dacă dorești să ștergi noile evenimente, va trebui să faci acest lucru manual. Mult noroc cu asta.</string>
@@ -329,7 +327,7 @@
     <string name="delete_db_dialog_description">Asigură-te că faci mai întâi o copie de rezervă a evenimentelor, această operațiune va șterge baza de date și ar trebui să fie utilizată numai în scopuri de depanare</string>
     <string name="delete_search_title">Șterge selecția de căutare</string>
     <string name="delete_search_description_off">Nu va fi posibil să ștergi mai multe evenimente odată</string>
-    <string name="delete_search_description_on">Apasă butonul de gunoi când cauți unul sau mai multe evenimente pentru a le șterge rapid pe toate din Birday. Utilizează cu prudență!</string>
+    <string name="delete_search_description_on">Apasă butonul de gunoi când cauți unul sau mai multe evenimente pentru a le șterge rapid pe toate din Auspice. Utilizează cu prudență!</string>
     <string name="delete_search_confirm">Aceasta va șterge toate rezultatele acestei căutări. Poți anula procesul la scurt timp după ce faci clic pe OK dacă te răzgândești!</string>
     <string name="import_contacts_bottom_sheet_description">Dorești să imporți toate evenimentele din contacte acum?</string>
     <string name="yes_import">Importă</string>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Добро дошли у Birday</string>
-    <string name="app_name_extended">Birday - Менаџер Догађаја</string>
-    <string name="leave_review_title">Оцените Birday</string>
+    <string name="app_welcome">Добро дошли у Auspice</string>
+    <string name="app_name_extended">Auspice - Менаџер Догађаја</string>
+    <string name="leave_review_title">Оцените Auspice</string>
     <string name="leave_review_subtitle">Оставите рецензију како бисте ми помогли са апликацијом. Имајте на уму да, поред донација, ова апликација је потпуно бесплатна и без реклама!</string>
     <string name="yes_review">Оцени!</string>
     <string name="later">Касније, кунем се</string>
@@ -18,13 +18,13 @@
     <string name="stats_summary">Резиме статистика</string>
     <string name="no_stats_description">Немате довољно догађаја за генерисање статистике. Додајте их неколико и вратите се касније!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birday вам помаже да се сетите укупно %d догађаја</item>
-        <item quantity="few">Birday вам помаже да се сетите укупно %d догађаја</item>
-        <item quantity="other">Birday вам помаже да се сетите укупно %d догађаја</item>
+        <item quantity="one">Auspice вам помаже да се сетите укупно %d догађаја</item>
+        <item quantity="few">Auspice вам помаже да се сетите укупно %d догађаја</item>
+        <item quantity="other">Auspice вам помаже да се сетите укупно %d догађаја</item>
     </plurals>
     <string name="next_event">Следећи догађај</string>
     <string name="no_next_event">Нема догађаја за приказ!</string>
-    <string name="no_next_event_description">Још увек нисте додали или увезли догађај. Додајте један и дозволите Birday да вам помогне!</string>
+    <string name="no_next_event_description">Још увек нисте додали или увезли догађај. Додајте један и дозволите Auspice да вам помогне!</string>
     <string name="next_age_years">Година</string>
     <string name="event_others">и остали</string>
     <plurals name="days_left">
@@ -86,16 +86,16 @@
     <string name="import_failed">Нешта је пошло по злу!</string>
     <string name="missing_permission_contacts">Дозвола контактима је одбијена. Покушајте поново или дајте дозволу ручно,
 		или увоз из контаката неће радити!</string>
-    <string name="missing_permission_contacts_forever">Birday не може да пита за дозволу да увезе из контаката,
+    <string name="missing_permission_contacts_forever">Auspice не може да пита за дозволу да увезе из контаката,
 		јер сте штиклирали \"не питај поново\". Дајте је ручно!</string>
-    <string name="birday_import_title">Увезите Birday backup</string>
-    <string name="birday_import_description">Одаберите валидан Birday backup како бисте увезли догађаје. Сви постојећи подаци
+    <string name="birday_import_title">Увезите Auspice backup</string>
+    <string name="birday_import_description">Одаберите валидан Auspice backup како бисте увезли догађаје. Сви постојећи подаци
 		ће бити избрисани!</string>
     <string name="birday_export_title">Извезите и поделите догађаје</string>
     <string name="birday_export_description">Извези постојеће догађаје у backup, и поделите их ако желите</string>
     <string name="birday_import_success">Увоз је завршен!</string>
     <string name="birday_import_failure">Увоз није успео. Да нисте изабрали погрешан фајл?</string>
-    <string name="birday_import_invalid_file">Увоз није успео. Изабран фајл није Birday backup!</string>
+    <string name="birday_import_invalid_file">Увоз није успео. Изабран фајл није Auspice backup!</string>
     <string name="birday_export_success">Извоз је завршен!</string>
     <string name="birday_export_failure">Извоз није успео. Упс!</string>
     <string name="birday_export_nothing_found">Нема ништа за извоз!</string>
@@ -113,14 +113,14 @@
     <string name="additional_notification_only_favorites_description_off">Send the additional notification for every event inserted</string>
     <string name="troubleshoot">Решавање проблема и додатно</string>
     <string name="battery_optimization_title">Онемогућите оптимизацију батерије</string>
-    <string name="battery_optimization_description">Пречица до подешавања да бисте онемогућили било коју оптимизацију за Birday. Корисно ако обавештења не раде</string>
-    <string name="battery_optimization_tutorial">- Show all the apps and find Birday in the list\n- Tap on Birday and select \"Don\'t optimize\"</string>
+    <string name="battery_optimization_description">Пречица до подешавања да бисте онемогућили било коју оптимизацију за Auspice. Корисно ако обавештења не раде</string>
+    <string name="battery_optimization_tutorial">- Show all the apps and find Auspice in the list\n- Tap on Auspice and select \"Don\'t optimize\"</string>
     <string name="notification_sound_title">Звук обавештења</string>
     <string name="notification_sound_description">Пречица до подешавања звука обавештења, ако вам се не свиђа подразумевани звук птице</string>
-    <string name="missing_permission_notifications">The notification permission was denied, and Birday can\'t send notifications! Activate the permission from settings.</string>
-    <string name="missing_permission_notifications_forever">The notification permission was denied and can\'t be asked again, so Birday can\'t send notifications! Activate the permission manually, from settings.</string>
-    <string name="missing_permission_calendar">The calendar permission was denied, and Birday can\'t import from calendar! Activate the permission from settings.</string>
-    <string name="missing_permission_calendar_forever">The calendar permission was denied and can\'t be asked again, so Birday can\'t import from calendar! Activate the permission manually, from settings.</string>
+    <string name="missing_permission_notifications">The notification permission was denied, and Auspice can\'t send notifications! Activate the permission from settings.</string>
+    <string name="missing_permission_notifications_forever">The notification permission was denied and can\'t be asked again, so Auspice can\'t send notifications! Activate the permission manually, from settings.</string>
+    <string name="missing_permission_calendar">The calendar permission was denied, and Auspice can\'t import from calendar! Activate the permission from settings.</string>
+    <string name="missing_permission_calendar_forever">The calendar permission was denied and can\'t be asked again, so Auspice can\'t import from calendar! Activate the permission manually, from settings.</string>
     <string name="import_calendar_title">Import from calendar</string>
     <string name="import_calendar_description">Import any yearly event from your calendars. Remember to set the event type and year to keep things ordered!</string>
     <string name="loop_avd_title">Loop animations</string>
@@ -131,13 +131,11 @@
     <string name="order_alphabetically_description_off">The events are ordered by date</string>
     <string name="grouped_notifications_title">Group multiple notifications</string>
     <string name="grouped_notifications_description_on">If there are two or more events in a single day, the notifications are grouped</string>
-    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Birday will send a notification for each</string>
+    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Auspice will send a notification for each</string>
     <!-- Developer -->
-    <string name="dev_description">Ја сам учтив момак и волим лепе ствари, као што су анимације, иконе, спортска аута и 3D штампање. Радим као дизајнер и рачунарски инжењер.</string>
-    <string name="easter_egg">Леп лого, зар не? ;D</string>
     <!-- New event -->
     <string name="new_event">Нови догађај</string>
-    <string name="new_event_description">Унесите особу до које вам је стало, и Birday ће вам помоћи да се сетите њеног рођендана или неког другог догађаја!</string>
+    <string name="new_event_description">Унесите особу до које вам је стало, и Auspice ће вам помоћи да се сетите њеног рођендана или неког другог догађаја!</string>
     <string name="insert_event">Унесите догађај</string>
     <string name="cancel">Откажи</string>
     <string name="insert_name_hint">Унесите Име</string>
@@ -242,25 +240,25 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Подсетник на догађај</string>
-    <string name="events_channel_description">Подсетници о предстојећим догађајима од Birday</string>
-    <string name="notification_title">Birday Подсетник</string>
+    <string name="events_channel_description">Подсетници о предстојећим догађајима од Auspice</string>
+    <string name="notification_title">Auspice Подсетник</string>
     <string name="notification_description_part_1">Данашњи догађаји су</string>
     <string name="notification_description_part_2">Пријатан дан!</string>
     <string name="additional_notification_text">Предстојећи догађаји!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Добро дошли у Birday!</string>
-    <string name="slide_one_description">Birday је проста и незахтевна апликација за управљање важним догађајима!
+    <string name="slide_one_title">Добро дошли у Auspice!</string>
+    <string name="slide_one_description">Auspice је проста и незахтевна апликација за управљање важним догађајима!
 		Можете је користити за памћење и складиштење рођендана, и других догађаја, људи које волите, на поуздан начин.</string>
     <string name="slide_two_title">Бесплатан, једноставан, прилагодљив</string>
-    <string name="slide_two_description">Birday је бесплатан, без реклама и отвореног кода. Пружа
+    <string name="slide_two_description">Auspice је бесплатан, без реклама и отвореног кода. Пружа
 		статистику о вашим догађајима, систем омиљених и прилагодљив интерфејс. И гарантовану
 		подршку и ажурирања!</string>
     <string name="slide_three_title">Увези из контаката</string>
     <string name="slide_three_description">Такође је могуће увести већ сачуване догађаје
-		из контаката. Birday може то да уради за вас, само дозволите присту контактима. Уживајте!</string>
+		из контаката. Auspice може то да уради за вас, само дозволите присту контактима. Уживајте!</string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Предстојећи догађаји</string>
-    <string name="add_widget">Birday - Предстојећи</string>
+    <string name="add_widget">Auspice - Предстојећи</string>
     <string name="dark_widget_name">Тамни виџет</string>
     <string name="dark_widget_description_on">Виџет користи тамну тему</string>
     <string name="dark_widget_description_off">Виџет користи светлу тему</string>
@@ -293,8 +291,8 @@
     <string name="check_github">Проверите GitHub</string>
     <string name="translate_app">Translate the app</string>
     <string name="launch_auto_import_title">Auto import on launch</string>
-    <string name="launch_auto_import_description_off">Birday won\'t import contacts automatically when launched</string>
-    <string name="launch_auto_import_description_on">Birday will automatically sync with contacts at startup</string>
+    <string name="launch_auto_import_description_off">Auspice won\'t import contacts automatically when launched</string>
+    <string name="launch_auto_import_description_on">Auspice will automatically sync with contacts at startup</string>
     <string name="hide_on_scroll_title">Hide navbar on scroll</string>
     <string name="hide_on_scroll_description_on">Hide the bottom navbar when you scroll</string>
     <string name="hide_on_scroll_description_off">The bottom navbar will always be visible</string>
@@ -315,8 +313,8 @@
     <string name="export_calendar_title">Export to calendar</string>
     <string name="export_calendar_description">Save every event to your local calendar, if possible. Requires the calendar permission</string>
     <string name="auto_export_title">Auto export events</string>
-    <string name="auto_export_description_on">Birday will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
-    <string name="auto_export_description_off">To perform a local Birday backup, it has to be executed manually</string>
+    <string name="auto_export_description_on">Auspice will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
+    <string name="auto_export_description_off">To perform a local Auspice backup, it has to be executed manually</string>
     <string name="add_demo_entries_title">Add demo entries</string>
     <string name="add_demo_entries_description">Populate the DB with a demo set of events, mostly actors and historical figures</string>
     <string name="add_demo_entries_dialog_description">Ово ће трајно додати ХИЉАДЕ уноса у базу података и намењено је у сврхе отклањања грешака. Неће обрисати постојеће догађаје, али ако желите да обришете нове уносе, мораћете то да урадите ручно. Срећно с тим.</string>
@@ -326,7 +324,7 @@
     <string name="delete_db_dialog_description">Make sure to backup your events first, this operation will wipe the DB and should be used for debugging purposes only</string>
     <string name="delete_search_title">Delete search selection</string>
     <string name="delete_search_description_off">It won\'t be possible to delete multiple events at once</string>
-    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Birday. Use with caution!</string>
+    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Auspice. Use with caution!</string>
     <string name="delete_search_confirm">This will delete all the results of this search. You can undo the process shortly after clicking OK if you change your mind!</string>
     <string name="import_contacts_bottom_sheet_description">Would you like to import all the events from your contacts right now?</string>
     <string name="yes_import">Import</string>

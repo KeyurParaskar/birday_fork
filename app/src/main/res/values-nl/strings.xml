@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Welkom bij Birday</string>
-    <string name="app_name_extended">Birday - Evenement Beheerder</string>
-    <string name="leave_review_title">Beordeel Birday</string>
-    <string name="leave_review_subtitle">Laat een review achter om mij te helpen met Birday. Deze app is, naast de donaties, geheel gratis en reclamevrij!</string>
+    <string name="app_welcome">Welkom bij Auspice</string>
+    <string name="app_name_extended">Auspice - Evenement Beheerder</string>
+    <string name="leave_review_title">Beordeel Auspice</string>
+    <string name="leave_review_subtitle">Laat een review achter om mij te helpen met Auspice. Deze app is, naast de donaties, geheel gratis en reclamevrij!</string>
     <string name="yes_review">Beoordelen</string>
     <string name="later">Later, dat beloof ik</string>
     <string name="no_thanks">Absoluut niet!</string>
@@ -18,12 +18,12 @@
     <string name="stats_summary">Overzicht statistieken</string>
     <string name="no_stats_description">Je hebt te weinig evenementen om statistieken te laten zien. Voeg er een aantal toe en kom dan terug!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birday herinnert je aan %d evenement</item>
-        <item quantity="other">Birday herinnert je aan %d evenementen</item>
+        <item quantity="one">Auspice herinnert je aan %d evenement</item>
+        <item quantity="other">Auspice herinnert je aan %d evenementen</item>
     </plurals>
     <string name="next_event">Volgende gebeurtenis</string>
     <string name="no_next_event">Geen evenementen om weer te geven!</string>
-    <string name="no_next_event_description">Je hebt nog geen evenementen opgegeven of geïmporteerd. Voeg er eentje toe en laat Birday je helpen!</string>
+    <string name="no_next_event_description">Je hebt nog geen evenementen opgegeven of geïmporteerd. Voeg er eentje toe en laat Auspice je helpen!</string>
     <string name="next_age_years">jaar</string>
     <string name="event_others">en anderen</string>
     <plurals name="days_left">
@@ -84,16 +84,16 @@
     <string name="import_failed">Er ging iets mis!</string>
     <string name="missing_permission_contacts">Toestemming tot contacten is geweigerd. Probeer het opnieuw of geef handmatig toestemming,
         anders werkt het importeren vanuit contacten niet!</string>
-    <string name="missing_permission_contacts_forever">Birday kan je contacten niet importeren en ook niet opnieuw om toestemming vragen,
+    <string name="missing_permission_contacts_forever">Auspice kan je contacten niet importeren en ook niet opnieuw om toestemming vragen,
     aangezien \"Niet meer vragen\" is aangevinkt. Geef handmatig toestemming!</string>
-    <string name="birday_import_title">Importeer een Birday backup</string>
-    <string name="birday_import_description">Kies een geldige Birday backup om handmatig je evenementen te herstellen. Bestaande
+    <string name="birday_import_title">Importeer een Auspice backup</string>
+    <string name="birday_import_description">Kies een geldige Auspice backup om handmatig je evenementen te herstellen. Bestaande
     data zal worden overschreven!</string>
     <string name="birday_export_title">Exporteer en deel evenementen</string>
     <string name="birday_export_description">Exporteer de beschikbare evenementen en deel ze, als je wilt</string>
     <string name="birday_import_success">Importeren voltooid!</string>
     <string name="birday_import_failure">Importeren mislukt. Heb je het juiste bestand gekozen?</string>
-    <string name="birday_import_invalid_file">Importeren mislukt. Het gekozen bestand is geen Birday backup!</string>
+    <string name="birday_import_invalid_file">Importeren mislukt. Het gekozen bestand is geen Auspice backup!</string>
     <string name="birday_export_success">Exporteren voltooid!</string>
     <string name="birday_export_failure">Exporteren mislukt. Oeps!</string>
     <string name="birday_export_nothing_found">Niets om te exporteren!</string>
@@ -111,14 +111,14 @@
     <string name="additional_notification_only_favorites_description_off">Stuur de extra notificatie voor elke geplaatste gebeurtenis</string>
     <string name="troubleshoot">Problemen oplossen</string>
     <string name="battery_optimization_title">Batterij-optimalisatie uitschakelen</string>
-    <string name="battery_optimization_description">Open de instellingen om optimalisatie voor Birday uit te schakelen. Handig als meldingen niet werken</string>
-    <string name="battery_optimization_tutorial">- Ga naar alle apps en zoek Birday in de lijst\n- Tik op Birday en selecteer \"Niet optimaliseren\"</string>
+    <string name="battery_optimization_description">Open de instellingen om optimalisatie voor Auspice uit te schakelen. Handig als meldingen niet werken</string>
+    <string name="battery_optimization_tutorial">- Ga naar alle apps en zoek Auspice in de lijst\n- Tik op Auspice en selecteer \"Niet optimaliseren\"</string>
     <string name="notification_sound_title">Notificatie geluid</string>
     <string name="notification_sound_description">Snelkoppeling naar de instellingen voor meldingsgeluiden, als je niet van het standaard vogelgeluid houdt</string>
-    <string name="missing_permission_notifications">De notificatie machtiging is geweigerd en Birday kan geen notificaties verzenden! Activeer toestemming via instellingen.</string>
-    <string name="missing_permission_notifications_forever">De toestemming voor meldingen is geweigerd en kan niet opnieuw worden gevraagd, dus Birday kan geen meldingen verzenden! Activeer de machtiging handmatig, via de instellingen.</string>
-    <string name="missing_permission_calendar">De agendamachtiging is geweigerd en Birday kan niet importeren uit de agenda! Activeer de toestemming via de instellingen.</string>
-    <string name="missing_permission_calendar_forever">De agendatoestemming is geweigerd en kan niet opnieuw worden gevraagd, dus Birday kan niet importeren uit de agenda! Activeer de machtiging handmatig, via de instellingen.</string>
+    <string name="missing_permission_notifications">De notificatie machtiging is geweigerd en Auspice kan geen notificaties verzenden! Activeer toestemming via instellingen.</string>
+    <string name="missing_permission_notifications_forever">De toestemming voor meldingen is geweigerd en kan niet opnieuw worden gevraagd, dus Auspice kan geen meldingen verzenden! Activeer de machtiging handmatig, via de instellingen.</string>
+    <string name="missing_permission_calendar">De agendamachtiging is geweigerd en Auspice kan niet importeren uit de agenda! Activeer de toestemming via de instellingen.</string>
+    <string name="missing_permission_calendar_forever">De agendatoestemming is geweigerd en kan niet opnieuw worden gevraagd, dus Auspice kan niet importeren uit de agenda! Activeer de machtiging handmatig, via de instellingen.</string>
     <string name="import_calendar_title">Importeren uit kalender</string>
     <string name="import_calendar_description">Importeer een jaarlijkse afspraak uit uw kalenders. Vergeet niet het type en het jaar in te stellen om de dingen te beheren!</string>
     <string name="loop_avd_title">Animaties herhalen</string>
@@ -129,13 +129,11 @@
     <string name="order_alphabetically_description_off">De evenementen worden op datum geordend</string>
     <string name="grouped_notifications_title">Groepeer meerdere meldingen</string>
     <string name="grouped_notifications_description_on">Als er twee of meer gebeurtenissen in een enkele dag zijn, worden de meldingen gegroepeerd</string>
-    <string name="grouped_notifications_description_off">Als er twee of meer evenementen op één dag zijn, stuurt Birday voor elke ervan een melding</string>
+    <string name="grouped_notifications_description_off">Als er twee of meer evenementen op één dag zijn, stuurt Auspice voor elke ervan een melding</string>
     <!-- Developer -->
-    <string name="dev_description">Ik ben een beleefde kerel en ik hou van mooie dingen, zoals animaties, icoontjes, sportauto\'s en 3d printen. Ik werk als een ontwerper en computer ingenieur.</string>
-    <string name="easter_egg">Puik logootje, hè? ;D</string>
     <!-- New event -->
     <string name="new_event">Nieuwe evenement</string>
-    <string name="new_event_description">Voeg een nieuw persoon toe en Birday helpt je om zijn/haar evenement niet te vergeten!</string>
+    <string name="new_event_description">Voeg een nieuw persoon toe en Auspice helpt je om zijn/haar evenement niet te vergeten!</string>
     <string name="insert_event">Evenement toevoegen</string>
     <string name="cancel">Annuleren</string>
     <string name="insert_name_hint">Naam</string>
@@ -236,26 +234,26 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Gebeurtenis Reminder</string>
-    <string name="events_channel_description">Reminders over de aankomende evenementen van Birday</string>
-    <string name="notification_title">Birday Reminder</string>
+    <string name="events_channel_description">Reminders over de aankomende evenementen van Auspice</string>
+    <string name="notification_title">Auspice Reminder</string>
     <string name="notification_description_part_1">De evenementen van vandaag zijn</string>
     <string name="notification_description_part_2">Fijne dag nog!</string>
     <string name="additional_notification_text">Aankomende evenementen!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Welkom bij Birday!</string>
-    <string name="slide_one_description">Birday is een simpele, lichtgewicht app waarmee je belangrijke gebeurtenissen kunt bijhouden!
+    <string name="slide_one_title">Welkom bij Auspice!</string>
+    <string name="slide_one_description">Auspice is een simpele, lichtgewicht app waarmee je belangrijke gebeurtenissen kunt bijhouden!
     Bewaar verjaardagen van dierbaren en sneller en gemakkelijker, zodat u er nooit meer een vergeet!</string>
     <string name="slide_two_title">Gratis, eenvoudig, aanpasbaar</string>
-    <string name="slide_two_description">Birday is gratis, reclamevrij en open source. De app heeft 
+    <string name="slide_two_description">Auspice is gratis, reclamevrij en open source. De app heeft 
     statistieken over jouw verjaardagen, een favorieten systeem en een aanpasbaar interface. Updates en
     ondersteuning zijn gegarandeerd!
     </string>
     <string name="slide_three_title">Importeren vanuit contacten</string>
     <string name="slide_three_description">Het is ook mogelijk om evenementen over te zetten vanuit contacten.
-        Birday doet het voor je als je toestemming geeft tot je contacten. Veel plezier!</string>
+        Auspice doet het voor je als je toestemming geeft tot je contacten. Veel plezier!</string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Aankomende evenementen</string>
-    <string name="add_widget">Birday - aankomend</string>
+    <string name="add_widget">Auspice - aankomend</string>
     <string name="dark_widget_name">Donkere widget</string>
     <string name="dark_widget_description_on">De widget gebruikt een donker thema</string>
     <string name="dark_widget_description_off">De widget maakt gebruik van een duidelijk thema</string>
@@ -274,7 +272,7 @@
     <!-- Search -->
     <string name="search_event">Zoeken…</string>
     <string name="search_no_result_title">Geen resultaten gevonden</string>
-    <string name="search_no_result_description">Je zoekopdracht komt niet overeen met een gebeurtenis uit de Birday database!</string>
+    <string name="search_no_result_description">Je zoekopdracht komt niet overeen met een gebeurtenis uit de Auspice database!</string>
     <!-- Notes -->
     <string name="notes">Opmerkingen</string>
     <string name="write_something">Schrijf iets…</string>
@@ -288,8 +286,8 @@
     <string name="check_github">Check GitHub</string>
     <string name="translate_app">Vertaal de app</string>
     <string name="launch_auto_import_title">Automatisch importeren bij opstarten</string>
-    <string name="launch_auto_import_description_off">Birday importeert contacten niet automatisch wanneer het wordt opgestart</string>
-    <string name="launch_auto_import_description_on">Birday importeert contacten automatisch wanneer het wordt opgestart</string>
+    <string name="launch_auto_import_description_off">Auspice importeert contacten niet automatisch wanneer het wordt opgestart</string>
+    <string name="launch_auto_import_description_on">Auspice importeert contacten automatisch wanneer het wordt opgestart</string>
     <string name="hide_on_scroll_title">Verberg de navigatiebalk tijdens het scrollen</string>
     <string name="hide_on_scroll_description_on">Verberg de onderste navigatiebalk wanneer u scrolt</string>
     <string name="hide_on_scroll_description_off">De navigatiebalk onderaan is altijd zichtbaar</string>
@@ -310,8 +308,8 @@
     <string name="export_calendar_title">Exporteren naar kalender</string>
     <string name="export_calendar_description">Sla elk evenement op in uw lokale agenda, indien mogelijk. Vereist de machtiging voor de agenda</string>
     <string name="auto_export_title">Afspraken automatisch exporteren</string>
-    <string name="auto_export_description_on">Birday exporteert automatisch een back-up wanneer de app wordt gesloten. Houd er rekening mee dat elke back-up de vorige overschrijft</string>
-    <string name="auto_export_description_off">Om een lokale Birday-back-up uit te voeren, moet deze handmatig worden gestuurd</string>
+    <string name="auto_export_description_on">Auspice exporteert automatisch een back-up wanneer de app wordt gesloten. Houd er rekening mee dat elke back-up de vorige overschrijft</string>
+    <string name="auto_export_description_off">Om een lokale Auspice-back-up uit te voeren, moet deze handmatig worden gestuurd</string>
     <string name="add_demo_entries_title">Demo invoergegevens toevoegen</string>
     <string name="add_demo_entries_description">Populeren van de DB met een demo reeks gebeurtenissen, voornamelijk acteurs en historische cijfers</string>
     <string name="add_demo_entries_dialog_description">Dit zal permanent DUIZENDEN vermeldingen aan de DB toevoegen en is bedoeld voor debug-doeleinden. Er worden geen bestaande evenementen verwijderd, maar als u de nieuwe invoer wilt verwijderen, moet u dit handmatig doen. Succes daarmee.</string>

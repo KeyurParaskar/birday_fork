@@ -6,7 +6,7 @@
     app:startDestination="@id/navigationMain">
     <fragment
         android:id="@+id/navigationMain"
-        android:name="com.minar.birday.fragments.HomeFragment"
+        android:name="app.auspice.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigationFavorites"
-        android:name="com.minar.birday.fragments.FavoritesFragment"
+        android:name="app.auspice.fragments.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites">
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigationSettings"
-        android:name="com.minar.birday.fragments.SettingsFragment"
+        android:name="app.auspice.fragments.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/author_preference_row">
         <action
@@ -52,23 +52,23 @@
     </fragment>
     <fragment
         android:id="@+id/experimentalSettingsFragment"
-        android:name="com.minar.birday.fragments.ExperimentalSettingsFragment"
+        android:name="app.auspice.fragments.ExperimentalSettingsFragment"
         android:label="fragment_experimental_settings"
         tools:layout="@layout/experimental_disclaimer_row" />
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.minar.birday.fragments.DetailsFragment"
+        android:name="app.auspice.fragments.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details">
         <argument
             android:name="event"
-            app:argType="com.minar.birday.model.EventResult" />
+            app:argType="app.auspice.model.EventResult" />
         <argument
             android:name="position"
             app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/overviewFragment"
-        android:name="com.minar.birday.fragments.OverviewFragment"
+        android:name="app.auspice.fragments.OverviewFragment"
         android:label="fragment_overview" />
 </navigation>

@@ -8,16 +8,16 @@ plugins {
 }
 
 android {
-    namespace = "com.minar.birday"
+    namespace = "app.auspice"
     compileSdk = 36
     buildToolsVersion = "35.0.0"
 
     defaultConfig {
-        applicationId = "com.minar.birday"
+        applicationId = "app.auspice"
         targetSdk = 36
         minSdk = 26
-        versionCode = 37
-        versionName = "4.7.2"
+        versionCode = 1
+        versionName = "0.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

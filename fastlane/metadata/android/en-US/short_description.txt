@@ -1,1 +1,1 @@
-A simple yet useful birthday manager. Birday is free and ad-free! 🥳
+Birthday reminders that also tell you what world traditions say about every birthday. Free, offline, open source.

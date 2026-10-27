@@ -282,7 +282,7 @@
     </style>
 
     <style name="SplashTheme.Night.Legacy">
-        <item name="android:windowBackground">@drawable/static_birday_dark</item>
+        <item name="android:windowBackground">@drawable/static_splash_dark</item>
     </style>
 
     <!-- Custom color styles -->

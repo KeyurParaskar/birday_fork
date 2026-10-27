@@ -3,7 +3,7 @@ Cette application a été créée pour mémoriser et gérer les événements de 
 L'application contient des options de personnalisation de base et une présentation, ainsi que de nouvelles ressources telles que des dessins vectoriels animés et le thème sombre/clair automatique. Le support et les mises à jour sont garantis !
 
 
-<h2><b>Pourquoi devrais-je utiliser Birday? 😕</b></h2>
+<h2><b>Pourquoi devrais-je utiliser Auspice? 😕</b></h2>
 Eh bien, je vais vous dire 3 raisons principales :
 <ul>
     <li> Cela peut vous aider à vous souvenir de chaque anniversaire au moment que vous préférez ! </li>
@@ -12,7 +12,7 @@ Eh bien, je vais vous dire 3 raisons principales :
 </ul>
 
 Birthday vous permet d'importer les anniversaires directement depuis vos contacts, avec un système de favoris simple et un ensemble de statistiques à découvrir !
-Si vous commencez à développer des applications et que vous en avez besoin d'une à regarder, pour trouver de l'inspiration et des astuces : cliquez sur le lien Github, et le code source de Birday vous sera servi !
+Si vous commencez à développer des applications et que vous en avez besoin d'une à regarder, pour trouver de l'inspiration et des astuces : cliquez sur le lien Github, et le code source de Auspice vous sera servi !
   
 
 <h2><b>Fonctionnalités 🎂</b></h2>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Καλώς ήρθατε στο Birday</string>
-    <string name="app_name_extended">Birday - Διαχειριστής Εκδηλώσεων</string>
-    <string name="leave_review_title">Αξιολογήστε το Birday</string>
+    <string name="app_welcome">Καλώς ήρθατε στο Auspice</string>
+    <string name="app_name_extended">Auspice - Διαχειριστής Εκδηλώσεων</string>
+    <string name="leave_review_title">Αξιολογήστε το Auspice</string>
     <string name="leave_review_subtitle">Αφήστε μια κριτική για να με βοηθήσετε με την εφαρμογή. Λάβετε υπόψη ότι, εκτός από τις δωρεές, αυτή η εφαρμογή είναι εντελώς δωρεάν και χωρίς διαφημίσεις!</string>
     <string name="yes_review">Αξιολόγηση!</string>
     <string name="later">Αργότερα, το ορκίζομαι</string>
@@ -18,12 +18,12 @@
     <string name="stats_summary">Σύνοψη στατιστικών</string>
     <string name="no_stats_description">Δεν έχετε αρκετές εκδηλώσεις για να δημιουργήσετε στατιστικά. Προσθέστε μερικές και επιστρέψτε αργότερα!</string>
     <plurals name="stats_total">
-        <item quantity="one">Το Birday σας βοηθά να θυμάστε συνολικά %d εκδήλωση</item>
-        <item quantity="other">Το Birday σας βοηθά να θυμάστε συνολικά %d εκδηλώσεις</item>
+        <item quantity="one">Το Auspice σας βοηθά να θυμάστε συνολικά %d εκδήλωση</item>
+        <item quantity="other">Το Auspice σας βοηθά να θυμάστε συνολικά %d εκδηλώσεις</item>
     </plurals>
     <string name="next_event">Επόμενη εκδήλωση</string>
     <string name="no_next_event">Δεν υπάρχουν εκδηλώσεις για εμφάνιση!</string>
-    <string name="no_next_event_description">Δεν έχετε εισάγει καμία εκδήλωση ακόμα. Προσθέστε μία και αφήστε το Birday να σας βοηθήσει!</string>
+    <string name="no_next_event_description">Δεν έχετε εισάγει καμία εκδήλωση ακόμα. Προσθέστε μία και αφήστε το Auspice να σας βοηθήσει!</string>
     <string name="next_age_years">Ηλικία</string>
     <string name="event_others">και άλλες</string>
     <plurals name="days_left">
@@ -84,16 +84,16 @@
     <string name="import_failed">Κάτι πήγε στραβά!</string>
     <string name="missing_permission_contacts">Η άδεια επαφών δεν επιτράπηκε. Δοκιμάστε ξανά ή ενεργοποιήστε την άδεια χειροκίνητα,
     αλλιώς η εισαγωγή επαφών δε θα λειτουργήσει!</string>
-    <string name="missing_permission_contacts_forever">Το Birday δεν μπορεί να ζητήσει άδεια για την εισαγωγή επαφών,
+    <string name="missing_permission_contacts_forever">Το Auspice δεν μπορεί να ζητήσει άδεια για την εισαγωγή επαφών,
     δεδομένου ότι έχετε επιλέξει το \"ποτέ ξανά\". Ενεργοποιήστε τη χειροκίνητα!</string>
-    <string name="birday_import_title">Εισαγωγή αντιγράφου ασφαλείας Birday</string>
-    <string name="birday_import_description">Επιλέξτε ένα έγκυρο αντίγραφο ασφαλείας Birday για να επαναφέρετε τις εκδηλώσεις σας. Όλα τα υπάρχοντα δεδομένα
+    <string name="birday_import_title">Εισαγωγή αντιγράφου ασφαλείας Auspice</string>
+    <string name="birday_import_description">Επιλέξτε ένα έγκυρο αντίγραφο ασφαλείας Auspice για να επαναφέρετε τις εκδηλώσεις σας. Όλα τα υπάρχοντα δεδομένα
     θα αντικατασταθούν!</string>
     <string name="birday_export_title">Εξαγωγή και κοινοποίηση εκδηλώσεων</string>
     <string name="birday_export_description">Μπορείτε να εξάγετε τις διαθέσιμες εκδηλώσεις σε ένα αντίγραφο ασφαλείας και να τις κοινοποιήσετε αν θέλετε</string>
     <string name="birday_import_success">Η εισαγωγή ολοκληρώθηκε!</string>
     <string name="birday_import_failure">Η εισαγωγή απέτυχε. Διαλέξατε σωστά το αρχείο;</string>
-    <string name="birday_import_invalid_file">Η εισαγωγή απέτυχε. Το επιλεγμένο αρχείο δεν είναι αντίγραφο ασφαλείας Birday!</string>
+    <string name="birday_import_invalid_file">Η εισαγωγή απέτυχε. Το επιλεγμένο αρχείο δεν είναι αντίγραφο ασφαλείας Auspice!</string>
     <string name="birday_export_success">Η εξαγωγή ολοκληρώθηκε!</string>
     <string name="birday_export_failure">Η εξαγωγή απέτυχε. Ούπσι!</string>
     <string name="birday_export_nothing_found">Δεν υπάρχει τίποτα για εξαγωγή!</string>
@@ -111,14 +111,14 @@
     <string name="additional_notification_only_favorites_description_off">Αποστολή της επιπλέον ειδοποίησης για κάθε εκδήλωση που έχει εισαχθεί</string>
     <string name="troubleshoot">Αντιμετώπιση προβλημάτων και πρόσθετα</string>
     <string name="battery_optimization_title">Απενεργοποίηση βελτιστοποίησης μπαταρίας</string>
-    <string name="battery_optimization_description">Ανοίξτε τις ρυθμίσεις για να απενεργοποιήσετε οποιαδήποτε βελτιστοποίηση για τo Birday. Χρήσιμο εάν οι ειδοποιήσεις δε λειτουργούν</string>
-    <string name="battery_optimization_tutorial">- Εμφανίστε όλες τις εφαρμογές και βρείτε το Birday στη λίστα\n- Πατήστε το Birday και επιλέξτε \"Οχι βελτιστοποίηση\"</string>
+    <string name="battery_optimization_description">Ανοίξτε τις ρυθμίσεις για να απενεργοποιήσετε οποιαδήποτε βελτιστοποίηση για τo Auspice. Χρήσιμο εάν οι ειδοποιήσεις δε λειτουργούν</string>
+    <string name="battery_optimization_tutorial">- Εμφανίστε όλες τις εφαρμογές και βρείτε το Auspice στη λίστα\n- Πατήστε το Auspice και επιλέξτε \"Οχι βελτιστοποίηση\"</string>
     <string name="notification_sound_title">Ήχος ειδοποίησης</string>
     <string name="notification_sound_description">Συντόμευση στις ρυθμίσεις ήχου ειδοποίησης, αν δε σας αρέσει ο προεπιλεγμένος ήχος πουλιών</string>
-    <string name="missing_permission_notifications">Το δικαίωμα ειδοποίησης απορρίφθηκε και το Birday δεν μπορεί να στείλει ειδοποιήσεις! Ενεργοποιήστε το δικαίωμα από τις ρυθμίσεις.</string>
-    <string name="missing_permission_notifications_forever">Το δικαίωμα ειδοποίησης απορρίφθηκε και δεν μπορεί να ζητηθεί ξανά, οπότε το Birday δεν μπορεί να στείλει ειδοποιήσεις! Ενεργοποιήστε το δικαίωμα χειροκίνητα, από τις ρυθμίσεις.</string>
-    <string name="missing_permission_calendar">Η άδεια ημερολογίου απορρίφθηκε και το Birday δεν μπορεί να εισαγάγει από το ημερολόγιο! Ενεργοποιήστε την άδεια από τις ρυθμίσεις.</string>
-    <string name="missing_permission_calendar_forever">Η άδεια ημερολογίου απορρίφθηκε και δεν μπορεί να ζητηθεί ξανά, επομένως το Birday δεν μπορεί να κάνει εισαγωγή από το ημερολόγιο! Ενεργοποιήστε την άδεια χειροκίνητα, από τις ρυθμίσεις.</string>
+    <string name="missing_permission_notifications">Το δικαίωμα ειδοποίησης απορρίφθηκε και το Auspice δεν μπορεί να στείλει ειδοποιήσεις! Ενεργοποιήστε το δικαίωμα από τις ρυθμίσεις.</string>
+    <string name="missing_permission_notifications_forever">Το δικαίωμα ειδοποίησης απορρίφθηκε και δεν μπορεί να ζητηθεί ξανά, οπότε το Auspice δεν μπορεί να στείλει ειδοποιήσεις! Ενεργοποιήστε το δικαίωμα χειροκίνητα, από τις ρυθμίσεις.</string>
+    <string name="missing_permission_calendar">Η άδεια ημερολογίου απορρίφθηκε και το Auspice δεν μπορεί να εισαγάγει από το ημερολόγιο! Ενεργοποιήστε την άδεια από τις ρυθμίσεις.</string>
+    <string name="missing_permission_calendar_forever">Η άδεια ημερολογίου απορρίφθηκε και δεν μπορεί να ζητηθεί ξανά, επομένως το Auspice δεν μπορεί να κάνει εισαγωγή από το ημερολόγιο! Ενεργοποιήστε την άδεια χειροκίνητα, από τις ρυθμίσεις.</string>
     <string name="import_calendar_title">Εισαγωγή από ημερολόγιο</string>
     <string name="import_calendar_description">Εισαγάγετε οποιοδήποτε ετήσια εκδήλωση από τα ημερολόγιά σας. Θυμηθείτε να ορίσετε τον τύπο και το έτος εκδήλωσης για να κρατάτε τα πράγματα σε τάξη!</string>
     <string name="loop_avd_title">Επανάληψη κινούμενων σχεδίων</string>
@@ -129,13 +129,11 @@
     <string name="order_alphabetically_description_off">Οι εκδηλώσεις ταξινομούνται ανά ημερομηνία</string>
     <string name="grouped_notifications_title">Ομαδοποίηση πολλαπλών ειδοποιήσεων</string>
     <string name="grouped_notifications_description_on">Εάν υπάρχουν δύο ή περισσότερες εκδηλώσεις σε μία μόνο ημέρα, οι ειδοποιήσεις ομαδοποιούνται</string>
-    <string name="grouped_notifications_description_off">Εάν υπάρχουν δύο ή περισσότερες εκδηλώσεις σε μια μόνο ημέρα, το Birday θα στείλει ειδοποίηση για κάθε μία</string>
+    <string name="grouped_notifications_description_off">Εάν υπάρχουν δύο ή περισσότερες εκδηλώσεις σε μια μόνο ημέρα, το Auspice θα στείλει ειδοποίηση για κάθε μία</string>
     <!-- Developer -->
-    <string name="dev_description">Είμαι ευγενικός τύπος και μου αρέσουν τα όμορφα πράγματα, όπως κινούμενα σχέδια, εικονίδια, σπορ αυτοκίνητα και τρισδιάστατη εκτύπωση. Εργάζομαι ως σχεδιαστής και μηχανικός υπολογιστών.</string>
-    <string name="easter_egg">Ωραίο λογότυπο, ε; ;D</string>
     <!-- New event -->
     <string name="new_event">Νέα εκδήλωση</string>
-    <string name="new_event_description">Εισαγάγετε ένα άτομο που σας ενδιαφέρει και το Birday θα σας βοηθήσει να θυμάστε τα γενέθλιά του ή άλλες εκδηλώσεις!</string>
+    <string name="new_event_description">Εισαγάγετε ένα άτομο που σας ενδιαφέρει και το Auspice θα σας βοηθήσει να θυμάστε τα γενέθλιά του ή άλλες εκδηλώσεις!</string>
     <string name="insert_event">Εισαγωγή εκδήλωσης</string>
     <string name="cancel">Ακύρωση</string>
     <string name="insert_name_hint">Εισαγάγετε Όνομα</string>
@@ -236,28 +234,28 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Υπενθύμιση Εκδήλωσης</string>
-    <string name="events_channel_description">Υπενθυμίσεις για τις επερχόμενες εκδηλώσεις από το Birday</string>
-    <string name="notification_title">Υπενθύμιση Birday</string>
+    <string name="events_channel_description">Υπενθυμίσεις για τις επερχόμενες εκδηλώσεις από το Auspice</string>
+    <string name="notification_title">Υπενθύμιση Auspice</string>
     <string name="notification_description_part_1">Οι σημερινές εκδηλώσεις είναι</string>
     <string name="notification_description_part_2">Να έχετε μια υπέροχη μέρα!</string>
     <string name="additional_notification_text">Προσεχείς εκδηλώσεις!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Καλώς ήρθατε στο Birday!</string>
-    <string name="slide_one_description">Το Birday είναι μια απλή και ελαφριά εφαρμογή για να διαχειριστείτε σημαντικές εκδηλώσεις!
+    <string name="slide_one_title">Καλώς ήρθατε στο Auspice!</string>
+    <string name="slide_one_description">Το Auspice είναι μια απλή και ελαφριά εφαρμογή για να διαχειριστείτε σημαντικές εκδηλώσεις!
     Μπορείτε να το χρησιμοποιήσετε για να θυμάστε και να αποθηκεύσετε τα γενέθλια των ανθρώπων που αγαπάτε και πολλά άλλα, με αξιόπιστο και γρήγορο τρόπο.
     </string>
     <string name="slide_two_title">Δωρεάν, απλό, προσαρμόσιμο</string>
-    <string name="slide_two_description">Το Birday είναι δωρεάν, χωρίς διαφημίσεις και ανοικτού κώδικα. Παρέχει ένα σύνολο στατιστικών
+    <string name="slide_two_description">Το Auspice είναι δωρεάν, χωρίς διαφημίσεις και ανοικτού κώδικα. Παρέχει ένα σύνολο στατιστικών
     για τις εκδηλώσεις σας, ένα σύστημα αγαπημένων και μια προσαρμόσιμη διεπαφή. Και εγγυημένη
     υποστήριξη και ενημερώσεις!
     </string>
     <string name="slide_three_title">Εισαγωγή από τις επαφές</string>
     <string name="slide_three_description">Είναι επίσης δυνατόν να εισαγάγετε τις εκδηλώσεις που έχετε ήδη αποθηκεύσει
-    από τις επαφές σας. Το Birday μπορεί να το κάνει για εσάς, απλά χορηγήστε την άδεια επαφών. Απολαύστε το!
+    από τις επαφές σας. Το Auspice μπορεί να το κάνει για εσάς, απλά χορηγήστε την άδεια επαφών. Απολαύστε το!
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Προσεχείς εκδηλώσεις</string>
-    <string name="add_widget">Birday - Επερχόμενα</string>
+    <string name="add_widget">Auspice - Επερχόμενα</string>
     <string name="dark_widget_name">Σκοτεινό widget</string>
     <string name="dark_widget_description_on">Το widget χρησιμοποιεί το σκοτεινό θέμα</string>
     <string name="dark_widget_description_off">Το widget χρησιμοποιεί το ανοιχτό θέμα</string>
@@ -290,8 +288,8 @@
     <string name="check_github">Δείτε το Github</string>
     <string name="translate_app">Μετάφραση της εφαρμογής</string>
     <string name="launch_auto_import_title">Αυτόματη εισαγωγή κατά την εκκίνηση</string>
-    <string name="launch_auto_import_description_off">Το Birday δε θα εισάγει αυτόματα επαφές όταν ξεκινάει</string>
-    <string name="launch_auto_import_description_on">Το Birday θα συγχρονίζεται αυτόματα με τις επαφές όταν ξεκινάει</string>
+    <string name="launch_auto_import_description_off">Το Auspice δε θα εισάγει αυτόματα επαφές όταν ξεκινάει</string>
+    <string name="launch_auto_import_description_on">Το Auspice θα συγχρονίζεται αυτόματα με τις επαφές όταν ξεκινάει</string>
     <string name="hide_on_scroll_title">Απόκρυψη γραμμής πλοήγησης κατά την κύλιση</string>
     <string name="hide_on_scroll_description_on">Απόκρυψη της κάτω γραμμής πλοήγησης κατά την κύλιση</string>
     <string name="hide_on_scroll_description_off">Η κάτω γραμμή πλοήγησης θα είναι πάντα ορατή</string>
@@ -312,8 +310,8 @@
     <string name="export_calendar_title">Εξαγωγή στο ημερολόγιο</string>
     <string name="export_calendar_description">Αποθηκεύστε κάθε εκδήλωση στο τοπικό σας ημερολόγιο, αν είναι δυνατόν. Απαιτεί δικαιώματα ημερολογίου</string>
     <string name="auto_export_title">Αυτόματη εξαγωγή εκδηλώσεων</string>
-    <string name="auto_export_description_on">Το Birday θα εξάγει αυτόματα ένα αντίγραφο ασφαλείας όταν κλείσει η εφαρμογή. Παρακαλώ σημειώστε ότι κάθε αντίγραφο ασφαλείας θα αντικαταστήσει το προηγούμενο</string>
-    <string name="auto_export_description_off">Για να εκτελεστεί ένα τοπικό αντίγραφο ασφαλείας του Birday, πρέπει να γίνει χειροκίνητα</string>
+    <string name="auto_export_description_on">Το Auspice θα εξάγει αυτόματα ένα αντίγραφο ασφαλείας όταν κλείσει η εφαρμογή. Παρακαλώ σημειώστε ότι κάθε αντίγραφο ασφαλείας θα αντικαταστήσει το προηγούμενο</string>
+    <string name="auto_export_description_off">Για να εκτελεστεί ένα τοπικό αντίγραφο ασφαλείας του Auspice, πρέπει να γίνει χειροκίνητα</string>
     <string name="add_demo_entries_title">Προσθήκη καταχωρήσεων επίδειξης</string>
     <string name="add_demo_entries_description">Γέμισε τη βάση δεδομένων με ένα σύνολο εκδηλώσεων επίδειξης, με κατά βάση ηθοποιούς και ιστορικές προσωπικότητες</string>
     <string name="add_demo_entries_dialog_description">Αυτό θα προσθέσει μόνιμα ΧΙΛΙΑΔΕΣ καταχωρήσεις στη βάση δεδομένων και προορίζεται για σκοπούς αποσφαλμάτωσης. Δε θα διαγράψει οποιαδήποτε υπάρχουσα εκδήλωση, αλλά αν θέλετε να διαγράψετε τις νέες καταχωρήσεις, θα πρέπει να το κάνετε χειροκίνητα. Καλή τύχη με αυτό.</string>
@@ -323,7 +321,7 @@
     <string name="delete_db_dialog_description">Πρώτα βεβαιωθείτε ότι έχετε δημιουργήσει αντίγραφα ασφαλείας των εκδηλώσεών σας, αυτή η λειτουργία θα διαγράψει τη Βάση Δεδομένων και θα πρέπει να χρησιμοποιηθεί μόνο για σκοπούς εντοπισμού σφαλμάτων</string>
     <string name="delete_search_title">Διαγραφή επιλογής αναζήτησης</string>
     <string name="delete_search_description_off">Δε θα είναι δυνατή η διαγραφή πολλαπλών εκδηλώσεων ταυτόχρονα</string>
-    <string name="delete_search_description_on">Πατήστε το κουμπί \"Κάδος\" όταν κάνετε αναζήτηση σε μία ή περισσότερες εκδηλώσεις για να τις διαγράψετε γρήγορα όλες από το Birday. Χρησιμοποιήστε το με προσοχή!</string>
+    <string name="delete_search_description_on">Πατήστε το κουμπί \"Κάδος\" όταν κάνετε αναζήτηση σε μία ή περισσότερες εκδηλώσεις για να τις διαγράψετε γρήγορα όλες από το Auspice. Χρησιμοποιήστε το με προσοχή!</string>
     <string name="delete_search_confirm">Αυτό θα διαγράψει όλα τα αποτελέσματα αυτής της αναζήτησης. Μπορείτε να αναιρέσετε τη διαδικασία λίγο μετά απ\' το πάτημα του OK αν αλλάξετε γνώμη!</string>
     <string name="import_contacts_bottom_sheet_description">Θα θέλατε να εισάγετε όλες τις εκδηλώσεις από τις επαφές σας αμέσως τώρα;</string>
     <string name="yes_import">Εισαγωγή</string>

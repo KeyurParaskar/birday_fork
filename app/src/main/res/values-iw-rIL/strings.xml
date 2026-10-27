@@ -95,7 +95,7 @@
     <string name="birday_export_description">ייצא את האירועים הזמינים לגיבוי, ושתפו אותם אם תרצו</string>
     <string name="birday_import_success">הייבוא הושלם!</string>
     <string name="birday_import_failure">הייבוא ​​נכשל. האם בחרת את הקובץ נכון?</string>
-    <string name="birday_import_invalid_file">הייבוא ​​נכשל. הקובץ שנבחר אינו גיבוי של Birday!</string>
+    <string name="birday_import_invalid_file">הייבוא ​​נכשל. הקובץ שנבחר אינו גיבוי של Auspice!</string>
     <string name="birday_export_success">הייצוא הושלם!</string>
     <string name="birday_export_failure">הייצוא נכשל. אופס!</string>
     <string name="birday_export_nothing_found">אין מה לייצא!</string>
@@ -113,14 +113,14 @@
     <string name="additional_notification_only_favorites_description_off">שלח את ההתראה הנוספת עבור כל אירוע שנוסף</string>
     <string name="troubleshoot">פתרון בעיות ועוד</string>
     <string name="battery_optimization_title">השבת מיטוב סוללה</string>
-    <string name="battery_optimization_description">פתח את ההגדרות כדי להשבית כל מיטוב עבור Birday. שימושי אם ההתראות אינן פועלות</string>
-    <string name="battery_optimization_tutorial">- הצג את כל האפליקציות ומצא את Birday ברשימה\n- הקש על \"- הצג את כל האפליקציות ומצא את \"יום הולדת\" ברשימה\n- הקש על Birday ובחר \"אל תייעל\"</string>
+    <string name="battery_optimization_description">פתח את ההגדרות כדי להשבית כל מיטוב עבור Auspice. שימושי אם ההתראות אינן פועלות</string>
+    <string name="battery_optimization_tutorial">- הצג את כל האפליקציות ומצא את Auspice ברשימה\n- הקש על \"- הצג את כל האפליקציות ומצא את \"יום הולדת\" ברשימה\n- הקש על Auspice ובחר \"אל תייעל\"</string>
     <string name="notification_sound_title">צליל התראה</string>
     <string name="notification_sound_description">קיצור דרך להגדרות צליל ההתראות, אם אינך אוהב את צליל הציפור המוגדר כברירת מחדל</string>
-    <string name="missing_permission_notifications">הרשאת ההתראות נדחתה, Birday לא יכול לשלוח התראות! הפעל את ההרשאה מההגדרות.</string>
-    <string name="missing_permission_notifications_forever">הרשאת ההתראות נדחתה ולא ניתן לבקש שוב, לכן Birday לא יכול לשלוח התראות! הפעל את ההרשאה באופן ידני, מההגדרות.</string>
-    <string name="missing_permission_calendar">הרשאת היומן נדחתה, Birday לא יכול לייבא מהיומן! הפעל את ההרשאה מההגדרות.</string>
-    <string name="missing_permission_calendar_forever">הרשאת היומן נדחתה ולא ניתן לבקש אותה שוב, לכן Birday לא יכול לייבא מהיומן! הפעל את ההרשאה באופן ידני, מההגדרות.</string>
+    <string name="missing_permission_notifications">הרשאת ההתראות נדחתה, Auspice לא יכול לשלוח התראות! הפעל את ההרשאה מההגדרות.</string>
+    <string name="missing_permission_notifications_forever">הרשאת ההתראות נדחתה ולא ניתן לבקש שוב, לכן Auspice לא יכול לשלוח התראות! הפעל את ההרשאה באופן ידני, מההגדרות.</string>
+    <string name="missing_permission_calendar">הרשאת היומן נדחתה, Auspice לא יכול לייבא מהיומן! הפעל את ההרשאה מההגדרות.</string>
+    <string name="missing_permission_calendar_forever">הרשאת היומן נדחתה ולא ניתן לבקש אותה שוב, לכן Auspice לא יכול לייבא מהיומן! הפעל את ההרשאה באופן ידני, מההגדרות.</string>
     <string name="import_calendar_title">ייבוא מהיומן</string>
     <string name="import_calendar_description">ייבאו כל אירוע שנתי מהיומנים שלכם. זכרו להגדיר את סוג האירוע והשנה כדי לשמור על סדר!</string>
     <string name="loop_avd_title">אנימציות לולאה</string>
@@ -131,13 +131,11 @@
     <string name="order_alphabetically_description_off">האירועים מסודרים לפי תאריך</string>
     <string name="grouped_notifications_title">קבץ התראות מרובות</string>
     <string name="grouped_notifications_description_on">אם ישנם שני אירועים או יותר באותו יום, ההתראות יקובצו</string>
-    <string name="grouped_notifications_description_off">אם ישנם שני אירועים או יותר באותו יום, Birday ישלח הודעה עבור כל אחד מהם</string>
+    <string name="grouped_notifications_description_off">אם ישנם שני אירועים או יותר באותו יום, Auspice ישלח הודעה עבור כל אחד מהם</string>
     <!-- Developer -->
-    <string name="dev_description">אני בחור מנומס ואני אוהב דברים יפים, כמו אנימציות, אייקונים, מכוניות ספורט והדפסה תלת מימדית. אני עובד כמעצב ומהנדס מחשבים.</string>
-    <string name="easter_egg">לוגו נחמד, הא? D;</string>
     <!-- New event -->
     <string name="new_event">אירוע חדש</string>
-    <string name="new_event_description">הזינו אדם שחשוב לכם, ו-Birday יעזור לכם לזכור את יום ההולדת שלו או אירועים אחרים!</string>
+    <string name="new_event_description">הזינו אדם שחשוב לכם, ו-Auspice יעזור לכם לזכור את יום ההולדת שלו או אירועים אחרים!</string>
     <string name="insert_event">הוסף אירוע</string>
     <string name="cancel">ביטול</string>
     <string name="insert_name_hint">הכנס שם פרטי</string>
@@ -246,24 +244,24 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">תזכורת לאירוע</string>
-    <string name="events_channel_description">תזכורות לגבי אירועים קרובים מ-Birday</string>
+    <string name="events_channel_description">תזכורות לגבי אירועים קרובים מ-Auspice</string>
     <string name="notification_title">תזכורת יום הולדת</string>
     <string name="notification_description_part_1">האירועים של היום הם</string>
     <string name="notification_description_part_2">שיהיה לך יום נפלא!</string>
     <string name="additional_notification_text">ארועים קרובים!</string>
     <!-- Introduction slides -->
     <string name="slide_one_title">ברוך הבא ליום הולדת!</string>
-    <string name="slide_one_description">Birday is a simple and lightweight app to manage important events!
+    <string name="slide_one_description">Auspice is a simple and lightweight app to manage important events!
     You can use it to remember and store the birthdays of the people you love and more, in a reliable and fast way.
     </string>
     <string name="slide_two_title">Free, simple, customizable</string>
-    <string name="slide_two_description">Birday is free, ad-free and open source. It provides a set of
+    <string name="slide_two_description">Auspice is free, ad-free and open source. It provides a set of
     stats about your events, a favorite system and a customizable interface. And guaranteed
     support and updates!
     </string>
     <string name="slide_three_title">Import from contacts</string>
     <string name="slide_three_description">It\'s also possible to import the events you\'ve already saved
-    from your contacts. Birday can do it for you, just grant the contacts permission. Enjoy!
+    from your contacts. Auspice can do it for you, just grant the contacts permission. Enjoy!
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Upcoming events</string>
@@ -300,8 +298,8 @@
     <string name="check_github">בדוק ב-GitHub</string>
     <string name="translate_app">עזור לתרם את היישום</string>
     <string name="launch_auto_import_title">ייבוא אוטומטי בעת ההפעלה</string>
-    <string name="launch_auto_import_description_off">Birday won\'t import contacts automatically when launched</string>
-    <string name="launch_auto_import_description_on">Birday will automatically sync with contacts at startup</string>
+    <string name="launch_auto_import_description_off">Auspice won\'t import contacts automatically when launched</string>
+    <string name="launch_auto_import_description_on">Auspice will automatically sync with contacts at startup</string>
     <string name="hide_on_scroll_title">Hide navbar on scroll</string>
     <string name="hide_on_scroll_description_on">Hide the bottom navbar when you scroll</string>
     <string name="hide_on_scroll_description_off">The bottom navbar will always be visible</string>
@@ -322,8 +320,8 @@
     <string name="export_calendar_title">יצוא ללוח שנה</string>
     <string name="export_calendar_description">שמור כל אירוע בלוח השנה המקומי שלך, אם אפשר. נדרשת הרשאת לוח שנה</string>
     <string name="auto_export_title">ייצוא אירועים אוטומטי</string>
-    <string name="auto_export_description_on">Birday ייצא גיבוי באופן אוטומטי כאשר האפליקציה תיסגר. שימו לב שכל גיבוי ידרוס את הקודם</string>
-    <string name="auto_export_description_off">To perform a local Birday backup, it has to be executed manually</string>
+    <string name="auto_export_description_on">Auspice ייצא גיבוי באופן אוטומטי כאשר האפליקציה תיסגר. שימו לב שכל גיבוי ידרוס את הקודם</string>
+    <string name="auto_export_description_off">To perform a local Auspice backup, it has to be executed manually</string>
     <string name="add_demo_entries_title">Add demo entries</string>
     <string name="add_demo_entries_description">Populate the DB with a demo set of events, mostly actors and historical figures</string>
     <string name="add_demo_entries_dialog_description">זה יוסיף לצמיתות אלפי רשומות למסד הנתונים, ונועד למטרות ניפוי שגיאות debug. זה לא ימחק אירועים קיימים, אך אם תרצה למחוק את הרשומות החדשות, יהיה עליך לעשות זאת ידנית. בהצלחה עם זה.</string>
@@ -333,7 +331,7 @@
     <string name="delete_db_dialog_description">ודא גיבוי של האירועים שלך תחילה, פעולה זו תמחק את מסד הנתונים ויש להשתמש בה למטרות ניפוי שגיאות בלבד</string>
     <string name="delete_search_title">מחיקת בחירת חיפוש</string>
     <string name="delete_search_description_off">לא ניתן יהיה למחוק מספר אירועים בו זמנית</string>
-    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Birday. Use with caution!</string>
+    <string name="delete_search_description_on">Press the trash button when you search one or more events to quickly delete them all from Auspice. Use with caution!</string>
     <string name="delete_search_confirm">This will delete all the results of this search. You can undo the process shortly after clicking OK if you change your mind!</string>
     <string name="import_contacts_bottom_sheet_description">Would you like to import all the events from your contacts right now?</string>
     <string name="yes_import">Import</string>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Üdvözlünk a Birday-ben</string>
-    <string name="app_name_extended">Birday - Esemény Kezelő</string>
-    <string name="leave_review_title">Birday Véleményezése</string>
+    <string name="app_welcome">Üdvözlünk a Auspice-ben</string>
+    <string name="app_name_extended">Auspice - Esemény Kezelő</string>
+    <string name="leave_review_title">Auspice Véleményezése</string>
     <string name="leave_review_subtitle">Írjon véleményt, hogy segítsen nekem az alkalmazásban. Ne feledje, hogy az adományokat leszámítva ez az alkalmazás teljesen ingyenes és reklámmentes!</string>
     <string name="yes_review">Véleményezés!</string>
     <string name="later">Később, esküszöm</string>
@@ -18,12 +18,12 @@
     <string name="stats_summary">Statisztikai összefoglaló</string>
     <string name="no_stats_description">Nincs elég esemény a statisztikák megjelenítéséhez. Adj hozzá néhányat, és gyere vissza később!</string>
     <plurals name="stats_total">
-        <item quantity="one">A Birday segít, hogy emlékezz összesen %d eseményre</item>
-        <item quantity="other">A Birday segít, hogy emlékezz összesen %d eseményre</item>
+        <item quantity="one">A Auspice segít, hogy emlékezz összesen %d eseményre</item>
+        <item quantity="other">A Auspice segít, hogy emlékezz összesen %d eseményre</item>
     </plurals>
     <string name="next_event">Következő esemény</string>
     <string name="no_next_event">Nincs megjeleníthető esemény!</string>
-    <string name="no_next_event_description">Még nem írtál be vagy importált eseményeket. Adj hozzá egyet, és hagyd, hogy a Birday segítsen!</string>
+    <string name="no_next_event_description">Még nem írtál be vagy importált eseményeket. Adj hozzá egyet, és hagyd, hogy a Auspice segítsen!</string>
     <string name="next_age_years">Évek</string>
     <string name="event_others">és mások</string>
     <plurals name="days_left">
@@ -83,14 +83,14 @@
     <string name="import_nothing_found">Nem található esemény!</string>
     <string name="import_failed">Hiba történt!</string>
     <string name="missing_permission_contacts">A kapcsolattartási engedély meg lett tagadva. Próbálkozz újra, vagy aktiváld az engedélyt manuálisan, vagy a névjegyek importálása nem fog működni!</string>
-    <string name="missing_permission_contacts_forever">A Birday nem tudta importálni a kapcsolatait, és nem kérhető engedély, mivel bejelölted a \"soha ne kérdezzen újra\" lehetőséget. Manuálisan engedélyezd!</string>
-    <string name="birday_import_title">Importálj egy Birday biztonsági másolatot</string>
-    <string name="birday_import_description">Válasszon egy érvényes Birday biztonsági másolatot a eseményjainak manuális visszaállításához. Minden létező adat felül lesz írva!</string>
+    <string name="missing_permission_contacts_forever">A Auspice nem tudta importálni a kapcsolatait, és nem kérhető engedély, mivel bejelölted a \"soha ne kérdezzen újra\" lehetőséget. Manuálisan engedélyezd!</string>
+    <string name="birday_import_title">Importálj egy Auspice biztonsági másolatot</string>
+    <string name="birday_import_description">Válasszon egy érvényes Auspice biztonsági másolatot a eseményjainak manuális visszaállításához. Minden létező adat felül lesz írva!</string>
     <string name="birday_export_title">Eseményeket exportálása és megosztása</string>
     <string name="birday_export_description">Exportáld a rendelkezésre álló eseményeketat, és oszd meg őket, ha szeretnéd</string>
     <string name="birday_import_success">Az importálás befejeződött!</string>
     <string name="birday_import_failure">Az importálás sikertelen. Helyes fájlt választottál?</string>
-    <string name="birday_import_invalid_file">Az importálás sikertelen. A kiválasztott fájl nem Birday biztonsági másolat!</string>
+    <string name="birday_import_invalid_file">Az importálás sikertelen. A kiválasztott fájl nem Auspice biztonsági másolat!</string>
     <string name="birday_export_success">Az exportálás befejeződött!</string>
     <string name="birday_export_failure">Az exportálás sikertelen. Hoppá!</string>
     <string name="birday_export_nothing_found">Nincs mit exportálni!</string>
@@ -108,14 +108,14 @@
     <string name="additional_notification_only_favorites_description_off">Minden megadott eseményhez küldjön értesítést</string>
     <string name="troubleshoot">Hibaelhárítás</string>
     <string name="battery_optimization_title">Az akkumulátor optimalizálás letiltása</string>
-    <string name="battery_optimization_description">Nyissa meg a beállításokat a Birday optimalizálásának letiltásához</string>
-    <string name="battery_optimization_tutorial">Mutasd az összes alkalmazást, és keresd meg a Birday-t a listában\nÉrintsd meg a Birday-t, majd válaszd a „Ne optimalizáld” lehetőséget</string>
+    <string name="battery_optimization_description">Nyissa meg a beállításokat a Auspice optimalizálásának letiltásához</string>
+    <string name="battery_optimization_tutorial">Mutasd az összes alkalmazást, és keresd meg a Auspice-t a listában\nÉrintsd meg a Auspice-t, majd válaszd a „Ne optimalizáld” lehetőséget</string>
     <string name="notification_sound_title">Értesítési hang</string>
     <string name="notification_sound_description">Parancsikon az értesítési hangbeállításokhoz, ha nem tetszik az alapértelmezett madárhang</string>
-    <string name="missing_permission_notifications">Az értesítés engedély nem lett elfogadva, és Birday nem tud értesítést küldeni! Engedélyezd az értesítéseket a beállításokból, különben Birday morcos lesz!</string>
-    <string name="missing_permission_notifications_forever">Az értesítés engedély nem lett elfogadva, és nem lehet újra kérvényezni, szóval Birday nem tud értesítést küldeni! Engedélyezd az értesítéseket a beállításokból manuálisan.</string>
-    <string name="missing_permission_calendar">A naptár engedély nem lett elfogadva, és Birday nem tud importálni a naptárból! Aktiváld az engedélyt a beállításokból.</string>
-    <string name="missing_permission_calendar_forever">Az naptár engedély nem lett elfogadva, és nem lehet újra kérvényezni, szóval Birday nem tud importálni a naptárból! Engedélyezd a naptárat a beállításokból manuálisan.</string>
+    <string name="missing_permission_notifications">Az értesítés engedély nem lett elfogadva, és Auspice nem tud értesítést küldeni! Engedélyezd az értesítéseket a beállításokból, különben Auspice morcos lesz!</string>
+    <string name="missing_permission_notifications_forever">Az értesítés engedély nem lett elfogadva, és nem lehet újra kérvényezni, szóval Auspice nem tud értesítést küldeni! Engedélyezd az értesítéseket a beállításokból manuálisan.</string>
+    <string name="missing_permission_calendar">A naptár engedély nem lett elfogadva, és Auspice nem tud importálni a naptárból! Aktiváld az engedélyt a beállításokból.</string>
+    <string name="missing_permission_calendar_forever">Az naptár engedély nem lett elfogadva, és nem lehet újra kérvényezni, szóval Auspice nem tud importálni a naptárból! Engedélyezd a naptárat a beállításokból manuálisan.</string>
     <string name="import_calendar_title">Importálás naptárból</string>
     <string name="import_calendar_description">Importálj akármilyen éves eseményt a naptárodból. Ne felejtsd el beállítani az esemény típúsát és az évet, hhog rendben tartsd a dolgokat!</string>
     <string name="loop_avd_title">Animációs hurok</string>
@@ -126,13 +126,11 @@
     <string name="order_alphabetically_description_off">Az események dátum szerinti sorrendben</string>
     <string name="grouped_notifications_title">Több értesítés csoportosítása</string>
     <string name="grouped_notifications_description_on">Ha egy napon két vagy több esemény van, az értesítések csoportosítva lesznek</string>
-    <string name="grouped_notifications_description_off">Ha egy napon belül két vagy több esemény van, a Birday minden egyes eseményről értesítést küld</string>
+    <string name="grouped_notifications_description_off">Ha egy napon belül két vagy több esemény van, a Auspice minden egyes eseményről értesítést küld</string>
     <!-- Developer -->
-    <string name="dev_description">Udvarias srác vagyok, és szeretem a szép dolgokat, mint animációk, ikonok, sportkocsik és 3D nyomtatás. Tervezőként és számítógépes mérnökként dolgozom.</string>
-    <string name="easter_egg">Szép logó, mi? ;D</string>
     <!-- New event -->
     <string name="new_event">Új esemény</string>
-    <string name="new_event_description">Írj be egy új embert, akivel törődsz, és Birday segít emlékeztetni születésnapjára vagy valami másra!</string>
+    <string name="new_event_description">Írj be egy új embert, akivel törődsz, és Auspice segít emlékeztetni születésnapjára vagy valami másra!</string>
     <string name="insert_event">Esemény beírása</string>
     <string name="cancel">Mégsem</string>
     <string name="insert_name_hint">Név beírása</string>
@@ -233,23 +231,23 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Esemény Emlékeztető</string>
-    <string name="events_channel_description">Emlékeztetők a közelgő eseményeketra a Birday-től</string>
-    <string name="notification_title">Birday Emlékeztető</string>
+    <string name="events_channel_description">Emlékeztetők a közelgő eseményeketra a Auspice-től</string>
+    <string name="notification_title">Auspice Emlékeztető</string>
     <string name="notification_description_part_1">A mai eseményeket:</string>
     <string name="notification_description_part_2">Szép napot!</string>
     <string name="additional_notification_text">Közelgő események!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Üdvözlünk a Birday-ben!</string>
-    <string name="slide_one_description">A Birday egy egyszerű és könnyű alkalmazás a fontos események kezelésére! Segítségével megbízhatóan és gyorsan elmentheti és archiválhatja szerettei születésnapját vagy más eseményeket.</string>
+    <string name="slide_one_title">Üdvözlünk a Auspice-ben!</string>
+    <string name="slide_one_description">A Auspice egy egyszerű és könnyű alkalmazás a fontos események kezelésére! Segítségével megbízhatóan és gyorsan elmentheti és archiválhatja szerettei születésnapját vagy más eseményeket.</string>
     <string name="slide_two_title">Ingyenes, egyszerű, testreszabható</string>
-    <string name="slide_two_description">A Birday ingyenes, hirdetésmentes és nyílt forráskódú. Statisztikát biztosít a születésnapokról, kedvenc rendszert és a testreszabható felületet biztosít. És garantált támogatást és frissítéseket!
+    <string name="slide_two_description">A Auspice ingyenes, hirdetésmentes és nyílt forráskódú. Statisztikát biztosít a születésnapokról, kedvenc rendszert és a testreszabható felületet biztosít. És garantált támogatást és frissítéseket!
     </string>
     <string name="slide_three_title">Importálás a névjegyekből</string>
-    <string name="slide_three_description">A már elmentett eseményeketat is importálhatod a névjegyekből. A Birday meg tudja csinálni számodra, csak adja meg a névjegyek engedélyt. Élvezd!
+    <string name="slide_three_description">A már elmentett eseményeketat is importálhatod a névjegyekből. A Auspice meg tudja csinálni számodra, csak adja meg a névjegyek engedélyt. Élvezd!
     </string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Közelgő eseményeket</string>
-    <string name="add_widget">Birday - közelgő</string>
+    <string name="add_widget">Auspice - közelgő</string>
     <string name="dark_widget_name">Sötét widget</string>
     <string name="dark_widget_description_on">A widget sötét témát használ</string>
     <string name="dark_widget_description_off">A widget világos témát használ</string>
@@ -268,7 +266,7 @@
     <!-- Search -->
     <string name="search_event">Keresés…</string>
     <string name="search_no_result_title">Nincs találat</string>
-    <string name="search_no_result_description">A keresési karakterlánc nem felel meg a Birday adatbázis egyetlen eseményének sem!</string>
+    <string name="search_no_result_description">A keresési karakterlánc nem felel meg a Auspice adatbázis egyetlen eseményének sem!</string>
     <!-- Notes -->
     <string name="notes">Megjegyzések</string>
     <string name="write_something">Írjon valamit…</string>
@@ -282,8 +280,8 @@
     <string name="check_github">Csekkold a GitHubot</string>
     <string name="translate_app">Alkalmazás fordítása</string>
     <string name="launch_auto_import_title">Automatikus importálás indításkor</string>
-    <string name="launch_auto_import_description_off">Birday nem fog automatikusan kontaktokat importálni kilövésnél!</string>
-    <string name="launch_auto_import_description_on">Birday automatikusan fog szinkronizálni a kontaktokkal indításkor</string>
+    <string name="launch_auto_import_description_off">Auspice nem fog automatikusan kontaktokat importálni kilövésnél!</string>
+    <string name="launch_auto_import_description_on">Auspice automatikusan fog szinkronizálni a kontaktokkal indításkor</string>
     <string name="hide_on_scroll_title">Navigációs sáv elrejtése görgetéskor</string>
     <string name="hide_on_scroll_description_on">Navigációs sáv elrejtése görgetésnél</string>
     <string name="hide_on_scroll_description_off">Az alsó navigációs sáv mindig látható marad</string>
@@ -304,8 +302,8 @@
     <string name="export_calendar_title">Exportálás naptárba</string>
     <string name="export_calendar_description">Ha lehetséges, mentsen el minden eseményt a helyi naptárába. A naptár engedélye szükséges</string>
     <string name="auto_export_title">Események automatikus exportálása</string>
-    <string name="auto_export_description_on">A Birday automatikusan exportál egy biztonsági mentést, amikor az alkalmazást bezárja. Felhívjuk figyelmét, hogy minden egyes biztonsági mentés felülírja az előzőt</string>
-    <string name="auto_export_description_off">A Birday helyi biztonsági mentését manuálisan kell végrehajtani</string>
+    <string name="auto_export_description_on">A Auspice automatikusan exportál egy biztonsági mentést, amikor az alkalmazást bezárja. Felhívjuk figyelmét, hogy minden egyes biztonsági mentés felülírja az előzőt</string>
+    <string name="auto_export_description_off">A Auspice helyi biztonsági mentését manuálisan kell végrehajtani</string>
     <string name="add_demo_entries_title">Demó bejegyzések hozzáadása</string>
     <string name="add_demo_entries_description">Töltse fel az adatbázist egy demó eseménykészlettel, főként színészekkel és történelmi személyiségekkel</string>
     <string name="add_demo_entries_dialog_description">Ez tartósan több ezer bejegyzést ad az adatbázishoz, és hibakeresési célokra szolgál. Nem törli a meglévő eseményeket, de manuálisan kell megcsinálnia, ha törölni akarja az új bejegyzéseket. Sok szerencsét hozzá.</string>
@@ -315,7 +313,7 @@
     <string name="delete_db_dialog_description">Először mindenképpen készíts biztonsági másolatot az eseményekről, ez a művelet törli a DB-t, és csak hibakeresési célokra használható</string>
     <string name="delete_search_title">Keresési szelekció törlése</string>
     <string name="delete_search_description_off">Nem lehet egyszerre több eseményt törölni</string>
-    <string name="delete_search_description_on">Ha egy vagy több esemény keresésekor megnyomod a törlés gombot, gyorsan törölheted az összeset a Birdayből. Óvatosan használd!</string>
+    <string name="delete_search_description_on">Ha egy vagy több esemény keresésekor megnyomod a törlés gombot, gyorsan törölheted az összeset a Auspiceből. Óvatosan használd!</string>
     <string name="delete_search_confirm">Ez a keresés összes eredményét törli. Ha meggondolod magadat, az OK gombra kattintás után röviddel visszavonhatod a folyamatot!</string>
     <string name="import_contacts_bottom_sheet_description">Szeretnéd az összes eseményt importálni a névjegyeiből most rögtön?</string>
     <string name="yes_import">Importálás</string>

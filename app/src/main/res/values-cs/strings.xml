@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Vítejte v Birday</string>
-    <string name="app_name_extended">Birday - Správce událostí</string>
-    <string name="leave_review_title">Ohodnoťte Birday</string>
+    <string name="app_welcome">Vítejte v Auspice</string>
+    <string name="app_name_extended">Auspice - Správce událostí</string>
+    <string name="leave_review_title">Ohodnoťte Auspice</string>
     <string name="leave_review_subtitle">Zanechte recenzi, která mi pomůže s aplikací. Mějte na paměti, že kromě darů je tato aplikace zcela zdarma a bez reklam!</string>
     <string name="yes_review">Rád pomůžu!</string>
     <string name="later">Později, přísahám</string>
@@ -18,14 +18,14 @@
     <string name="stats_summary">Přehled statistik</string>
     <string name="no_stats_description">Pro zobrazení statistik nemáte dostatek událostí. Přidejte další a vraťte se později!</string>
     <plurals name="stats_total">
-        <item quantity="one">Birday vám pomáhá zapamatovat si %d událost</item>
-        <item quantity="few">Birday vám pomáhá zapamatovat si celkem %d události</item>
-        <item quantity="many">Birday vám pomáhá zapamatovat si celkem %d událostí</item>
-        <item quantity="other">Birday vám pomáhá zapamatovat si celkem %d událostí</item>
+        <item quantity="one">Auspice vám pomáhá zapamatovat si %d událost</item>
+        <item quantity="few">Auspice vám pomáhá zapamatovat si celkem %d události</item>
+        <item quantity="many">Auspice vám pomáhá zapamatovat si celkem %d událostí</item>
+        <item quantity="other">Auspice vám pomáhá zapamatovat si celkem %d událostí</item>
     </plurals>
     <string name="next_event">Následující událost</string>
     <string name="no_next_event">Žádné události k zobrazení!</string>
-    <string name="no_next_event_description">Dosud jste nevytvořili ani neimportovali žádnou událost. Přidejte ji a nechte Birday, aby vás na ni včas upozornil!</string>
+    <string name="no_next_event_description">Dosud jste nevytvořili ani neimportovali žádnou událost. Přidejte ji a nechte Auspice, aby vás na ni včas upozornil!</string>
     <string name="next_age_years">Věk</string>
     <string name="event_others">a další</string>
     <plurals name="days_left">
@@ -87,14 +87,14 @@
     <string name="import_nothing_found">Nebyla nalezena žádná událost!</string>
     <string name="import_failed">Něco se pokazilo!</string>
     <string name="missing_permission_contacts">Oprávnění pro přístupu ke kontaktům bylo zamítnuto. Zkuste to znovu nebo povolte oprávnění ručně z nastavení smartphonu, jinak import kontaktů nebude fungovat!</string>
-    <string name="missing_permission_contacts_forever">Birday nemůže požádat o povolení importovat kontakty, protože jste zaškrtli možnost \"Nikdy se neptat\" nebo \"Zakázat\". Povolte oprávnění pro přístup ke kontaktům ručně v nastaveních smartphonu!</string>
-    <string name="birday_import_title">Importujte zálohu Birday</string>
-    <string name="birday_import_description">Vyberte si platnou zálohu Birday a ručně obnovte své události. Všechna existující data budou přepsána!</string>
+    <string name="missing_permission_contacts_forever">Auspice nemůže požádat o povolení importovat kontakty, protože jste zaškrtli možnost \"Nikdy se neptat\" nebo \"Zakázat\". Povolte oprávnění pro přístup ke kontaktům ručně v nastaveních smartphonu!</string>
+    <string name="birday_import_title">Importujte zálohu Auspice</string>
+    <string name="birday_import_description">Vyberte si platnou zálohu Auspice a ručně obnovte své události. Všechna existující data budou přepsána!</string>
     <string name="birday_export_title">Exportovat a sdílet události</string>
     <string name="birday_export_description">Exportujte všechny vaše události a nabídne je ke sdílení</string>
     <string name="birday_import_success">Import dokončen!</string>
     <string name="birday_import_failure">Import se nezdařil. Vybrali jste soubor správně?</string>
-    <string name="birday_import_invalid_file">Import se nezdařil. Zvolený soubor není soubor zálohy Birday!</string>
+    <string name="birday_import_invalid_file">Import se nezdařil. Zvolený soubor není soubor zálohy Auspice!</string>
     <string name="birday_export_success">Export dokončen!</string>
     <string name="birday_export_failure">Jejda! Export se nezdařil.</string>
     <string name="birday_export_nothing_found">Není co exportovat!</string>
@@ -112,14 +112,14 @@
     <string name="additional_notification_only_favorites_description_off">Odeslat dodatečné upozornění pro všechny události</string>
     <string name="troubleshoot">Odstraňování problémů a další</string>
     <string name="battery_optimization_title">Zakázat optimalizaci baterie</string>
-    <string name="battery_optimization_description">Otevřete nastavení a deaktivujte jakoukoli optimalizaci baterie pro Birday. Užitečné, pokud nefungují upozornění</string>
+    <string name="battery_optimization_description">Otevřete nastavení a deaktivujte jakoukoli optimalizaci baterie pro Auspice. Užitečné, pokud nefungují upozornění</string>
     <string name="battery_optimization_tutorial">- Zobrazit všechny aplikace a najít narozeniny v seznamu\n- Klepněte na narozeniny a vyberte \"Neoptimalizovat\"</string>
     <string name="notification_sound_title">Zvuk upozornění</string>
     <string name="notification_sound_description">Přejít k nastavení zvuku upozornění, pokud se vám nelíbí výchozí zvuk ptáčků</string>
-    <string name="missing_permission_notifications">Oprávnění k upozornění bylo zamítnuto. Birday vás nebude moct upozornit na události. Povolte prosím oprávnění v nastaveních smartphonu!</string>
-    <string name="missing_permission_notifications_forever">Oprávněník k upozornění bylo zamítnuto a nemůže být znovu vyžádáno. Birday vás nebude moct upozornit na události. Povolte prosím oprávnění v nastaveních smartphonu!</string>
-    <string name="missing_permission_calendar">Oprávnění k přístupu ke kalendáři bylo zamítnuto. Birday nebude moct importovat události z kalendáře. Povolte prosím oprávnění v nastaveních smartphonu!</string>
-    <string name="missing_permission_calendar_forever">Oprávnění k přístupu ke kalendáři bylo zamítnuto a Birday nemůže importovat položky z kalendáře! Udělte oprávnění ručně z nastavení smartphonu, protože Birday již nemůže znovu otevřít dialogové okno oprávnění.</string>
+    <string name="missing_permission_notifications">Oprávnění k upozornění bylo zamítnuto. Auspice vás nebude moct upozornit na události. Povolte prosím oprávnění v nastaveních smartphonu!</string>
+    <string name="missing_permission_notifications_forever">Oprávněník k upozornění bylo zamítnuto a nemůže být znovu vyžádáno. Auspice vás nebude moct upozornit na události. Povolte prosím oprávnění v nastaveních smartphonu!</string>
+    <string name="missing_permission_calendar">Oprávnění k přístupu ke kalendáři bylo zamítnuto. Auspice nebude moct importovat události z kalendáře. Povolte prosím oprávnění v nastaveních smartphonu!</string>
+    <string name="missing_permission_calendar_forever">Oprávnění k přístupu ke kalendáři bylo zamítnuto a Auspice nemůže importovat položky z kalendáře! Udělte oprávnění ručně z nastavení smartphonu, protože Auspice již nemůže znovu otevřít dialogové okno oprávnění.</string>
     <string name="import_calendar_title">Importovat z kalendáře</string>
     <string name="import_calendar_description">Importujte libovolnou roční událost ze svých kalendářů. Nezapomeňte nastavit typ události a rok, aby bylo vše správně seřazeno!</string>
     <string name="loop_avd_title">Smyčka animací</string>
@@ -130,13 +130,11 @@
     <string name="order_alphabetically_description_off">Události jsou řazeny podle data</string>
     <string name="grouped_notifications_title">Sloučení oznámení</string>
     <string name="grouped_notifications_description_on">Pokud jsou v jeden den dvě nebo více událostí, jejich oznámení jsou sloučeny</string>
-    <string name="grouped_notifications_description_off">Pokud jsou v jeden den dvě nebo více událostí, Birday odešle oznámení pro každou zvlášť</string>
+    <string name="grouped_notifications_description_off">Pokud jsou v jeden den dvě nebo více událostí, Auspice odešle oznámení pro každou zvlášť</string>
     <!-- Developer -->
-    <string name="dev_description">Jsem milý a skromný člověk, který má rád krásné věci, jako jsou animace, ikony, sportovní auta a 3D tisk. Pracuji jako designér a počítačový inženýr.</string>
-    <string name="easter_egg">Husté logo, žeee? ;D</string>
     <!-- New event -->
     <string name="new_event">Nová událost</string>
-    <string name="new_event_description">Zadejte novou osobu, na které vám záleží, a Birday vám pomůže připomenout její narozeniny nebo jinou životní událost!</string>
+    <string name="new_event_description">Zadejte novou osobu, na které vám záleží, a Auspice vám pomůže připomenout její narozeniny nebo jinou životní událost!</string>
     <string name="insert_event">Vložte událost</string>
     <string name="cancel">Zrušit</string>
     <string name="insert_name_hint">Vložte jméno</string>
@@ -245,21 +243,21 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">Připomenutí událostí</string>
-    <string name="events_channel_description">Připomenutí nadcházejících událostí z Birday</string>
+    <string name="events_channel_description">Připomenutí nadcházejících událostí z Auspice</string>
     <string name="notification_title">Připomenutí narozenin</string>
     <string name="notification_description_part_1">Dnešní události jsou</string>
     <string name="notification_description_part_2">Měj krásný zbytek dne!</string>
     <string name="additional_notification_text">Nadcházející události!</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">Vítejte v Birday!</string>
-    <string name="slide_one_description">Birday je jednoduchá a nenáročná aplikace pro správu událostí! Můžete jej použít ke spolehlivému a rychlému uložení narozenin, svátků nebo výročí a dalších důležitých událostí. A díky upozorněním už nikdy na žádnou událost nezapomenete.</string>
+    <string name="slide_one_title">Vítejte v Auspice!</string>
+    <string name="slide_one_description">Auspice je jednoduchá a nenáročná aplikace pro správu událostí! Můžete jej použít ke spolehlivému a rychlému uložení narozenin, svátků nebo výročí a dalších důležitých událostí. A díky upozorněním už nikdy na žádnou událost nezapomenete.</string>
     <string name="slide_two_title">Zdarma, jednoduchá, přizpůsobitelná</string>
-    <string name="slide_two_description">Birday je zdarma, bez reklam a open source. Poskytuje přehledné statistiky o vašich narozeninách, seznam oblíbených událostí a přizpůsobitelné rozhraní. Skvělá podpora a aktualizace jsou samozřejmostí!</string>
+    <string name="slide_two_description">Auspice je zdarma, bez reklam a open source. Poskytuje přehledné statistiky o vašich narozeninách, seznam oblíbených událostí a přizpůsobitelné rozhraní. Skvělá podpora a aktualizace jsou samozřejmostí!</string>
     <string name="slide_three_title">Importovat z kontaktů</string>
-    <string name="slide_three_description">Můžete také importovat události, které máte uložené u svých kontaktů nebo v kalendáři. Birday vše udělá za vás, stačí jen udělit oprávnění pro přístup ke kontaktům a kalendáři a události se v mžiku načtou. Příjemnou zábavu!</string>
+    <string name="slide_three_description">Můžete také importovat události, které máte uložené u svých kontaktů nebo v kalendáři. Auspice vše udělá za vás, stačí jen udělit oprávnění pro přístup ke kontaktům a kalendáři a události se v mžiku načtou. Příjemnou zábavu!</string>
     <!-- Widget -->
     <string name="appwidget_upcoming">Nadcházející události</string>
-    <string name="add_widget">Birday - nadcházející</string>
+    <string name="add_widget">Auspice - nadcházející</string>
     <string name="dark_widget_name">Tmavý widget</string>
     <string name="dark_widget_description_on">Widget používá tmavý motiv</string>
     <string name="dark_widget_description_off">Widget používá světlý motiv</string>
@@ -278,7 +276,7 @@
     <!-- Search -->
     <string name="search_event">Vyhledávání…</string>
     <string name="search_no_result_title">Nebyly nalezeny žádné výsledky</string>
-    <string name="search_no_result_description">Váš vyhledávací řetězec neodpovídá žádné události v Birday!</string>
+    <string name="search_no_result_description">Váš vyhledávací řetězec neodpovídá žádné události v Auspice!</string>
     <!-- Notes -->
     <string name="notes">Poznámky</string>
     <string name="write_something">Napište něco…</string>
@@ -290,10 +288,10 @@
     <string name="experimental_settings_description">Zopár experimentálních nastavení a funkcí. Můžou obsahovat chyby. Používejte na vlastní riziko</string>
     <string name="experimental_disclaimer">Následující funkce jsou experimentální a nemusí fungovat správně. Používejte je na vlastní riziko. Pro kontrolu aktuálního stavu zkontrolujte GitHub, některé z těchto funkcí by mohly být \"aktualizovány\" a preloženy</string>
     <string name="check_github">Přejít na GitHub</string>
-    <string name="translate_app">Pomozte s překladem Birday</string>
+    <string name="translate_app">Pomozte s překladem Auspice</string>
     <string name="launch_auto_import_title">Synchronizace s kontakty při spuštění</string>
-    <string name="launch_auto_import_description_off">Birday se při spuštění nebude automaticky synchronizovat s kontakty</string>
-    <string name="launch_auto_import_description_on">Birday se při spuštění automaticky synchronizuje s kontakty</string>
+    <string name="launch_auto_import_description_off">Auspice se při spuštění nebude automaticky synchronizovat s kontakty</string>
+    <string name="launch_auto_import_description_on">Auspice se při spuštění automaticky synchronizuje s kontakty</string>
     <string name="hide_on_scroll_title">Skrýt spodní navigační lištu při posouvání</string>
     <string name="hide_on_scroll_description_on">Navigační lišta bude při posouvání skryta</string>
     <string name="hide_on_scroll_description_off">Navigační lišta bude vždy viditelná</string>
@@ -314,8 +312,8 @@
     <string name="export_calendar_title">Exportovat do kalendáře</string>
     <string name="export_calendar_description">Ukládat každou událost do vašeho místního kalendáře, je-li to možné. Vyžaduje povolení ke kalendáři</string>
     <string name="auto_export_title">Automatický export událostí</string>
-    <string name="auto_export_description_on">Birday automaticky exportuje zálohu při ukončení aplikace. Každá záloha přepíše zálohu předchozí</string>
-    <string name="auto_export_description_off">Místní zálohy Birday musí být vykonány manuálně</string>
+    <string name="auto_export_description_on">Auspice automaticky exportuje zálohu při ukončení aplikace. Každá záloha přepíše zálohu předchozí</string>
+    <string name="auto_export_description_off">Místní zálohy Auspice musí být vykonány manuálně</string>
     <string name="add_demo_entries_title">Přidat ukázkové záznamy</string>
     <string name="add_demo_entries_description">Vyplňte DB ukázkovou sadou událostí, většinou herců a historických postav</string>
     <string name="add_demo_entries_dialog_description">To trvale přidá THOUSANDS položek do DB a je určeno pro účely ladění. Neodstraní žádnou existující událost, ale pokud chcete odstranit nové položky, musíte to udělat ručně. Hodně štěstí.</string>
@@ -325,7 +323,7 @@
     <string name="delete_db_dialog_description">Nezapomeňte si události nejprve zálohovat, tato operace vymaže databázi a měla by se používat pouze pro účely odstraňování chyb</string>
     <string name="delete_search_title">Smazat historii vyhledávání</string>
     <string name="delete_search_description_off">Nebude možné odstranit více událostí najednou</string>
-    <string name="delete_search_description_on">Při vyhledávání jedné nebo více událostí stiskněte tlačítko koše, abyste je všechny rychle odstranili z aplikace Birday. Používejte opatrně!</string>
+    <string name="delete_search_description_on">Při vyhledávání jedné nebo více událostí stiskněte tlačítko koše, abyste je všechny rychle odstranili z aplikace Auspice. Používejte opatrně!</string>
     <string name="delete_search_confirm">Tím se odstraní všechny výsledky tohoto vyhledávání. Pokud si to rozmyslíte, můžete tento proces krátce po kliknutí na tlačítko OK vrátit zpět!</string>
     <string name="import_contacts_bottom_sheet_description">Chcete okamžitě importovat všechny události z vašich kontaktů?</string>
     <string name="yes_import">Importovat</string>

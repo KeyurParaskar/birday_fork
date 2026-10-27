@@ -1,0 +1,3 @@
+First Auspice build, based on Birday 4.7.2.
+- New name, icon and splash screen
+- Traditions engine (cosmos module) with Western, Chinese, numerology, Mayan, birthstones, weekday lore, Islamic calendar and milestone years

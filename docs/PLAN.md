@@ -110,9 +110,13 @@ plus "Show cautionary items" (default on). Reuses Birday's existing `astrologyDi
 - [x] `cosmos` module with Western, Chinese (sexagenary), numerology (Pythagorean), Mayan Tzolk'in,
       birthstones and flowers, weekday lore, Hijri date, milestones and date lore. 19 unit tests.
 - [x] Module wired into the Gradle build; CI's `./gradlew build` runs its tests.
-- [ ] Rename application id and package from `com.minar.birday` to `app.auspice`, new icon, new name,
-      new splash. Keep the GPL notice and a "Based on Birday" credit in About.
-- [ ] Replace screenshots and Fastlane metadata.
+- [x] Rename application id and package from `com.minar.birday` to `app.auspice`, new icon, new name,
+      new splash. GPL notice kept; the About card credits Birday and links to it.
+- [x] Fastlane title and descriptions rewritten; Birday's changelogs, Crowdin config and funding file removed.
+- [ ] Replace the screenshots once the traditions UI exists (phase 1); until then they still show Birday's
+      screens, which are unchanged apart from the icon.
+- [ ] Set up an Auspice translation project; translated strings currently say "Auspice" wherever Birday
+      said "Birday", and the translated developer bio was dropped in favour of the English credit.
 
 ### Phase 1: show it in the app
 

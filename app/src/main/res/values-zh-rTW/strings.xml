@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">歡迎使用 Birday</string>
-    <string name="app_name_extended">Birday - 日期管理員</string>
-    <string name="leave_review_title">替 Birday 評分</string>
+    <string name="app_welcome">歡迎使用 Auspice</string>
+    <string name="app_name_extended">Auspice - 日期管理員</string>
+    <string name="leave_review_title">替 Auspice 評分</string>
     <string name="leave_review_subtitle">幫我留個評價吧！記得，除非你選擇贊助，否則這個程式是完全免費且無廣告的！</string>
     <string name="yes_review">評價！</string>
     <string name="later">晚點吧</string>
@@ -18,11 +18,11 @@
     <string name="stats_summary">統計摘要</string>
     <string name="no_stats_description">您目前沒有足夠的節日來生成統計。新增一些項目再回來吧！</string>
     <plurals name="stats_total">
-        <item quantity="other">Birday 幫你記住了多達 %d 個重要日子</item>
+        <item quantity="other">Auspice 幫你記住了多達 %d 個重要日子</item>
     </plurals>
     <string name="next_event">下個活動</string>
     <string name="no_next_event">沒有可顯示的紀念日！</string>
-    <string name="no_next_event_description">您尚未輸入或匯入任何節日。趕快新增一個讓 Birday 幫你替未來慶生吧！</string>
+    <string name="no_next_event_description">您尚未輸入或匯入任何節日。趕快新增一個讓 Auspice 幫你替未來慶生吧！</string>
     <string name="next_age_years">年齡</string>
     <string name="event_others">及其他</string>
     <plurals name="days_left">
@@ -49,7 +49,7 @@
     <string name="vibration_description_off">按下按鈕時無振動</string>
     <string name="date_format_name">日期格式</string>
     <string name="notification_hour_name">通知時間</string>
-    <string name="notification_hour_description">%s \n\n請注意，某些裝置 (如華為、小米、OnePlus 等) 可能會在背景中把此 Birday 殺掉，導致生日通知無法正常運作。詳情請參閱 dontkillmyapp.com。</string>
+    <string name="notification_hour_description">%s \n\n請注意，某些裝置 (如華為、小米、OnePlus 等) 可能會在背景中把此 Auspice 殺掉，導致生日通知無法正常運作。詳情請參閱 dontkillmyapp.com。</string>
     <string name="accent_description">更改預設配色</string>
     <string name="accent_name">配色</string>
     <string name="theme_description">使用自動、深色或淺色主題</string>
@@ -81,14 +81,14 @@
     <string name="import_nothing_found">找不到任何可匯入的紀念日！</string>
     <string name="import_failed">出事了！</string>
     <string name="missing_permission_contacts">聯絡人存取權限被拒。請再試一次或手動允許該權限，否則無法匯入聯絡人生日！</string>
-    <string name="missing_permission_contacts_forever">因為你初次拒絕了聯絡人存取權限，Birday 無法再次要求該權限。請進入設定，並手動允許聯絡人權限。</string>
-    <string name="birday_import_title">匯入 Birday 備份</string>
-    <string name="birday_import_description">選擇任何可用的 Birday 備份進行還原。請注意，所有現有資料將被覆寫！</string>
+    <string name="missing_permission_contacts_forever">因為你初次拒絕了聯絡人存取權限，Auspice 無法再次要求該權限。請進入設定，並手動允許聯絡人權限。</string>
+    <string name="birday_import_title">匯入 Auspice 備份</string>
+    <string name="birday_import_description">選擇任何可用的 Auspice 備份進行還原。請注意，所有現有資料將被覆寫！</string>
     <string name="birday_export_title">匯出及分享紀念日</string>
     <string name="birday_export_description">匯出現有的節日作為備份或分享用</string>
     <string name="birday_import_success">匯入成功！</string>
     <string name="birday_import_failure">匯入失敗。您是否正常選擇了適當的檔案？</string>
-    <string name="birday_import_invalid_file">匯入失敗。您所選的檔案不是 Birday 的備份檔案！</string>
+    <string name="birday_import_invalid_file">匯入失敗。您所選的檔案不是 Auspice 的備份檔案！</string>
     <string name="birday_export_success">匯出成功！</string>
     <string name="birday_export_failure">匯出失敗。噢不！</string>
     <string name="birday_export_nothing_found">沒有可匯出的項目！</string>
@@ -106,14 +106,14 @@
     <string name="additional_notification_only_favorites_description_off">在每一個節日都發送額外通知</string>
     <string name="troubleshoot">疑难解答</string>
     <string name="battery_optimization_title">禁用电池优化</string>
-    <string name="battery_optimization_description">打开设置以禁用 Birday 的任何优化。 如果通知不起作用，则很有用</string>
-    <string name="battery_optimization_tutorial">- Show all the apps and find Birday in the list\n- Tap on Birday and select \"Don\'t optimize\"</string>
+    <string name="battery_optimization_description">打开设置以禁用 Auspice 的任何优化。 如果通知不起作用，则很有用</string>
+    <string name="battery_optimization_tutorial">- Show all the apps and find Auspice in the list\n- Tap on Auspice and select \"Don\'t optimize\"</string>
     <string name="notification_sound_title">通知声音</string>
     <string name="notification_sound_description">通知声音设置的快捷方式，如果您不喜欢默认的鸟声</string>
-    <string name="missing_permission_notifications">發送通知許可被拒絕了，因此 Birday 並不能發送通知！請在設置裡開啟許可。</string>
-    <string name="missing_permission_notifications_forever">發送通知許可被拒絕了，且不能再詢問，因此 Birday 並不能發送通知！請自行往設置裡開啟許可。</string>
-    <string name="missing_permission_calendar">行事曆的許可被拒絕了，因此 Birday 不能從行事曆引入！請在設置裡開啟許可。</string>
-    <string name="missing_permission_calendar_forever">行事曆的許可被拒絕了，且不能再詢問，因此 Birday 不能從行事曆裡引入！請自行前往設置裡開啟許可。</string>
+    <string name="missing_permission_notifications">發送通知許可被拒絕了，因此 Auspice 並不能發送通知！請在設置裡開啟許可。</string>
+    <string name="missing_permission_notifications_forever">發送通知許可被拒絕了，且不能再詢問，因此 Auspice 並不能發送通知！請自行往設置裡開啟許可。</string>
+    <string name="missing_permission_calendar">行事曆的許可被拒絕了，因此 Auspice 不能從行事曆引入！請在設置裡開啟許可。</string>
+    <string name="missing_permission_calendar_forever">行事曆的許可被拒絕了，且不能再詢問，因此 Auspice 不能從行事曆裡引入！請自行前往設置裡開啟許可。</string>
     <string name="import_calendar_title">從行事曆裡引入</string>
     <string name="import_calendar_description">從行事曆裡引入各種年度節日。記得設置節日類型和年份，以避免混亂！</string>
     <string name="loop_avd_title">Loop animations</string>
@@ -124,13 +124,11 @@
     <string name="order_alphabetically_description_off">The events are ordered by date</string>
     <string name="grouped_notifications_title">Group multiple notifications</string>
     <string name="grouped_notifications_description_on">If there are two or more events in a single day, the notifications are grouped</string>
-    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Birday will send a notification for each</string>
+    <string name="grouped_notifications_description_off">If there are two or more events in a single day, Auspice will send a notification for each</string>
     <!-- Developer -->
-    <string name="dev_description">我是一個有禮貌、喜歡漂亮東西的人，像動畫製作、圖案設計、跑車、跟3D列印。我目前擔任的職務是設計師及電腦工程師。</string>
-    <string name="easter_egg">扛棒很棒吧，嘻嘻！</string>
     <!-- New event -->
     <string name="new_event">建立紀念日</string>
-    <string name="new_event_description">輸入你喜歡的人的資料，Birday 將幫你把它們記起來！</string>
+    <string name="new_event_description">輸入你喜歡的人的資料，Auspice 將幫你把它們記起來！</string>
     <string name="insert_event">輸入紀念日</string>
     <string name="cancel">取消</string>
     <string name="insert_name_hint">輸入姓氏</string>
@@ -227,23 +225,23 @@
     </plurals>
     <!-- Notifications -->
     <string name="events_notification_channel">活動提醒</string>
-    <string name="events_channel_description">透過 Birday 提醒即將到來的紀念日</string>
-    <string name="notification_title">Birday 提醒</string>
+    <string name="events_channel_description">透過 Auspice 提醒即將到來的紀念日</string>
+    <string name="notification_title">Auspice 提醒</string>
     <string name="notification_description_part_1">今天有特殊紀念日的人是</string>
     <string name="notification_description_part_2">祝你有美好的一天！</string>
     <string name="additional_notification_text">即將到來的紀念日！</string>
     <!-- Introduction slides -->
-    <string name="slide_one_title">歡迎使用 Birday！</string>
-    <string name="slide_one_description">Birday 是一個簡單輕巧並用於管理重要節日的 App！
+    <string name="slide_one_title">歡迎使用 Auspice！</string>
+    <string name="slide_one_description">Auspice 是一個簡單輕巧並用於管理重要節日的 App！
     你可以透過它來以快速可靠的方式記住任何你所喜歡的人的生日。</string>
     <string name="slide_two_title">免費、簡單、可自訂化</string>
-    <string name="slide_two_description">Birday 是免費、無廣告且開源的。功能包括提供聯絡人生日的
+    <string name="slide_two_description">Auspice 是免費、無廣告且開源的。功能包括提供聯絡人生日的
     統計訊息、我的最愛、及可自定義的界面。除此之外，我們也將持續提供更新及支援！</string>
     <string name="slide_three_title">從聯絡人匯入</string>
-    <string name="slide_three_description">如果你的聯絡人資料中含有節日相關資訊，Birday 也可以從聯絡人中匯入此資訊！</string>
+    <string name="slide_three_description">如果你的聯絡人資料中含有節日相關資訊，Auspice 也可以從聯絡人中匯入此資訊！</string>
     <!-- Widget -->
     <string name="appwidget_upcoming">即將到來的紀念日</string>
-    <string name="add_widget">Birday - 即將到來的紀念日</string>
+    <string name="add_widget">Auspice - 即將到來的紀念日</string>
     <string name="dark_widget_name">深色小工具</string>
     <string name="dark_widget_description_on">桌面小工具使用深色主題</string>
     <string name="dark_widget_description_off">桌面小工具使用淺色主題</string>
@@ -276,8 +274,8 @@
     <string name="check_github">查看GitHub</string>
     <string name="translate_app">翻譯app</string>
     <string name="launch_auto_import_title">開啟時自動導入</string>
-    <string name="launch_auto_import_description_off">Birday不會在開啟時自動導入通訊錄</string>
-    <string name="launch_auto_import_description_on">Birday會在開啟時與通訊錄自動同步</string>
+    <string name="launch_auto_import_description_off">Auspice不會在開啟時自動導入通訊錄</string>
+    <string name="launch_auto_import_description_on">Auspice會在開啟時與通訊錄自動同步</string>
     <string name="hide_on_scroll_title">在滑動時隱藏導覽列</string>
     <string name="hide_on_scroll_description_on">在你滑動時隱藏下方的導覽列</string>
     <string name="hide_on_scroll_description_off">下方的導覽列將永遠出現</string>
@@ -298,8 +296,8 @@
     <string name="export_calendar_title">Export to calendar</string>
     <string name="export_calendar_description">Save every event to your local calendar, if possible. Requires the calendar permission</string>
     <string name="auto_export_title">Auto export events</string>
-    <string name="auto_export_description_on">Birday will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
-    <string name="auto_export_description_off">To perform a local Birday backup, it has to be executed manually</string>
+    <string name="auto_export_description_on">Auspice will automatically export a backup when the app is closed. Please note that each backup will overwrite the previous</string>
+    <string name="auto_export_description_off">To perform a local Auspice backup, it has to be executed manually</string>
     <string name="add_demo_entries_title">Add demo entries</string>
     <string name="add_demo_entries_description">Populate the DB with a demo set of events, mostly actors and historical figures</string>
     <string name="add_demo_entries_dialog_description">這將永久地在資料庫中新增數千筆記錄，僅供除錯用途。它不會刪除任何現有事件，但如果你想刪除這些新記錄，則需要手動進行。祝你好運。</string>
@@ -309,7 +307,7 @@
     <string name="delete_db_dialog_description">確認先備份好你的事件，這個操作會抹除掉資料庫而且只應該用作debug的用途</string>
     <string name="delete_search_title">刪除搜索選擇</string>
     <string name="delete_search_description_off">不可能一次性刪除多個事件</string>
-    <string name="delete_search_description_on">當你搜索一個或多個事件時點擊垃圾箱鍵來將他們全部從Birday快速刪除掉。小心使用！</string>
+    <string name="delete_search_description_on">當你搜索一個或多個事件時點擊垃圾箱鍵來將他們全部從Auspice快速刪除掉。小心使用！</string>
     <string name="delete_search_confirm">這會刪除所有的搜索結果。如果你在點擊OK後很快改主意的話可以撤銷進程！</string>
     <string name="import_contacts_bottom_sheet_description">您想要現在從您的聯絡人中導入所有事件嗎？</string>
     <string name="yes_import">導入</string>

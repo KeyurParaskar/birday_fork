@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Crescent -->
+    <path android:pathData="M14,3.02 A9.2,9.2 0 1,0 14,20.98 A9.32,9.32 0 0,1 14,3.02Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="3"
+                android:startY="4"
+                android:endX="12"
+                android:endY="21"
+                android:type="linear"
+                android:startColor="#7B6CF6"
+                android:endColor="#3D3599" />
+        </aapt:attr>
+    </path>
+    <!-- Eight-pointed star -->
+    <path android:pathData="M15.60,5.10 L16.42,8.41 L19.35,6.65 L17.59,9.58 L20.90,10.40 L17.59,11.22 L19.35,14.15 L16.42,12.39 L15.60,15.70 L14.78,12.39 L11.85,14.15 L13.61,11.22 L10.30,10.40 L13.61,9.58 L11.85,6.65 L14.78,8.41Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="12"
+                android:startY="5"
+                android:endX="20"
+                android:endY="16"
+                android:type="linear"
+                android:startColor="#FFD86B"
+                android:endColor="#F0963C" />
+        </aapt:attr>
+    </path>
+    <!-- Small sparkle -->
+    <path
+        android:fillColor="#FFD86B"
+        android:pathData="M18.60,16.70 L19.06,17.94 L20.30,18.40 L19.06,18.86 L18.60,20.10 L18.14,18.86 L16.90,18.40 L18.14,17.94Z" />
+</vector>
