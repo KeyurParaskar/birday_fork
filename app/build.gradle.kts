@@ -68,6 +68,11 @@ android {
         buildConfig = true
     }
 
+    testOptions {
+        // Emulator tests run with system animations off, see docs/TESTING.md
+        animationsDisabled = true
+    }
+
     lint {
         disable += listOf("MissingTranslation", "MissingQuantity")
     }
@@ -139,6 +144,10 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.3.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
+    androidTestImplementation("androidx.test:runner:1.7.0")
+    androidTestImplementation("androidx.test:rules:1.7.0")
+    androidTestImplementation("androidx.test:core-ktx:1.7.0")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.7.0")
 
     // [Testing] ICU
     testImplementation("com.ibm.icu:icu4j:77.1")
