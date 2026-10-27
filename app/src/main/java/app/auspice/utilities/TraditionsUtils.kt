@@ -99,6 +99,8 @@ fun traditionTitle(context: Context, tradition: Tradition): String = context.get
         Tradition.BIRTHSTONES_AND_FLOWERS -> R.string.tradition_birthstones
         Tradition.DAY_LORE -> R.string.tradition_day_lore
         Tradition.ISLAMIC_CALENDAR -> R.string.tradition_islamic
+        Tradition.HEBREW_CALENDAR -> R.string.tradition_hebrew
+        Tradition.CELTIC_TREE -> R.string.tradition_celtic
         Tradition.MILESTONES_AND_SUPERSTITIONS -> R.string.tradition_milestones
     }
 )
@@ -117,6 +119,7 @@ fun reportLabelText(context: Context, label: ReportLabel): String = context.getS
         ReportLabel.EXPRESSION -> R.string.label_expression
         ReportLabel.SOUL_URGE -> R.string.label_soul_urge
         ReportLabel.PERSONALITY -> R.string.label_personality
+        ReportLabel.NUMEROLOGY_SYSTEM -> R.string.label_numerology_system
         ReportLabel.TZOLKIN -> R.string.label_tzolkin
         ReportLabel.BIRTHSTONE -> R.string.label_birthstone
         ReportLabel.BIRTH_FLOWER -> R.string.label_birth_flower
@@ -125,5 +128,8 @@ fun reportLabelText(context: Context, label: ReportLabel): String = context.getS
         ReportLabel.THAI_COLOUR -> R.string.label_thai_colour
         ReportLabel.AKAN_NAME -> R.string.label_akan_name
         ReportLabel.HIJRI_DATE -> R.string.label_hijri_date
+        ReportLabel.HEBREW_DATE -> R.string.label_hebrew_date
+        ReportLabel.HEBREW_BIRTHDAY -> R.string.label_hebrew_birthday
+        ReportLabel.CELTIC_TREE -> R.string.label_celtic_tree
     }
 )

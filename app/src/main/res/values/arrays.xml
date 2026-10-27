@@ -85,6 +85,8 @@
         <item>@string/tradition_birthstones</item>
         <item>@string/tradition_day_lore</item>
         <item>@string/tradition_islamic</item>
+        <item>@string/tradition_hebrew</item>
+        <item>@string/tradition_celtic</item>
         <item>@string/tradition_milestones</item>
     </string-array>
     <string-array name="traditionsValues" translatable="false">
@@ -95,6 +97,8 @@
         <item>BIRTHSTONES_AND_FLOWERS</item>
         <item>DAY_LORE</item>
         <item>ISLAMIC_CALENDAR</item>
+        <item>HEBREW_CALENDAR</item>
+        <item>CELTIC_TREE</item>
         <item>MILESTONES_AND_SUPERSTITIONS</item>
     </string-array>
     <!-- Must match TraditionsReport.DEFAULT_ENABLED -->

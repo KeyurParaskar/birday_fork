@@ -11,4 +11,6 @@ kotlin {
 
 dependencies {
     testImplementation("junit:junit:4.13.2")
+    // Independent Hebrew calendar implementation to cross-check ours against
+    testImplementation("com.ibm.icu:icu4j:77.1")
 }

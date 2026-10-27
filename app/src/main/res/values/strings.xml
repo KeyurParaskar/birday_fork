@@ -362,7 +362,7 @@
     <string name="traditions_cautionary_description_off">Only lucky and neutral traditions are shown</string>
     <string name="traditions_sources_title">Sources and notes</string>
     <string name="traditions_sources_description">Where each tradition comes from, and how Auspice computes it</string>
-    <string name="traditions_sources_text">Everything is calculated on your device, from the date and the name. Traditions are shown as cultural trivia, never as advice or prediction.\n\n<b>Western astrology</b>: tropical sun signs with the conventional cusp dates, which can be one day off for people born on a cusp.\n\n<b>Chinese astrology</b>: the sexagenary cycle of animals, elements and yin/yang, using the real lunar new year from the Chinese calendar.\n\n<b>Numerology</b>: Pythagorean system. Master numbers 11, 22 and 33 are kept. Name numbers use the name and surname as entered.\n\n<b>Mayan calendar</b>: the 260-day Tzolk\'in count with the standard GMT correlation.\n\n<b>Birthstones and flowers</b>: the modern birthstone list and traditional birth flowers.\n\n<b>Weekday lore</b>: the English \"Monday\'s child\" rhyme, Thai lucky colours and Akan day names from Ghana.\n\n<b>Islamic calendar</b>: the Umm al-Qura Hijri date provided by the system.\n\n<b>This birthday</b>: golden birthdays, Ben Ming Nian, Japanese longevity ages (kanreki, kiju, beiju and more), Korean hwangap, South Indian shashtipoorthi, numerology cycles and lucky or unlucky numbers. Yakudoshi needs to know whether a person is a man or a woman, which Auspice does not ask yet.</string>
+    <string name="traditions_sources_text">Everything is calculated on your device, from the date and the name. Traditions are shown as cultural trivia, never as advice or prediction.\n\n<b>Western astrology</b>: tropical sun signs with the conventional cusp dates, which can be one day off for people born on a cusp.\n\n<b>Chinese astrology</b>: the sexagenary cycle of animals, elements and yin/yang, using the real lunar new year from the Chinese calendar.\n\n<b>Numerology</b>: Pythagorean system. Master numbers 11, 22 and 33 are kept. Name numbers use the name and surname as entered.\n\n<b>Mayan calendar</b>: the 260-day Tzolk\'in count with the standard GMT correlation.\n\n<b>Birthstones and flowers</b>: the modern birthstone list and traditional birth flowers.\n\n<b>Weekday lore</b>: the English \"Monday\'s child\" rhyme, Thai lucky colours and Akan day names from Ghana.\n\n<b>Islamic calendar</b>: the Umm al-Qura Hijri date provided by the system.\n\n<b>Hebrew calendar</b>: the arithmetic Hebrew calendar, checked day by day against independent implementations. A Hebrew day starts at sunset, so someone born in the evening may have a Hebrew birthday one day later than shown. People born in Adar celebrate in Adar II in leap years.\n\n<b>Celtic tree calendar</b>: thirteen tree months linked to the Ogham alphabet. It is a modern construction, popularised by Robert Graves in 1948, not an ancient Celtic calendar.\n\n<b>This birthday</b>: golden birthdays, Ben Ming Nian, Japanese longevity ages (kanreki, kiju, beiju and more), Korean hwangap, South Indian shashtipoorthi, numerology cycles and lucky or unlucky numbers. Yakudoshi needs to know whether a person is a man or a woman, which Auspice does not ask yet.</string>
     <string name="tradition_western">Western astrology</string>
     <string name="tradition_chinese">Chinese astrology</string>
     <string name="tradition_vedic">Vedic astrology</string>
@@ -372,6 +372,12 @@
     <string name="tradition_day_lore">Weekday lore</string>
     <string name="tradition_islamic">Islamic calendar</string>
     <string name="tradition_milestones">This birthday and date lore</string>
+    <string name="tradition_hebrew">Hebrew calendar</string>
+    <string name="tradition_celtic">Celtic tree calendar (modern)</string>
+    <string name="label_numerology_system">System</string>
+    <string name="label_hebrew_date">Hebrew birth date</string>
+    <string name="label_hebrew_birthday">Next Hebrew birthday</string>
+    <string name="label_celtic_tree">Tree</string>
     <string name="label_element">Element</string>
     <string name="label_modality">Modality</string>
     <string name="label_ruling_planet">Ruling planet</string>

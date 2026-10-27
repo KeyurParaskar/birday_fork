@@ -2,6 +2,8 @@ package com.auspice.cosmos
 
 import java.time.LocalDate
 import java.time.chrono.HijrahDate
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 import java.time.format.TextStyle
 import java.time.temporal.ChronoField
 import java.util.Locale
@@ -10,11 +12,13 @@ import java.util.Locale
 enum class ReportLabel {
     ELEMENT, MODALITY, RULING_PLANET,
     BEST_MATCHES, CLASHES_WITH,
-    LIFE_PATH, BIRTHDAY_NUMBER, ATTITUDE_NUMBER, PERSONAL_YEAR, EXPRESSION, SOUL_URGE, PERSONALITY,
+    LIFE_PATH, BIRTHDAY_NUMBER, ATTITUDE_NUMBER, PERSONAL_YEAR, EXPRESSION, SOUL_URGE, PERSONALITY, NUMEROLOGY_SYSTEM,
     TZOLKIN,
     BIRTHSTONE, BIRTH_FLOWER,
     BORN_ON, NURSERY_RHYME, THAI_COLOUR, AKAN_NAME,
     HIJRI_DATE,
+    HEBREW_DATE, HEBREW_BIRTHDAY,
+    CELTIC_TREE,
 }
 
 /**
@@ -41,6 +45,8 @@ object TraditionsReport {
         Tradition.BIRTHSTONES_AND_FLOWERS,
         Tradition.DAY_LORE,
         Tradition.ISLAMIC_CALENDAR,
+        Tradition.HEBREW_CALENDAR,
+        Tradition.CELTIC_TREE,
         Tradition.MILESTONES_AND_SUPERSTITIONS,
     )
 
@@ -62,6 +68,7 @@ object TraditionsReport {
      * @param birthDate the stored birth date; when [yearKnown] is false only its month and day are trusted
      * @param fullName name and surname, used for the name numbers; null or blank skips them
      * @param nextBirthday the date of the next (or today's) occurrence, which sets the age being turned
+     * @param today used to find the next Hebrew birthday
      */
     fun build(
         birthDate: LocalDate,
@@ -72,6 +79,9 @@ object TraditionsReport {
         showCautionary: Boolean,
         locale: Locale = Locale.ENGLISH,
         lunarNewYearOf: (Int) -> LocalDate? = { null },
+        numerologySystem: NumerologySystem = NumerologySystem.PYTHAGOREAN,
+        sex: Sex = Sex.UNKNOWN,
+        today: LocalDate = LocalDate.now(),
     ): List<ReportSection> {
         val sections = mutableListOf<ReportSection>()
         fun add(tradition: Tradition, rows: List<ReportRow>) {
@@ -109,11 +119,18 @@ object TraditionsReport {
         }
         val name = fullName?.takeIf { it.any(Char::isLetter) }
         if (name != null) {
+            val expression = Numerology.expression(name, numerologySystem)
+            val compound = Numerology.compoundExpression(name, numerologySystem)
+            // Chaldean readings also look at the unreduced "compound" number
+            val expressionText =
+                if (numerologySystem == NumerologySystem.CHALDEAN && compound != expression) "$expression ($compound)"
+                else expression.toString()
+            if (expression > 0) numerology += ReportRow(ReportLabel.EXPRESSION, expressionText)
             listOf(
-                ReportLabel.EXPRESSION to Numerology.expression(name),
-                ReportLabel.SOUL_URGE to Numerology.soulUrge(name),
-                ReportLabel.PERSONALITY to Numerology.personality(name),
+                ReportLabel.SOUL_URGE to Numerology.soulUrge(name, numerologySystem),
+                ReportLabel.PERSONALITY to Numerology.personality(name, numerologySystem),
             ).filter { it.second > 0 }.forEach { numerology += ReportRow(it.first, it.second.toString()) }
+            numerology += ReportRow(ReportLabel.NUMEROLOGY_SYSTEM, titleCase(numerologySystem.name))
         }
         add(Tradition.NUMEROLOGY, numerology)
 
@@ -145,12 +162,31 @@ object TraditionsReport {
             hijriText(birthDate)?.let { add(Tradition.ISLAMIC_CALENDAR, listOf(ReportRow(ReportLabel.HIJRI_DATE, it))) }
         }
 
+        // The Hebrew date depends on the year; the day starts at sunset, which a date alone cannot tell
+        if (yearKnown && Tradition.HEBREW_CALENDAR in enabled) {
+            runCatching {
+                val hebrew = HebrewCalendar.fromGregorian(birthDate)
+                val next = HebrewCalendar.nextBirthday(birthDate, today)
+                val formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).withLocale(locale)
+                listOf(
+                    ReportRow(ReportLabel.HEBREW_DATE, hebrew.toString()),
+                    ReportRow(ReportLabel.HEBREW_BIRTHDAY, next.format(formatter)),
+                )
+            }.getOrNull()?.let { add(Tradition.HEBREW_CALENDAR, it) }
+        }
+
+        // Celtic tree calendar needs only month and day
+        val tree = CelticTree.forDate(birthDate)
+        add(Tradition.CELTIC_TREE, listOf(
+            ReportRow(ReportLabel.CELTIC_TREE, if (tree == null) "The nameless day" else "${titleCase(tree.name)} (${tree.ogham})"),
+        ))
+
         // Date lore and this birthday's milestones, each also gated by its own tradition
         if (Tradition.MILESTONES_AND_SUPERSTITIONS in enabled) {
             val lore = Milestones.forDate(birthDate)
                 .filter { yearKnown || it.key != "date.friday13" }
             val insights = filterInsights(lore, enabled, showCautionary) +
-                highlights(birthDate, yearKnown, nextBirthday, enabled, showCautionary, lunarNewYearOf)
+                highlights(birthDate, yearKnown, nextBirthday, enabled, showCautionary, lunarNewYearOf, sex)
             add(Tradition.MILESTONES_AND_SUPERSTITIONS, insights.map { ReportRow(null, it.fallbackText, it.sentiment) })
         }
 

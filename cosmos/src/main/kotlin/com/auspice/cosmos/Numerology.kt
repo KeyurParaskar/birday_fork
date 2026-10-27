@@ -4,8 +4,14 @@ import java.text.Normalizer
 import java.time.LocalDate
 
 /**
- * Pythagorean (Western) numerology. Numbers are reduced to a single digit except the master numbers
- * 11, 22 and 33, which are kept as they are. A Chaldean variant is planned (see docs/PLAN.md).
+ * How letters become numbers. Pythagorean is the common Western grid (A=1 ... I=9, then repeat).
+ * Chaldean is the older Babylonian-attributed table: values 1 to 8 assigned by sound, 9 never used.
+ */
+enum class NumerologySystem { PYTHAGOREAN, CHALDEAN }
+
+/**
+ * Numerology. Numbers are reduced to a single digit except the master numbers 11, 22 and 33, which are kept.
+ * Date numbers are the same in both systems; name numbers depend on the [NumerologySystem].
  */
 object Numerology {
     val MASTER_NUMBERS = setOf(11, 22, 33)
@@ -36,17 +42,39 @@ object Numerology {
     fun personalYear(date: LocalDate, inYear: Int): Int =
         reduce(reduce(date.monthValue) + reduce(date.dayOfMonth) + reduce(inYear), keepMasters = false)
 
-    /** Expression (Destiny) number from the full name: all letters. */
-    fun expression(fullName: String): Int = reduce(letters(fullName).sumOf(::value))
+    /** Expression (Destiny, or Name number in Chaldean) from the full name: all letters. */
+    fun expression(fullName: String, system: NumerologySystem = NumerologySystem.PYTHAGOREAN): Int =
+        reduce(compoundExpression(fullName, system))
+
+    /** The unreduced letter sum. Chaldean readings give meaning to these "compound" numbers too. */
+    fun compoundExpression(fullName: String, system: NumerologySystem = NumerologySystem.PYTHAGOREAN): Int =
+        letters(fullName).sumOf { value(it, system) }
 
     /** Soul Urge (Heart's Desire): vowels only. */
-    fun soulUrge(fullName: String): Int = reduce(letters(fullName).filter(::isVowel).sumOf(::value))
+    fun soulUrge(fullName: String, system: NumerologySystem = NumerologySystem.PYTHAGOREAN): Int =
+        reduce(letters(fullName).filter(::isVowel).sumOf { value(it, system) })
 
     /** Personality number: consonants only. */
-    fun personality(fullName: String): Int = reduce(letters(fullName).filterNot(::isVowel).sumOf(::value))
+    fun personality(fullName: String, system: NumerologySystem = NumerologySystem.PYTHAGOREAN): Int =
+        reduce(letters(fullName).filterNot(::isVowel).sumOf { value(it, system) })
 
     /** Pythagorean grid: A=1 ... I=9, J=1 ... R=9, S=1 ... Z=8. */
     fun value(letter: Char): Int = ((letter.uppercaseChar() - 'A') % 9) + 1
+
+    // Chaldean table, A to Z
+    private val CHALDEAN = intArrayOf(1, 2, 3, 4, 5, 8, 3, 5, 1, 1, 2, 3, 4, 5, 7, 8, 1, 2, 3, 4, 6, 6, 6, 5, 1, 7)
+
+    fun value(letter: Char, system: NumerologySystem): Int = when (system) {
+        NumerologySystem.PYTHAGOREAN -> value(letter)
+        NumerologySystem.CHALDEAN -> CHALDEAN[letter.uppercaseChar() - 'A']
+    }
+
+    /** Life Path numbers that numerologists usually group as natural matches. Masters count as their root. */
+    fun lifePathFamily(n: Int): Int = when (reduce(n, keepMasters = false)) {
+        1, 5, 7 -> 0
+        2, 4, 8 -> 1
+        else -> 2
+    }
 
     // Y is treated as a consonant, the most common convention. Accents are stripped so "José" works.
     private fun isVowel(c: Char) = c.uppercaseChar() in "AEIOU"
